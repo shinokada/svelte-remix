@@ -3,7 +3,7 @@
 [![npm version](https://badgen.net/npm/v/svelte-remix)](https://www.npmjs.com/package/svelte-remix)
 [![license](https://badgen.net/npm/license/svelte-remix)](https://github.com/shinokada/svelte-remix/blob/main/LICENSE)
 
-2270+ SVG file icon components for Svelte. Svelte-Remix support major CSS frameworks using the `class` props.
+2270+ SVG [RemixIcon](https://github.com/Remix-Design/RemixIcon) components for Svelte. Svelte-Remix support major CSS frameworks using the `class` props.
 
 <p align="center">
 <img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-remix/main/static/images/remix1.webp" />
