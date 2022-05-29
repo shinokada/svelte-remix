@@ -1,26 +1,26 @@
-# Svelte-Remix-Icons
+# Svelte-Remix
 
-[![npm version](https://badgen.net/npm/v/svelte-remix-icons)](https://www.npmjs.com/package/svelte-remix-icons)
-[![license](https://badgen.net/npm/license/svelte-remix-icons)](https://github.com/shinokada/svelte-remix-icons/blob/main/LICENSE)
+[![npm version](https://badgen.net/npm/v/svelte-remix)](https://www.npmjs.com/package/svelte-remix)
+[![license](https://badgen.net/npm/license/svelte-remix)](https://github.com/shinokada/svelte-remix/blob/main/LICENSE)
 
-2270+ SVG file icon components for Svelte. svelte-remix-icons support major CSS frameworks using the `class` props.
+2270+ SVG file icon components for Svelte. Svelte-Remix support major CSS frameworks using the `class` props.
 
 <p align="center">
-<img width="400" src="https://raw.githubusercontent.com/shinokada/svelte-remix-icons/main/static/images/remix-icons1.webp" />
-<img width="400" src="https://raw.githubusercontent.com/shinokada/svelte-remix-icons/main/static/images/remix-icons2.webp" />
-<img width="400" src="https://raw.githubusercontent.com/shinokada/svelte-remix-icons/main/static/images/remix-icons3.webp" />
-<img width="400" src="https://raw.githubusercontent.com/shinokada/svelte-remix-icons/main/static/images/remix-icons4.webp" />
-<img width="400" src="https://raw.githubusercontent.com/shinokada/svelte-remix-icons/main/static/images/remix-icons5.webp" />
+<img width="400" src="https://raw.githubusercontent.com/shinokada/svelte-remix/main/static/images/remix-icons1.webp" />
+<img width="400" src="https://raw.githubusercontent.com/shinokada/svelte-remix/main/static/images/remix-icons2.webp" />
+<img width="400" src="https://raw.githubusercontent.com/shinokada/svelte-remix/main/static/images/remix-icons3.webp" />
+<img width="400" src="https://raw.githubusercontent.com/shinokada/svelte-remix/main/static/images/remix-icons4.webp" />
+<img width="400" src="https://raw.githubusercontent.com/shinokada/svelte-remix/main/static/images/remix-icons5.webp" />
 </p>
 
 ## Icon name list
 
-[Icon list](https://github.com/shinokada/svelte-remix-icons/blob/main/icon-list.md)
+[Icon list](https://github.com/shinokada/svelte-remix/blob/main/icon-list.md)
 
 ## Installation
 
 ```sh
-npm i -D svelte-remix-icons
+npm i -D svelte-remix
 ```
 
 ## Usages
@@ -29,7 +29,7 @@ In a svelte file:
 
 ```html
 <script>
-	import { Vite, Config, D3, Sublime, Svelte, VSCode, EJS } from 'svelte-remix-icons';
+	import { Vite, Config, D3, Sublime, Svelte, VSCode, EJS } from 'svelte-remix';
 </script>
 
 <Vite />
@@ -112,7 +112,7 @@ You can pass other attibutes as well.
 
 ```html
 <script>
-	import { Svelte } from 'svelte-remix-icons';
+	import { Svelte } from 'svelte-remix';
 </script>
 
 <svelte:component this="{Svelte}" />
@@ -122,7 +122,7 @@ You can pass other attibutes as well.
 
 ```html
 <script>
-	import { Svelte } from 'svelte-remix-icons';
+	import { Svelte } from 'svelte-remix';
 	import { onMount } from 'svelte';
 	const props = {
 		size: '50',
@@ -136,11 +136,11 @@ You can pass other attibutes as well.
 
 ## Import all
 
-Use `import * as Icon from 'svelte-remix-icons`.
+Use `import * as Icon from 'svelte-remix`.
 
 ```html
 <script>
-	import * as Icon from 'svelte-remix-icons';
+	import * as Icon from 'svelte-remix';
 </script>
 
 <Icon.Svelte />
