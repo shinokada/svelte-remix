@@ -5,16 +5,14 @@
 
 2270+ SVG file icon components for Svelte. Svelte-Remix support major CSS frameworks using the `class` props.
 
-<div style="width: 400px;">
-<p align="center" width="400">
-<img width="400" src="https://raw.githubusercontent.com/shinokada/svelte-remix/main/static/images/remix1.webp" />
-<img width="400" src="https://raw.githubusercontent.com/shinokada/svelte-remix/main/static/images/remix2.webp" />
-<img width="400" src="https://raw.githubusercontent.com/shinokada/svelte-remix/main/static/images/remix3.webp" />
-<img width="400" src="https://raw.githubusercontent.com/shinokada/svelte-remix/main/static/images/remix4.webp" />
-<img width="400" src="https://raw.githubusercontent.com/shinokada/svelte-remix/main/static/images/remix5.webp" />
-<img width="400" src="https://raw.githubusercontent.com/shinokada/svelte-remix/main/static/images/remix6.webp" />
+<p align="center">
+<img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-remix/main/static/images/remix1.webp" />
+<img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-remix/main/static/images/remix2.webp" />
+<img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-remix/main/static/images/remix3.webp" />
+<img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-remix/main/static/images/remix4.webp" />
+<img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-remix/main/static/images/remix5.webp" />
+<img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-remix/main/static/images/remix6.webp" />
 </p>
-</div>
 
 ## Icon name list
 
