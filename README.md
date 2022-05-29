@@ -5,7 +5,7 @@
 
 2270+ SVG file icon components for Svelte. Svelte-Remix support major CSS frameworks using the `class` props.
 
-<p align="center">
+<p align="center" width="400">
 <img width="400" src="https://raw.githubusercontent.com/shinokada/svelte-remix/main/static/images/remix1.webp" />
 <img width="400" src="https://raw.githubusercontent.com/shinokada/svelte-remix/main/static/images/remix2.webp" />
 <img width="400" src="https://raw.githubusercontent.com/shinokada/svelte-remix/main/static/images/remix3.webp" />
@@ -34,7 +34,11 @@ In a svelte file:
 
 ```html
 <script>
-	import { BankFillBUILDINGS, MailDownloadFillBUSINESS, InboxUnarchiveLineBUSINESS } from 'svelte-remix';
+	import {
+		BankFillBUILDINGS,
+		MailDownloadFillBUSINESS,
+		InboxUnarchiveLineBUSINESS
+	} from 'svelte-remix';
 </script>
 
 <BankFillBUILDINGS />
