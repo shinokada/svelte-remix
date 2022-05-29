@@ -1,4 +1,3 @@
-
 ```html
 <Icon.AncientGateFillBUILDINGS size="40" color="{random_hex_color_code()}" />
 <Icon.AncientGateLineBUILDINGS size="40" color="{random_hex_color_code()}" />
