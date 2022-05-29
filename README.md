@@ -94,11 +94,11 @@ Let's use `dark` for the dark mode class as an example.
 
 ## aria-label
 
-All icons have aria-label. For example `Svelte` has `aria-label="svelte"`.
+All icons have aria-label. For example `BankFillBUILDINGS` has `aria-label="bank fill buildings"`.
 Use `ariaLabel` prop to modify the `aria-label` value.
 
 ```html
-<BankFillBUILDINGS ariaLabel="Awesome Svelte" />
+<BankFillBUILDINGS ariaLabel="bank buildings svg icon" />
 ```
 
 ## Passing down other attributes
