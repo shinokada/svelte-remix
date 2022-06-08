@@ -1,12 +1,11 @@
 <script>
-	import * as Icon from 'svelte-remix';
+	import * as Icon from '$lib';
 	const random_hex_color_code = () => {
 		let n = (Math.random() * 0xfffff * 1000000).toString(16);
 		return '#' + n.slice(0, 6);
 	};
 </script>
 
-<Icon. size="40" color={random_hex_color_code()} />
 <Icon.AncientGateFillBUILDINGS size="40" color={random_hex_color_code()} />
 <Icon.AncientGateLineBUILDINGS size="40" color={random_hex_color_code()} />
 <Icon.AncientPavilionFillBUILDINGS size="40" color={random_hex_color_code()} />
