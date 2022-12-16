@@ -1,7 +1,15 @@
-# Svelte-Remix
+<h1 align="center">Svelte-Remix</h1>
 
-[![npm version](https://badgen.net/npm/v/svelte-remix)](https://www.npmjs.com/package/svelte-remix)
-[![license](https://badgen.net/npm/license/svelte-remix)](https://github.com/shinokada/svelte-remix/blob/main/LICENSE)
+<p align="center">
+<a href="https://shinokada.github.io/svelte-remix/">Svelte-Remix</a>
+</p>
+
+<p align="center">
+<a href="https://www.npmjs.com/package/svelte-remix" rel="nofollow"><img src="https://img.shields.io/npm/v/svelte-remix" alt="npm"></a>
+<a href="https://twitter.com/shinokada" rel="nofollow"><img src="https://img.shields.io/badge/created%20by-@shinokada-4BBAAB.svg" alt="Created by Shin Okada"></a>
+<a href="https://opensource.org/licenses/MIT" rel="nofollow"><img src="https://img.shields.io/github/license/shinokada/svelte-remix" alt="License"></a>
+<a href="https://www.npmjs.com/package/svelte-remix" rel="nofollow"><img src="https://img.shields.io/npm/dw/svelte-remix.svg" alt="npm"></a>
+</p>
 
 2270+ SVG [RemixIcon](https://github.com/Remix-Design/RemixIcon) components for Svelte. Svelte-Remix support major CSS frameworks using the `class` props.
 
@@ -14,9 +22,6 @@
 <img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-remix/main/static/images/remix6.webp" />
 </p>
 
-## Icon name list
-
-[Icon list](https://github.com/shinokada/svelte-remix/blob/main/icon-list.md)
 
 ## Installation
 
@@ -24,9 +29,14 @@
 npm i -D svelte-remix
 ```
 
+## Icon name list
+
+[Icon list](https://github.com/shinokada/svelte-remix/blob/main/icon-list.md)
+
+
 ## REPL
 
-[Demo](https://svelte.dev/repl/60e7000b54004872aa4006535fcef7fd?version=3.48.0)
+[Demo](https://svelte.dev/repl/60e7000b54004872aa4006535fcef7fd)
 
 ## Usages
 
