@@ -4,15 +4,13 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.1.7](https://github.com/shinokada/svelte-remix-icons/compare/v0.1.6...v0.1.7) (2022-12-16)
 
-
 ### Features
 
-* add docsify ([8d814d6](https://github.com/shinokada/svelte-remix-icons/commit/8d814d6d5c9121cf5a8f07e3ee6df5d58bad5f8a))
-
+- add docsify ([8d814d6](https://github.com/shinokada/svelte-remix-icons/commit/8d814d6d5c9121cf5a8f07e3ee6df5d58bad5f8a))
 
 ### Bug Fixes
 
-* example page ([333af2b](https://github.com/shinokada/svelte-remix-icons/commit/333af2b001e94b524ddaf465cf17ddedc9559968))
+- example page ([333af2b](https://github.com/shinokada/svelte-remix-icons/commit/333af2b001e94b524ddaf465cf17ddedc9559968))
 
 ### [0.1.6](https://github.com/shinokada/svelte-remix-icons/compare/v0.1.5...v0.1.6) (2022-06-08)
 

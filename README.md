@@ -1,7 +1,7 @@
 <h1 align="center">Svelte-Remix</h1>
 
 <p align="center">
-<a href="https://shinokada.github.io/svelte-remix/">Svelte-Remix</a>
+<a href="https://svelte-remix.codewithshin.com/">Svelte-Remix</a>
 </p>
 
 <p align="center">
@@ -22,7 +22,6 @@
 <img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-remix/main/static/images/remix6.webp" />
 </p>
 
-
 ## Installation
 
 ```sh
@@ -32,7 +31,6 @@ npm i -D svelte-remix
 ## Icon name list
 
 [Icon list](https://github.com/shinokada/svelte-remix/blob/main/icon-list.md)
-
 
 ## REPL
 
@@ -44,11 +42,11 @@ In a svelte file:
 
 ```html
 <script>
-	import {
-		BankFillBUILDINGS,
-		MailDownloadFillBUSINESS,
-		InboxUnarchiveLineBUSINESS
-	} from 'svelte-remix';
+  import {
+    BankFillBUILDINGS,
+    MailDownloadFillBUSINESS,
+    InboxUnarchiveLineBUSINESS
+  } from 'svelte-remix';
 </script>
 
 <BankFillBUILDINGS />
@@ -123,7 +121,7 @@ You can pass other attibutes as well.
 
 ```html
 <script>
-	import { BankFillBUILDINGS } from 'svelte-remix';
+  import { BankFillBUILDINGS } from 'svelte-remix';
 </script>
 
 <svelte:component this="{BankFillBUILDINGS}" />
@@ -133,15 +131,15 @@ You can pass other attibutes as well.
 
 ```html
 <script>
-	import { BankFillBUILDINGS } from 'svelte-remix';
-	import { onMount } from 'svelte';
-	const props = {
-		size: '50',
-		color: '#ff0000'
-	};
-	onMount(() => {
-		const icon = new BankFillBUILDINGS({ target: document.body, props });
-	});
+  import { BankFillBUILDINGS } from 'svelte-remix';
+  import { onMount } from 'svelte';
+  const props = {
+    size: '50',
+    color: '#ff0000'
+  };
+  onMount(() => {
+    const icon = new BankFillBUILDINGS({ target: document.body, props });
+  });
 </script>
 ```
 
@@ -151,7 +149,7 @@ Use `import * as Icon from 'svelte-remix`.
 
 ```html
 <script>
-	import * as Icon from 'svelte-remix';
+  import * as Icon from 'svelte-remix';
 </script>
 
 <Icon.BankFillBUILDINGS />
