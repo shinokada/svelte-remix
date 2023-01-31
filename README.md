@@ -15,7 +15,7 @@
 2270+ SVG [RemixIcon](https://github.com/Remix-Design/RemixIcon) components for Svelte. Svelte-Remix support major CSS frameworks using the `class` props.
 
 <p align="center">
-<img src="/static/images/remix.png" />
+<img src="/static/images/remix-650-1050.png" />
 </p>
 
 ## Installation
@@ -23,6 +23,10 @@
 ```sh
 npm i -D svelte-remix
 ```
+
+## Icon images
+
+[Icon images](/icon-images.md)
 
 ## Icon name list
 
