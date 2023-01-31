@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.9](https://github.com/shinokada/svelte-remix-icons/compare/v0.1.8...v0.1.9) (2023-01-31)
+
+
+### Features
+
+* add pwa ([9bd08a1](https://github.com/shinokada/svelte-remix-icons/commit/9bd08a16ced80fd53f3ab62681e38788d929deb1))
+
 ### [0.1.8](https://github.com/shinokada/svelte-remix-icons/compare/v0.1.7...v0.1.8) (2022-12-25)
 
 ### Bug Fixes
