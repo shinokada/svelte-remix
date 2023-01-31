@@ -4,10 +4,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.1.10](https://github.com/shinokada/svelte-remix-icons/compare/v0.1.9...v0.1.10) (2023-01-31)
 
-
 ### Features
 
-* add icon images page ([d36e812](https://github.com/shinokada/svelte-remix-icons/commit/d36e812185dd945d75bc7a3f3b06efdca07d0e15))
+- add icon images page ([d36e812](https://github.com/shinokada/svelte-remix-icons/commit/d36e812185dd945d75bc7a3f3b06efdca07d0e15))
 
 ### [0.1.9](https://github.com/shinokada/svelte-remix-icons/compare/v0.1.8...v0.1.9) (2023-01-31)
 
