@@ -1,10 +1,11 @@
-<h1 align="center">Svelte-Remix</h1>
+<h1 align="center">Svelte Remix</h1>
 
 <p align="center">
 <a href="https://svelte-remix.codewithshin.com/">Svelte-Remix</a>
 </p>
 
 <p align="center">
+<a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps"><img src="https://img.shields.io/badge/PWA-enabled-brightgreen" alt="PWA Shield"></a>
 <a href="https://www.npmjs.com/package/svelte-remix" rel="nofollow"><img src="https://img.shields.io/npm/v/svelte-remix" alt="npm"></a>
 <a href="https://twitter.com/shinokada" rel="nofollow"><img src="https://img.shields.io/badge/created%20by-@shinokada-4BBAAB.svg" alt="Created by Shin Okada"></a>
 <a href="https://opensource.org/licenses/MIT" rel="nofollow"><img src="https://img.shields.io/github/license/shinokada/svelte-remix" alt="License"></a>
@@ -14,12 +15,7 @@
 2270+ SVG [RemixIcon](https://github.com/Remix-Design/RemixIcon) components for Svelte. Svelte-Remix support major CSS frameworks using the `class` props.
 
 <p align="center">
-<img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-remix/main/static/images/remix1.webp" />
-<img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-remix/main/static/images/remix2.webp" />
-<img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-remix/main/static/images/remix3.webp" />
-<img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-remix/main/static/images/remix4.webp" />
-<img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-remix/main/static/images/remix5.webp" />
-<img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-remix/main/static/images/remix6.webp" />
+<img src="/static/images/remix.png" />
 </p>
 
 ## Installation
@@ -30,7 +26,7 @@ npm i -D svelte-remix
 
 ## Icon name list
 
-[Icon list](https://github.com/shinokada/svelte-remix/blob/main/icon-list.md)
+[Icon list](/icon-list.md)
 
 ## REPL
 
@@ -170,3 +166,9 @@ Use `import * as Icon from 'svelte-remix`.
 ## Other icons
 
 - [Svelte-Icon-Sets](https://svelte-svg-icons.vercel.app/)
+
+## Experience lightning-fast browsing and offline access with Our PWA
+
+This website can be downloaded and installed on your device for offline access as a Progressive Web App.
+
+To install a PWA, look for the "Add to Home Screen" option in the browser's menu or settings. On most mobile devices, this option can be found by visiting the website, then selecting the "Options" or "Menu" button in the browser, and looking for the "Add to Home Screen" option. On some desktop browsers, right-click on the page and select "Install".
