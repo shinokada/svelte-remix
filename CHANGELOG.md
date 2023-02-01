@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.12](https://github.com/shinokada/svelte-remix-icons/compare/v0.1.11...v0.1.12) (2023-02-01)
+
+
+### Bug Fixes
+
+* add optimized image ([9fb40a7](https://github.com/shinokada/svelte-remix-icons/commit/9fb40a70a551fd35d0594c50abdf090fc182b62c))
+* badges target, height, and add links to crossOriginLinks ([7987a86](https://github.com/shinokada/svelte-remix-icons/commit/7987a862dafd777c0b7d39f6e7b3375977d52fe5))
+* favicon link ([6b0ebeb](https://github.com/shinokada/svelte-remix-icons/commit/6b0ebeb4e77c2fb807c017d34efbb9663e60486f))
+
 ### [0.1.11](https://github.com/shinokada/svelte-remix-icons/compare/v0.1.10...v0.1.11) (2023-01-31)
 
 ### Bug Fixes
