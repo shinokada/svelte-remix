@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1](https://github.com/shinokada/svelte-remix-icons/compare/v0.1.13...v0.2.1) (2023-02-22)
+
+
+### Features
+
+* add microsoft webmaster tools meta tag ([477d147](https://github.com/shinokada/svelte-remix-icons/commit/477d147a475cf351fa82b9626e87e1238c5afee8))
+* new svelte packaging system ([505bc20](https://github.com/shinokada/svelte-remix-icons/commit/505bc205e4cd228588874a1911cc403c3a0d3fea))
+* new svelte packaging system 2 ([aa4926f](https://github.com/shinokada/svelte-remix-icons/commit/aa4926f64386dfa150bfa61cdb62d29d512cc6b7))
+
+
+### Bug Fixes
+
+* update index.html ([c135d16](https://github.com/shinokada/svelte-remix-icons/commit/c135d16995a236ae1a511bb26b88e2677a4a26aa))
+
 ### [0.1.13](https://github.com/shinokada/svelte-remix-icons/compare/v0.1.12...v0.1.13) (2023-02-03)
 
 ### [0.1.12](https://github.com/shinokada/svelte-remix-icons/compare/v0.1.11...v0.1.12) (2023-02-01)
