@@ -16,6 +16,9 @@
 
 2270+ SVG [RemixIcon](https://github.com/Remix-Design/RemixIcon) components for Svelte. Svelte-Remix support major CSS frameworks using the `class` props.
 
+Thank you for considering using my open-source package for your project. I appreciate your support and contributions towards the development of this package. If you are using this package in a commercial or profit-generating project, please consider supporting me by clicking on the following link, [https://github.com/sponsors/shinokada](https://github.com/sponsors/shinokada). Your support will help me maintain and improve the quality of this package for the benefit of the entire community.
+
+
 <p align="center">
 <img src="/static/images/remix-650-1050-optimized.png" width="650" />
 </p>
@@ -58,7 +61,8 @@ In a svelte file:
 
 ## Faster compiling
 
-For faster compilation, you can import the icon directly.
+If you only need to use a single icon from this library in your Svelte app, importing it directly. This can help optimize compilation speed. 
+By importing only what you need, you can reduce the amount of code that needs to be processed, which can improve overall performance.
 
 ```html
 <script>
@@ -68,7 +72,7 @@ For faster compilation, you can import the icon directly.
 <BankFillBUILDINGS />
 ```
 
-If you are TypeScript user, **this require `"typescript": "^5.0.0"`.**
+If you are TypeScript user, **this requires `"typescript": "^5.0.0"`.**
 
 As of March 2023, the `typescript@beta` version is now available:
 

@@ -1,6 +1,23 @@
-<script>export let size="24"; export let color="currentColor";export let ariaLabel="contrast drop 2 line" </script><svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill={color} class={$$props.class} {...$$restProps} aria-label={ariaLabel} viewBox="0 0 24 24">
-    <g>
-        <path fill="none" d="M0 0h24v24H0z"/>
-        <path d="M12 3.1L7.05 8.05a7 7 0 1 0 9.9 0L12 3.1zm0-2.828l6.364 6.364a9 9 0 1 1-12.728 0L12 .272zM7 13h10a5 5 0 0 1-10 0z"/>
-    </g>
+<script>
+  export let size = '24';
+  export let color = 'currentColor';
+  export let ariaLabel = 'contrast drop 2 line';
+</script>
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width={size}
+  height={size}
+  fill={color}
+  class={$$props.class}
+  {...$$restProps}
+  aria-label={ariaLabel}
+  viewBox="0 0 24 24"
+>
+  <g>
+    <path fill="none" d="M0 0h24v24H0z" />
+    <path
+      d="M12 3.1L7.05 8.05a7 7 0 1 0 9.9 0L12 3.1zm0-2.828l6.364 6.364a9 9 0 1 1-12.728 0L12 .272zM7 13h10a5 5 0 0 1-10 0z"
+    />
+  </g>
 </svg>

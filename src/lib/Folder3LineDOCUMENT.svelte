@@ -1,6 +1,23 @@
-<script>export let size="24"; export let color="currentColor";export let ariaLabel="folder 3 line" </script><svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill={color} class={$$props.class} {...$$restProps} aria-label={ariaLabel} viewBox="0 0 24 24">
-    <g>
-        <path fill="none" d="M0 0h24v24H0z"/>
-        <path d="M12.414 5H21a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h7.414l2 2zM4 7v12h16V7H4z"/>
-    </g>
+<script>
+  export let size = '24';
+  export let color = 'currentColor';
+  export let ariaLabel = 'folder 3 line';
+</script>
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width={size}
+  height={size}
+  fill={color}
+  class={$$props.class}
+  {...$$restProps}
+  aria-label={ariaLabel}
+  viewBox="0 0 24 24"
+>
+  <g>
+    <path fill="none" d="M0 0h24v24H0z" />
+    <path
+      d="M12.414 5H21a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h7.414l2 2zM4 7v12h16V7H4z"
+    />
+  </g>
 </svg>
