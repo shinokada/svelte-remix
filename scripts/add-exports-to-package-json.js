@@ -1,51 +1,52 @@
-import fs from 'fs/promises';
-import path from 'path';
+/*
+This script reads the files in the dist directory and creates a new exports object in the package.json file with the appropriate svelte and types paths for each Svelte component file found in the dist directory, except for index.js and index.d.ts.
 
-const distDir = './dist';
-
-// Recursively find all the svelte files in the dist directory
-const svelteFiles = [];
-
-async function findSvelteFiles(dirPath) {
-  const dirEntries = await fs.readdir(dirPath, { withFileTypes: true });
-  for (const dirEntry of dirEntries) {
-    if (dirEntry.isDirectory()) {
-      await findSvelteFiles(path.join(dirPath, dirEntry.name));
-    } else if (dirEntry.isFile() && dirEntry.name.endsWith('.svelte')) {
-      svelteFiles.push(path.join(dirPath, dirEntry.name));
-    }
-  }
+The resulting exports object is structured as follows:
+"exports": {
+  ".": {
+    "types": "./dist/index.d.ts",
+    "svelte": "./dist/index.js"
+  },
+  "./<component-name>.svelte": {
+    "types": "./dist/<component-name>.svelte.d.ts",
+    "svelte": "./dist/<component-name>.svelte"
+  },
+  ...
 }
 
-await findSvelteFiles(distDir);
+where <component-name> represents the name of each Svelte component file found in the dist directory.
+*/
 
-// Create the exports object
+// Import the 'fs' module to access the file system
+import fs from 'fs';
+
+// Read the list of files in the "./dist" directory and filter out non-.svelte files.
+const files = fs.readdirSync('./dist').filter((file) => file.endsWith('.svelte'));
+
+// Create the initial "exports" object with an entry for "./dist/index.*".
 const exports = {
   '.': {
     types: './dist/index.d.ts',
-    svelte: './dist/index.js'
-  }
+    svelte: './dist/index.js',
+  },
 };
 
-for (const svelteFile of svelteFiles) {
-  const dirName = path.dirname(svelteFile.substring(distDir.length + 1));
-  const filePath = path.join(distDir, dirName, path.basename(svelteFile));
-  const subDirs = dirName.split('/').filter(subDir => subDir !== 'Buildings');
-  const subPath = `.${subDirs.map(dir => `/Buildings/${dir}`).join('')}/${path.basename(svelteFile)}`;
+// Iterate over each ".svelte" file in the "./dist" directory.
+// For each file, add an entry to the "exports" object with the svelte and types paths updated.
+files.forEach((file) => {
+  if (file !== 'index.svelte') {
+    const name = file.replace('.svelte', '');
+    exports[`./${name}.svelte`] = {
+      types: `./dist/${name}.svelte.d.ts`,
+      svelte: `./dist/${name}.svelte`,
+    };
+  } else {
+    exports[`./${file}`] = `./dist/${file}`;
+  }
+});
 
-  exports[subPath] = {
-    types: path.join(distDir, dirName, `${path.parse(svelteFile).name}.d.ts`),
-    svelte: filePath
-  };
-}
-
-// Read the package.json file
-const packageJsonPath = './package.json';
-const packageJsonString = await fs.readFile(packageJsonPath, 'utf8');
-const packageJson = JSON.parse(packageJsonString);
-
-// Add the exports object to the package.json file
+// Read the package.json file, update the "exports" field, and write the file back out.
+const packageJson = JSON.parse(fs.readFileSync('./package.json', 'utf-8'));
 packageJson.exports = exports;
 
-// Write the updated package.json file
-await fs.writeFile(packageJsonPath, JSON.stringify(packageJson, null, 2));
+fs.writeFileSync('./package.json', JSON.stringify(packageJson, null, 2));

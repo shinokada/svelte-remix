@@ -4,10 +4,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.3.2](https://github.com/shinokada/svelte-remix-icons/compare/v0.3.1...v0.3.2) (2023-03-07)
 
-
 ### Bug Fixes
 
-* no fast compilation ([070cc55](https://github.com/shinokada/svelte-remix-icons/commit/070cc556384d9a91ad15bc1bea37ad3c6756a17d))
+- no fast compilation ([070cc55](https://github.com/shinokada/svelte-remix-icons/commit/070cc556384d9a91ad15bc1bea37ad3c6756a17d))
 
 ### [0.3.1](https://github.com/shinokada/svelte-remix-icons/compare/v0.2.1...v0.3.1) (2023-03-07)
 
