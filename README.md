@@ -56,7 +56,6 @@ In a svelte file:
 <InboxUnarchiveLineBUSINESS />
 ```
 
-
 ## Faster compiling
 
 For faster compilation, you can import the icon directly.
