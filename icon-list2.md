@@ -1,5 +1,3 @@
-# Icon List
-
 - A24HoursFillFinance.svelte
 - A24HoursLineFinance.svelte
 - A4KFillMedia.svelte
@@ -2469,7 +2467,3 @@
 - ZoomOutLineSystem.svelte
 - ZzzFillHealthMedical.svelte
 - ZzzLineHealthMedical.svelte
-
-## Back to Home
-
-[Back to Home](/)
