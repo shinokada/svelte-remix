@@ -1,1 +1,46 @@
-<script>export let size="24"; export let color="currentColor";export let ariaLabel="mic 2 fill" </script><svg width={size} height={size} fill={color} class={$$props.class} {...$$restProps} aria-label={ariaLabel} on:click on:mouseenter on:mouseleave on:mouseover on:mouseout on:blur on:focus viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.9991 1C14.7605 1 16.9991 3.23858 16.9991 6V12C16.9991 14.7614 14.7605 17 11.9991 17C9.23767 17 6.9991 14.7614 6.9991 12V6C6.9991 3.23858 9.23767 1 11.9991 1ZM2.19141 13.9615L4.15294 13.5692C4.88224 17.2361 8.1179 20 11.9991 20C15.8803 20 19.1159 17.2361 19.8452 13.5692L21.8068 13.9615C20.8952 18.5452 16.8506 22 11.9991 22C7.1476 22 3.10303 18.5452 2.19141 13.9615Z"/></svg>
+<script>
+  export let size = '24';
+  export let color = 'currentColor';
+  export let ariaLabel = 'mic 2 fill';
+</script>
+
+<svg
+  width={size}
+  height={size}
+  fill={color}
+  class={$$props.class}
+  {...$$restProps}
+  aria-label={ariaLabel}
+  on:click
+  on:keydown
+  on:keyup
+  on:focus
+  on:blur
+  on:mouseenter
+  on:mouseleave
+  on:mouseover
+  on:mouseout
+  viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg"
+  ><path
+    d="M11.9991 1C14.7605 1 16.9991 3.23858 16.9991 6V12C16.9991 14.7614 14.7605 17 11.9991 17C9.23767 17 6.9991 14.7614 6.9991 12V6C6.9991 3.23858 9.23767 1 11.9991 1ZM2.19141 13.9615L4.15294 13.5692C4.88224 17.2361 8.1179 20 11.9991 20C15.8803 20 19.1159 17.2361 19.8452 13.5692L21.8068 13.9615C20.8952 18.5452 16.8506 22 11.9991 22C7.1476 22 3.10303 18.5452 2.19141 13.9615Z"
+  /></svg
+>
+<!--
+@component
+[Go to Document](https://svelte-remix.codewithshin.com/)
+## Props
+@prop size = '24';
+@prop color = 'currentColor';
+@prop ariaLabel = 'icon file name';
+## Event
+- on:click
+- on:keydown
+- on:keyup
+- on:focus
+- on:blur
+- on:mouseenter
+- on:mouseleave
+- on:mouseover
+- on:mouseout
+-->

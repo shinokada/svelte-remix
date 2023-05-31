@@ -1,1 +1,46 @@
-<script>export let size="24"; export let color="currentColor";export let ariaLabel="signal wifi off fill" </script><svg width={size} height={size} fill={color} class={$$props.class} {...$$restProps} aria-label={ariaLabel} on:click on:mouseenter on:mouseleave on:mouseover on:mouseout on:blur on:focus viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2.80864 1.39355L20.4863 19.0712L19.0721 20.4854L15.3894 16.8026L12.001 21.0002L0.69043 6.99686C1.60456 6.25759 2.59253 5.60601 3.64156 5.05491L1.39443 2.80777L2.80864 1.39355ZM12.001 3.00016C16.2854 3.00016 20.2201 4.49699 23.3108 6.99623L17.9044 13.6892L7.72553 3.511C9.09596 3.17714 10.5278 3.00016 12.001 3.00016Z"/></svg>
+<script>
+  export let size = '24';
+  export let color = 'currentColor';
+  export let ariaLabel = 'signal wifi off fill';
+</script>
+
+<svg
+  width={size}
+  height={size}
+  fill={color}
+  class={$$props.class}
+  {...$$restProps}
+  aria-label={ariaLabel}
+  on:click
+  on:keydown
+  on:keyup
+  on:focus
+  on:blur
+  on:mouseenter
+  on:mouseleave
+  on:mouseover
+  on:mouseout
+  viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg"
+  ><path
+    d="M2.80864 1.39355L20.4863 19.0712L19.0721 20.4854L15.3894 16.8026L12.001 21.0002L0.69043 6.99686C1.60456 6.25759 2.59253 5.60601 3.64156 5.05491L1.39443 2.80777L2.80864 1.39355ZM12.001 3.00016C16.2854 3.00016 20.2201 4.49699 23.3108 6.99623L17.9044 13.6892L7.72553 3.511C9.09596 3.17714 10.5278 3.00016 12.001 3.00016Z"
+  /></svg
+>
+<!--
+@component
+[Go to Document](https://svelte-remix.codewithshin.com/)
+## Props
+@prop size = '24';
+@prop color = 'currentColor';
+@prop ariaLabel = 'icon file name';
+## Event
+- on:click
+- on:keydown
+- on:keyup
+- on:focus
+- on:blur
+- on:mouseenter
+- on:mouseleave
+- on:mouseover
+- on:mouseout
+-->

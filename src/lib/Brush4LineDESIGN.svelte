@@ -1,1 +1,46 @@
-<script>export let size="24"; export let color="currentColor";export let ariaLabel="brush 4 line" </script><svg width={size} height={size} fill={color} class={$$props.class} {...$$restProps} aria-label={ariaLabel} on:click on:mouseenter on:mouseleave on:mouseover on:mouseout on:blur on:focus viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 4.99658V11.2693H7V4.99658H5V13.9966H19V4.99658H9ZM20 15.9966H4V17.9966H20V15.9966ZM3 13.9966V3.99658C3 3.4443 3.44772 2.99658 4 2.99658H20C20.5523 2.99658 21 3.4443 21 3.99658V13.9966H22V18.9966C22 19.5489 21.5523 19.9966 21 19.9966H13V22.9966H11V19.9966H3C2.44772 19.9966 2 19.5489 2 18.9966V13.9966H3Z"/></svg>
+<script>
+  export let size = '24';
+  export let color = 'currentColor';
+  export let ariaLabel = 'brush 4 line';
+</script>
+
+<svg
+  width={size}
+  height={size}
+  fill={color}
+  class={$$props.class}
+  {...$$restProps}
+  aria-label={ariaLabel}
+  on:click
+  on:keydown
+  on:keyup
+  on:focus
+  on:blur
+  on:mouseenter
+  on:mouseleave
+  on:mouseover
+  on:mouseout
+  viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg"
+  ><path
+    d="M9 4.99658V11.2693H7V4.99658H5V13.9966H19V4.99658H9ZM20 15.9966H4V17.9966H20V15.9966ZM3 13.9966V3.99658C3 3.4443 3.44772 2.99658 4 2.99658H20C20.5523 2.99658 21 3.4443 21 3.99658V13.9966H22V18.9966C22 19.5489 21.5523 19.9966 21 19.9966H13V22.9966H11V19.9966H3C2.44772 19.9966 2 19.5489 2 18.9966V13.9966H3Z"
+  /></svg
+>
+<!--
+@component
+[Go to Document](https://svelte-remix.codewithshin.com/)
+## Props
+@prop size = '24';
+@prop color = 'currentColor';
+@prop ariaLabel = 'icon file name';
+## Event
+- on:click
+- on:keydown
+- on:keyup
+- on:focus
+- on:blur
+- on:mouseenter
+- on:mouseleave
+- on:mouseover
+- on:mouseout
+-->

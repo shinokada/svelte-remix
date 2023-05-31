@@ -4,17 +4,15 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.4.1](https://github.com/shinokada/svelte-remix-icons/compare/v0.3.3...v0.4.1) (2023-05-12)
 
-
 ### Features
 
-* add events ([9883c3b](https://github.com/shinokada/svelte-remix-icons/commit/9883c3b9548af7a11d3cca889d566747979980e1))
-* add script add-exports and update README ([bc31ed0](https://github.com/shinokada/svelte-remix-icons/commit/bc31ed03cd5deb65d9bf9fda19ce9628ceca12bf))
-
+- add events ([9883c3b](https://github.com/shinokada/svelte-remix-icons/commit/9883c3b9548af7a11d3cca889d566747979980e1))
+- add script add-exports and update README ([bc31ed0](https://github.com/shinokada/svelte-remix-icons/commit/bc31ed03cd5deb65d9bf9fda19ce9628ceca12bf))
 
 ### Bug Fixes
 
-* remove husky and update README ([8793877](https://github.com/shinokada/svelte-remix-icons/commit/87938771a205380e3a7e23bc95e9a0081b06526e))
-* update package.json ([9cf5b25](https://github.com/shinokada/svelte-remix-icons/commit/9cf5b252e351d0fc1094529bddab6867c1224089))
+- remove husky and update README ([8793877](https://github.com/shinokada/svelte-remix-icons/commit/87938771a205380e3a7e23bc95e9a0081b06526e))
+- update package.json ([9cf5b25](https://github.com/shinokada/svelte-remix-icons/commit/9cf5b252e351d0fc1094529bddab6867c1224089))
 
 ### [0.3.3](https://github.com/shinokada/svelte-remix-icons/compare/v0.3.2...v0.3.3) (2023-03-07)
 

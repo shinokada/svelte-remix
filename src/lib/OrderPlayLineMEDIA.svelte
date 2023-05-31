@@ -1,1 +1,46 @@
-<script>export let size="24"; export let color="currentColor";export let ariaLabel="order play line" </script><svg width={size} height={size} fill={color} class={$$props.class} {...$$restProps} aria-label={ariaLabel} on:click on:mouseenter on:mouseleave on:mouseover on:mouseout on:blur on:focus viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 3.99986V2.06738C17 1.79124 17.2239 1.56738 17.5 1.56738C17.617 1.56738 17.7302 1.60839 17.8201 1.68327L21.9391 5.11575C22.1512 5.29253 22.1799 5.60782 22.0031 5.81995C21.9081 5.93395 21.7674 5.99986 21.619 5.99986H2V3.99986H17ZM2 17.9999H22V19.9999H2V17.9999ZM2 10.9999H22V12.9999H2V10.9999Z"/></svg>
+<script>
+  export let size = '24';
+  export let color = 'currentColor';
+  export let ariaLabel = 'order play line';
+</script>
+
+<svg
+  width={size}
+  height={size}
+  fill={color}
+  class={$$props.class}
+  {...$$restProps}
+  aria-label={ariaLabel}
+  on:click
+  on:keydown
+  on:keyup
+  on:focus
+  on:blur
+  on:mouseenter
+  on:mouseleave
+  on:mouseover
+  on:mouseout
+  viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg"
+  ><path
+    d="M17 3.99986V2.06738C17 1.79124 17.2239 1.56738 17.5 1.56738C17.617 1.56738 17.7302 1.60839 17.8201 1.68327L21.9391 5.11575C22.1512 5.29253 22.1799 5.60782 22.0031 5.81995C21.9081 5.93395 21.7674 5.99986 21.619 5.99986H2V3.99986H17ZM2 17.9999H22V19.9999H2V17.9999ZM2 10.9999H22V12.9999H2V10.9999Z"
+  /></svg
+>
+<!--
+@component
+[Go to Document](https://svelte-remix.codewithshin.com/)
+## Props
+@prop size = '24';
+@prop color = 'currentColor';
+@prop ariaLabel = 'icon file name';
+## Event
+- on:click
+- on:keydown
+- on:keyup
+- on:focus
+- on:blur
+- on:mouseenter
+- on:mouseleave
+- on:mouseover
+- on:mouseout
+-->
