@@ -307,6 +307,14 @@
       "types": "./dist/AppsLineSystem.svelte.d.ts",
       "svelte": "./dist/AppsLineSystem.svelte"
     },
+    "./Archive2FillBusiness.svelte": {
+      "types": "./dist/Archive2FillBusiness.svelte.d.ts",
+      "svelte": "./dist/Archive2FillBusiness.svelte"
+    },
+    "./Archive2LineBusiness.svelte": {
+      "types": "./dist/Archive2LineBusiness.svelte.d.ts",
+      "svelte": "./dist/Archive2LineBusiness.svelte"
+    },
     "./ArchiveDrawerFillBusiness.svelte": {
       "types": "./dist/ArchiveDrawerFillBusiness.svelte.d.ts",
       "svelte": "./dist/ArchiveDrawerFillBusiness.svelte"
@@ -4851,6 +4859,14 @@
       "types": "./dist/ImageLineMedia.svelte.d.ts",
       "svelte": "./dist/ImageLineMedia.svelte"
     },
+    "./Inbox2FillBusiness.svelte": {
+      "types": "./dist/Inbox2FillBusiness.svelte.d.ts",
+      "svelte": "./dist/Inbox2FillBusiness.svelte"
+    },
+    "./Inbox2LineBusiness.svelte": {
+      "types": "./dist/Inbox2LineBusiness.svelte.d.ts",
+      "svelte": "./dist/Inbox2LineBusiness.svelte"
+    },
     "./InboxArchiveFillBusiness.svelte": {
       "types": "./dist/InboxArchiveFillBusiness.svelte.d.ts",
       "svelte": "./dist/InboxArchiveFillBusiness.svelte"
@@ -7783,6 +7799,14 @@
       "types": "./dist/SettingsLineSystem.svelte.d.ts",
       "svelte": "./dist/SettingsLineSystem.svelte"
     },
+    "./ShakeHandsFillBusiness.svelte": {
+      "types": "./dist/ShakeHandsFillBusiness.svelte.d.ts",
+      "svelte": "./dist/ShakeHandsFillBusiness.svelte"
+    },
+    "./ShakeHandsLineBusiness.svelte": {
+      "types": "./dist/ShakeHandsLineBusiness.svelte.d.ts",
+      "svelte": "./dist/ShakeHandsLineBusiness.svelte"
+    },
     "./Shape2FillDesign.svelte": {
       "types": "./dist/Shape2FillDesign.svelte.d.ts",
       "svelte": "./dist/Shape2FillDesign.svelte"
@@ -8714,6 +8738,14 @@
     "./SunLineWeather.svelte": {
       "types": "./dist/SunLineWeather.svelte.d.ts",
       "svelte": "./dist/SunLineWeather.svelte"
+    },
+    "./SupabaseFillLogos.svelte": {
+      "types": "./dist/SupabaseFillLogos.svelte.d.ts",
+      "svelte": "./dist/SupabaseFillLogos.svelte"
+    },
+    "./SupabaseLineLogos.svelte": {
+      "types": "./dist/SupabaseLineLogos.svelte.d.ts",
+      "svelte": "./dist/SupabaseLineLogos.svelte"
     },
     "./Superscript2Editor.svelte": {
       "types": "./dist/Superscript2Editor.svelte.d.ts",
@@ -9703,6 +9735,14 @@
       "types": "./dist/WaterFlashLineFinance.svelte.d.ts",
       "svelte": "./dist/WaterFlashLineFinance.svelte"
     },
+    "./WaterPercentFillWeather.svelte": {
+      "types": "./dist/WaterPercentFillWeather.svelte.d.ts",
+      "svelte": "./dist/WaterPercentFillWeather.svelte"
+    },
+    "./WaterPercentLineWeather.svelte": {
+      "types": "./dist/WaterPercentLineWeather.svelte.d.ts",
+      "svelte": "./dist/WaterPercentLineWeather.svelte"
+    },
     "./WebcamFillMedia.svelte": {
       "types": "./dist/WebcamFillMedia.svelte.d.ts",
       "svelte": "./dist/WebcamFillMedia.svelte"
@@ -9867,6 +9907,14 @@
       "types": "./dist/YoutubeLineLogos.svelte.d.ts",
       "svelte": "./dist/YoutubeLineLogos.svelte"
     },
+    "./YuqueFillLogos.svelte": {
+      "types": "./dist/YuqueFillLogos.svelte.d.ts",
+      "svelte": "./dist/YuqueFillLogos.svelte"
+    },
+    "./YuqueLineLogos.svelte": {
+      "types": "./dist/YuqueLineLogos.svelte.d.ts",
+      "svelte": "./dist/YuqueLineLogos.svelte"
+    },
     "./ZcoolFillLogos.svelte": {
       "types": "./dist/ZcoolFillLogos.svelte.d.ts",
       "svelte": "./dist/ZcoolFillLogos.svelte"
@@ -9912,7 +9960,7 @@
     "dist"
   ],
   "peerDependencies": {
-    "svelte": "^3.54.0"
+    "svelte": "^3.54.0 || ^4.0.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.33.0",
