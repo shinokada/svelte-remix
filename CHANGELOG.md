@@ -4,17 +4,15 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.4.3](https://github.com/shinokada/svelte-remix-icons/compare/v0.4.2...v0.4.3) (2023-06-01)
 
-
 ### Features
 
-* add || ^4.0.0 to peerDependencies ([ea1b285](https://github.com/shinokada/svelte-remix-icons/commit/ea1b285ad5fda8b45c4d5428982be9a550723130))
+- add || ^4.0.0 to peerDependencies ([ea1b285](https://github.com/shinokada/svelte-remix-icons/commit/ea1b285ad5fda8b45c4d5428982be9a550723130))
 
 ### [0.4.2](https://github.com/shinokada/svelte-remix-icons/compare/v0.4.1...v0.4.2) (2023-05-31)
 
-
 ### Features
 
-* add component docs ([fbb9bb0](https://github.com/shinokada/svelte-remix-icons/commit/fbb9bb0769845db9f6b8daaae3b338e10a2071d5))
+- add component docs ([fbb9bb0](https://github.com/shinokada/svelte-remix-icons/commit/fbb9bb0769845db9f6b8daaae3b338e10a2071d5))
 
 ### [0.4.1](https://github.com/shinokada/svelte-remix-icons/compare/v0.3.3...v0.4.1) (2023-05-12)
 
