@@ -4,10 +4,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.4.4](https://github.com/shinokada/svelte-remix-icons/compare/v0.4.3...v0.4.4) (2023-06-01)
 
-
 ### Features
 
-* add prop role="img" ([06e0d7a](https://github.com/shinokada/svelte-remix-icons/commit/06e0d7ae84d6e418f9c5dc7eb139d9255802a662))
+- add prop role="img" ([06e0d7a](https://github.com/shinokada/svelte-remix-icons/commit/06e0d7ae84d6e418f9c5dc7eb139d9255802a662))
 
 ### [0.4.3](https://github.com/shinokada/svelte-remix-icons/compare/v0.4.2...v0.4.3) (2023-06-01)
 

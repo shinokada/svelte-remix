@@ -16,7 +16,6 @@
 
 2270+ SVG [RemixIcon](https://github.com/Remix-Design/RemixIcon) components for Svelte. Svelte-Remix support major CSS frameworks using the `class` props.
 
-
 Thank you for considering my open-source package. If you use it in a commercial project, please support me by sponsoring me on GitHub: https://github.com/sponsors/shinokada. Your support helps me maintain and improve this package for the benefit of the community.
 
 <p align="center">
@@ -102,7 +101,6 @@ To avoid any complaints from the editor, add `node16` or `nodenext` to `moduleRe
 
 If you are using an LSP-compatible editor, such as VSCode, Atom, Sublime Text, or Neovim, hovering over a component name will display a documentation link, features, props, events, and an example.
 
-
 ## Size
 
 Use the `size` prop to change the size of icons.
@@ -170,7 +168,6 @@ If you want to make an icon unfocusable, add `tabindex="-1"`.
 
 All icons have the following events:
 
-
 - on:click
 - on:keydown
 - on:keyup
@@ -180,7 +177,6 @@ All icons have the following events:
 - on:mouseleave
 - on:mouseover
 - on:mouseout
-
 
 ## Passing down other attributes
 
