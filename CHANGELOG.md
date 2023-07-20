@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.6](https://github.com/shinokada/svelte-remix-icons/compare/v0.4.5...v0.4.6) (2023-07-20)
+
+
+### Features
+
+* layout update ([396fb7a](https://github.com/shinokada/svelte-remix-icons/commit/396fb7a18f3778c293667ee4543cae6cf53d0b00))
+
+
+### Bug Fixes
+
+* A24HoursFillFinance ([26095d2](https://github.com/shinokada/svelte-remix-icons/commit/26095d2fc47fe40abc2541ff3d9a1bc8fb57db6d))
+* A24HoursFillFinance ([a917b37](https://github.com/shinokada/svelte-remix-icons/commit/a917b378ca2530af2139c2b70a5a136715aae1c7))
+* homepage update ([ab13f12](https://github.com/shinokada/svelte-remix-icons/commit/ab13f124366ee29c5ab567a732c2c8d5e6895b8f))
+* update flowbite-svelte v0.40.1, add @floating-ui/dom remove flowbite and popper, add tests ([eea8db5](https://github.com/shinokada/svelte-remix-icons/commit/eea8db5f11164af5f4c3bf8dc1a40b47ebadbabb))
+
 ### [0.4.5](https://github.com/shinokada/svelte-remix-icons/compare/v0.4.4...v0.4.5) (2023-06-15)
 
 ### [0.4.4](https://github.com/shinokada/svelte-remix-icons/compare/v0.4.3...v0.4.4) (2023-06-01)
