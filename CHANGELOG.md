@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.1](https://github.com/shinokada/svelte-remix-icons/compare/v0.4.7...v0.5.1) (2023-08-03)
+
+
+### Features
+
+* use two files ([f3c4a7c](https://github.com/shinokada/svelte-remix-icons/commit/f3c4a7c77b20e6c751ae1c1e025f0bf507451fa1))
+
 ### [0.4.7](https://github.com/shinokada/svelte-remix-icons/compare/v0.4.6...v0.4.7) (2023-07-20)
 
 
