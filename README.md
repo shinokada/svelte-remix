@@ -1,44 +1,36 @@
-<h1 align="center">Svelte Remix</h1>
+# Svelte Remix
 
-<p align="center">
-<a href="https://svelte-remix.codewithshin.com/">Svelte-Remix</a>
-</p>
+<div class="flex gap-2 my-8">
+<a href="https://github.com/sponsors/shinokada" target="_blank"><img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86" alt="sponsor" height="25" style="height: 25px !important;"></a>
+<a href="https://www.npmjs.com/package/svelte-remix" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/v/svelte-remix" alt="npm" height="25" style="height: 25px !important;"></a>
+<a href="https://twitter.com/shinokada" rel="nofollow" target="_blank"><img src="https://img.shields.io/badge/created%20by-@shinokada-4BBAAB.svg" alt="Created by Shin Okada" height="25" style="height: 25px !important;"></a>
+<a href="https://opensource.org/licenses/MIT" rel="nofollow" target="_blank"><img src="https://img.shields.io/github/license/shinokada/svelte-remix" alt="License" height="25" style="height: 25px !important;"></a>
+<a href="https://www.npmjs.com/package/svelte-remix" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/svelte-remix.svg" alt="npm" height="25" style="height: 25px !important;"></a>
+</div>
 
-<p align="center">
-<a href="https://github.com/sponsors/shinokada" target="_blank"><img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86" height="25"></a>
-<a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps" target="_blank"><img src="https://img.shields.io/badge/PWA-enabled-brightgreen" alt="PWA Shield" height="25">
-</a>
-<a href="https://www.npmjs.com/package/svelte-remix" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/v/svelte-remix" alt="npm" height="25"></a>
-<a href="https://twitter.com/shinokada" rel="nofollow" target="_blank"><img src="https://img.shields.io/badge/created%20by-@shinokada-4BBAAB.svg" alt="Created by Shin Okada" height="25"></a>
-<a href="https://opensource.org/licenses/MIT" rel="nofollow" target="_blank"><img src="https://img.shields.io/github/license/shinokada/svelte-remix" alt="License" height="25"></a>
-<a href="https://www.npmjs.com/package/svelte-remix" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/svelte-remix.svg" alt="npm" height="25"></a>
-</p>
+2270+ SVG [RemixIcon](https://github.com/Remix-Design/RemixIcon) components for Svelte. 
 
-2270+ SVG [RemixIcon](https://github.com/Remix-Design/RemixIcon) components for Svelte. Svelte-Remix support major CSS frameworks using the `class` props.
+Thank you for considering my open-source package. If you use it in a commercial project, please support me by sponsoring me on [the GitHub suport](https://github.com/sponsors/shinokada). Your support helps me maintain and improve this package for the benefit of the community.
 
-Thank you for considering my open-source package. If you use it in a commercial project, please support me by sponsoring me on GitHub: https://github.com/sponsors/shinokada. Your support helps me maintain and improve this package for the benefit of the community.
+## Repo
 
-<p align="center">
-<img src="/static/images/remix-650-1050-optimized.png" width="650" />
-</p>
+[GitHub Repo](https://github.com/shinokada/svelte-remix)
+
+## Original source
+
+[Remix-Design/RemixIcon](https://github.com/Remix-Design/RemixIcon)
+
+## License
+
+[Svelte-Remix License](https://github.com/shinokada/svelte-remix/blob/main/LICENSE)
+
+[Remix-Design/RemixIcon LICENSE](https://github.com/Remix-Design/RemixIcon/blob/master/License)
 
 ## Installation
 
 ```sh
-npm i -D svelte-remix
+pnpm i -D svelte-remix
 ```
-
-## Icon images
-
-[Icon images](/icon-images.md)
-
-## Icon name list
-
-[Icon list](/icon-list.md)
-
-## REPL
-
-[Demo](https://svelte.dev/repl/60e7000b54004872aa4006535fcef7fd)
 
 ## Usages
 
@@ -46,56 +38,20 @@ In a svelte file:
 
 ```html
 <script>
-  import {
-    BankFillBUILDINGS,
-    MailDownloadFillBUSINESS,
-    InboxUnarchiveLineBUSINESS
-  } from 'svelte-remix';
+  import { Icon } from 'svelte-remix';
 </script>
 
-<BankFillBUILDINGS />
-<MailDownloadFillBUSINESS />
-<InboxUnarchiveLineBUSINESS />
-```
-
-## Faster compiling
-
-If you need only a few icons from this library in your Svelte app, import them directly. This can optimize compilation speed and improve performance by reducing the amount of code processed during compilation.
-
-```html
-<script>
-  import BankFillBUILDINGS from 'svelte-remix/BankFillBUILDINGS.svelte';
-</script>
-
-<BankFillBUILDINGS />
-```
-
-If you are a TypeScript user, install **typescript version 5.0.0 or above**.
-
-As of March 2023, the `typescript@beta` version is now available:
-
-```sh
-pnpm i -D typescript@beta
-```
-
-To avoid any complaints from the editor, add `node16` or `nodenext` to `moduleResolution` in your tsconfig.json file.
-
-```json
-{
-  //...
-  "compilerOptions": {
-    // ...
-    "moduleResolution": "nodenext"
-  }
-}
+<Icon name="arrow-left-line" />
 ```
 
 ## Props
 
-- size = '16';
-- role = 'img';
-- color = 'currentColor';
-- ariaLabel = 'accessibility 16';
+- @prop name;
+- @prop width = "24";
+- @prop height = "24";
+- @prop role = 'img';
+- @prop color = 'currentColor'
+- @prop ariaLabel='icon name'
 
 ## IDE support
 
@@ -103,12 +59,16 @@ If you are using an LSP-compatible editor, such as VSCode, Atom, Sublime Text, o
 
 ## Size
 
-Use the `size` prop to change the size of icons.
+Use the `width` and `height` props to change the size of icons.
 
 ```html
-<BankFillBUILDINGS size="40" />
-<MailDownloadFillBUSINESS size="40" />
-<InboxUnarchiveLineBUSINESS size="40" />
+<Icon name="arrow-left-line" width="100" height="100" />
+```
+
+If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by including the desired classes in the class prop. For example:
+
+```html
+<Icon name="arrow-left-line" class="shrink-0 h-20 w-20" />
 ```
 
 ## CSS HEX Colors
@@ -116,25 +76,23 @@ Use the `size` prop to change the size of icons.
 Use the `color` prop to change colors with HEX color code.
 
 ```html
-<BankFillBUILDINGS color="#c61515" />
-<MailDownloadFillBUSINESS color="#3759e5" />
-<InboxUnarchiveLineBUSINESS color="#3fe537" />
+<Icon name="arrow-left-line" color="#c61515" />
 ```
 
-## CSS framworks suport
+## CSS frameworks suport
 
-Use the `class` prop to change size, colors and add additional css.
+You can apply CSS framework color and other attributes directly to the icon component or its parent tag using the `class` prop.
 
 Tailwind CSS example:
 
 ```html
-<BankFillBUILDINGS class="h-24 w-24 text-blue-700 mr-4" />
+<Icon name="arrow-left-line" class="text-red-700 inline m-1" />
 ```
 
 Bootstrap examples:
 
 ```html
-<BankFillBUILDINGS class="position-absolute top-0 px-1" />
+<Icon name="arrow-left-line" class="position-absolute top-0 px-1" />
 ```
 
 ## Dark mode
@@ -144,16 +102,16 @@ If you are using the dark mode on your website with Tailwind CSS, add your dark 
 Let's use `dark` for the dark mode class as an example.
 
 ```html
-<BankFillBUILDINGS class="text-blue-700 dark:text-red-500" />
+<Icon name="arrow-left-line"  class="text-blue-700 dark:text-red-500" />
 ```
 
 ## aria-label
 
-All icons have aria-label. For example `BankFillBUILDINGS` has `aria-label="bank fill buildings"`.
+All icons have aria-label. For example `arrow-left-line` has `aria-label="arrow-left-line"`.
 Use `ariaLabel` prop to modify the `aria-label` value.
 
 ```html
-<BankFillBUILDINGS ariaLabel="bank buildings svg icon" />
+<Icon name="arrow-left-line" ariaLabel="red arrow-left-line" color="#c61515"/>
 ```
 
 ## Unfocusable icon
@@ -161,7 +119,7 @@ Use `ariaLabel` prop to modify the `aria-label` value.
 If you want to make an icon unfocusable, add `tabindex="-1"`.
 
 ```html
-<BankFillBUILDINGS tabindex="-1" />
+<Icon name="arrow-left-line"  tabindex="-1" />
 ```
 
 ## Events
@@ -183,65 +141,50 @@ All icons have the following events:
 You can pass other attibutes as well.
 
 ```html
-<BankFillBUILDINGS tabindex="0" />
+<Icon name="arrow-left-line"  tabindex="0" />
 ```
 
 ## Using svelte:component
 
 ```html
-<script>
-  import { BankFillBUILDINGS } from 'svelte-remix';
-</script>
-
-<svelte:component this="{BankFillBUILDINGS}" />
+<svelte:component this="{Icon}" name="arrow-left-line" />
 ```
 
 ## Using onMount
 
 ```html
 <script>
-  import { BankFillBUILDINGS } from 'svelte-remix';
+  import {Icon} from 'svelte-remix';
   import { onMount } from 'svelte';
   const props = {
+    name: 'arrow-left-line',
     size: '50',
     color: '#ff0000'
   };
   onMount(() => {
-    const icon = new BankFillBUILDINGS({ target: document.body, props });
+    const icon = new Icon({ target: document.body, props });
   });
 </script>
 ```
 
+
 ## Import all
 
-Use `import * as Icon from 'svelte-remix`.
+Use `import {Icon, icons} from 'svelte-remix';`.
 
 ```html
 <script>
-  import * as Icon from 'svelte-remix';
+  import {Icon, icons} from 'svelte-remix';
 </script>
 
-<Icon.BankFillBUILDINGS />
-<Icon.MailDownloadFillBUSINESS />
-
-<h1>Size</h1>
-<Icon.BankFillBUILDINGS size="30" />
-<Icon.MailDownloadFillBUSINESS size="40" />
-
-<h1>CSS HEX color</h1>
-<Icon.BankFillBUILDINGS color="#c61515" size="40" />
-
-<h1>Tailwind CSS</h1>
-<Icon.BankFillBUILDINGS class="text-blue-500" />
-<Icon.MailDownloadFillBUSINESS class="text-pink-700" />
+{#each Object.keys(icons) as name}
+<div class="flex gap-4 items-center text-lg">
+  <Icon name={name} class="shrink-0"/>
+  {name}
+</div>
+{/each}
 ```
 
 ## Other icons
 
-- [Svelte-Icon-Sets](https://svelte-svg-icons.vercel.app/)
-
-## Experience lightning-fast browsing and offline access with Our PWA
-
-This website can be downloaded and installed on your device for offline access as a Progressive Web App.
-
-To install a PWA, look for the "Add to Home Screen" option in the browser's menu or settings. On most mobile devices, this option can be found by visiting the website, then selecting the "Options" or "Menu" button in the browser, and looking for the "Add to Home Screen" option. On some desktop browsers, right-click on the page and select "Install".
+[Svelte-Icon-Sets](https://svelte-svg-icons.vercel.app/)

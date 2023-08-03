@@ -38,54 +38,20 @@ In a svelte file:
 
 ```html
 <script>
-  import {
-    BankFillBUILDINGS,
-    MailDownloadFillBUSINESS,
-    InboxUnarchiveLineBUSINESS
-  } from 'svelte-remix';
+  import { Icon } from 'svelte-remix';
 </script>
 
-<BankFillBUILDINGS />
-<MailDownloadFillBUSINESS />
-<InboxUnarchiveLineBUSINESS />
-```
-
-## Faster compiling
-
-If you need only a few icons from this library in your Svelte app, import them directly. This can optimize compilation speed and improve performance by reducing the amount of code processed during compilation.
-
-```html
-<script>
-  import BankFillBUILDINGS from 'svelte-remix/BankFillBUILDINGS.svelte';
-</script>
-
-<BankFillBUILDINGS />
-```
-
-If you are a TypeScript user, install **typescript version 5.0.0 or above**.
-
-```sh
-pnpm i -D typescript@beta
-```
-
-To avoid any complaints from the editor, add `node16` or `nodenext` to `moduleResolution` in your tsconfig.json file.
-
-```json
-{
-  //...
-  "compilerOptions": {
-    // ...
-    "moduleResolution": "nodenext"
-  }
-}
+<Icon name="arrow-left-line" />
 ```
 
 ## Props
 
-- size = '16';
-- role = 'img';
-- color = 'currentColor';
-- ariaLabel = 'accessibility 16';
+- @prop name;
+- @prop width = "24";
+- @prop height = "24";
+- @prop role = 'img';
+- @prop color = 'currentColor'
+- @prop ariaLabel='icon name'
 
 ## IDE support
 
@@ -93,18 +59,16 @@ If you are using an LSP-compatible editor, such as VSCode, Atom, Sublime Text, o
 
 ## Size
 
-Use the `size` prop to change the size of icons.
+Use the `width` and `height` props to change the size of icons.
 
 ```html
-<BankFillBUILDINGS size="40" />
-<MailDownloadFillBUSINESS size="40" />
-<InboxUnarchiveLineBUSINESS size="40" />
+<Icon name="arrow-left-line" width="100" height="100" />
 ```
 
 If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by including the desired classes in the class prop. For example:
 
 ```html
-<BankFillBUILDINGS class="shrink-0 h-20 w-20" />
+<Icon name="arrow-left-line" class="shrink-0 h-20 w-20" />
 ```
 
 ## CSS HEX Colors
@@ -112,25 +76,23 @@ If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by i
 Use the `color` prop to change colors with HEX color code.
 
 ```html
-<BankFillBUILDINGS color="#c61515" />
-<MailDownloadFillBUSINESS color="#3759e5" />
-<InboxUnarchiveLineBUSINESS color="#3fe537" />
+<Icon name="arrow-left-line" color="#c61515" />
 ```
 
-## CSS framworks suport
+## CSS frameworks suport
 
 You can apply CSS framework color and other attributes directly to the icon component or its parent tag using the `class` prop.
 
 Tailwind CSS example:
 
 ```html
-<BankFillBUILDINGS class="h-24 w-24 text-blue-700 mr-4" />
+<Icon name="arrow-left-line" class="text-red-700 inline m-1" />
 ```
 
 Bootstrap examples:
 
 ```html
-<BankFillBUILDINGS class="position-absolute top-0 px-1" />
+<Icon name="arrow-left-line" class="position-absolute top-0 px-1" />
 ```
 
 ## Dark mode
@@ -140,16 +102,16 @@ If you are using the dark mode on your website with Tailwind CSS, add your dark 
 Let's use `dark` for the dark mode class as an example.
 
 ```html
-<BankFillBUILDINGS class="text-blue-700 dark:text-red-500" />
+<Icon name="arrow-left-line"  class="text-blue-700 dark:text-red-500" />
 ```
 
 ## aria-label
 
-All icons have aria-label. For example `BankFillBUILDINGS` has `aria-label="bank fill buildings"`.
+All icons have aria-label. For example `arrow-left-line` has `aria-label="arrow-left-line"`.
 Use `ariaLabel` prop to modify the `aria-label` value.
 
 ```html
-<BankFillBUILDINGS ariaLabel="bank buildings svg icon" />
+<Icon name="arrow-left-line" ariaLabel="red arrow-left-line" color="#c61515"/>
 ```
 
 ## Unfocusable icon
@@ -157,7 +119,7 @@ Use `ariaLabel` prop to modify the `aria-label` value.
 If you want to make an icon unfocusable, add `tabindex="-1"`.
 
 ```html
-<BankFillBUILDINGS tabindex="-1" />
+<Icon name="arrow-left-line"  tabindex="-1" />
 ```
 
 ## Events
@@ -179,57 +141,48 @@ All icons have the following events:
 You can pass other attibutes as well.
 
 ```html
-<BankFillBUILDINGS tabindex="0" />
+<Icon name="arrow-left-line"  tabindex="0" />
 ```
 
 ## Using svelte:component
 
 ```html
-<script>
-  import { BankFillBUILDINGS } from 'svelte-remix';
-</script>
-
-<svelte:component this="{BankFillBUILDINGS}" />
+<svelte:component this="{Icon}" name="arrow-left-line" />
 ```
 
 ## Using onMount
 
 ```html
 <script>
-  import { BankFillBUILDINGS } from 'svelte-remix';
+  import {Icon} from 'svelte-remix';
   import { onMount } from 'svelte';
   const props = {
+    name: 'arrow-left-line',
     size: '50',
     color: '#ff0000'
   };
   onMount(() => {
-    const icon = new BankFillBUILDINGS({ target: document.body, props });
+    const icon = new Icon({ target: document.body, props });
   });
 </script>
 ```
 
+
 ## Import all
 
-Use `import * as Icon from 'svelte-remix`.
+Use `import {Icon, icons} from 'svelte-remix';`.
 
 ```html
 <script>
-  import * as Icon from 'svelte-remix';
+  import {Icon, icons} from 'svelte-remix';
 </script>
 
-<Icon.BankFillBUILDINGS />
-<Icon.MailDownloadFillBUSINESS />
-
-<h1>Size</h1>
-<Icon.BankFillBUILDINGS size="30" />
-<Icon.MailDownloadFillBUSINESS size="40" />
-
-<h1>CSS HEX color</h1>
-<Icon.BankFillBUILDINGS color="#c61515" size="40" />
-
-<h1>Tailwind CSS</h1>
-<Icon.BankFillBUILDINGS class="text-blue-500" />
-<Icon.MailDownloadFillBUSINESS class="text-pink-700" />
+{#each Object.keys(icons) as name}
+<div class="flex gap-4 items-center text-lg">
+  <Icon name={name} class="shrink-0"/>
+  {name}
+</div>
+{/each}
 ```
 
 ## Other icons
