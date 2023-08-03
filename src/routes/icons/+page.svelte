@@ -8,7 +8,7 @@
   import icons from '$lib/icons.js';
   import { random_tailwind_color, random_hex_color_code} from '../utils.js'
 
-  const contentClass = 'rounded-lg dark:bg-slate-950 mt-4';
+  const contentClass = 'rounded-lg dark:bg-slate-900 mt-4';
   let searchTerm = '';
 
   $: filteredIconNames = Object.keys(icons).filter(name => {
