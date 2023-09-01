@@ -6,32 +6,28 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.5.1](https://github.com/shinokada/svelte-remix-icons/compare/v0.4.7...v0.5.1) (2023-08-03)
 
-
 ### Features
 
-* use two files ([f3c4a7c](https://github.com/shinokada/svelte-remix-icons/commit/f3c4a7c77b20e6c751ae1c1e025f0bf507451fa1))
+- use two files ([f3c4a7c](https://github.com/shinokada/svelte-remix-icons/commit/f3c4a7c77b20e6c751ae1c1e025f0bf507451fa1))
 
 ### [0.4.7](https://github.com/shinokada/svelte-remix-icons/compare/v0.4.6...v0.4.7) (2023-07-20)
 
-
 ### Bug Fixes
 
-* homepage update ([5f438bd](https://github.com/shinokada/svelte-remix-icons/commit/5f438bd75ca49632a5c2087186e8160e460cbbe3))
+- homepage update ([5f438bd](https://github.com/shinokada/svelte-remix-icons/commit/5f438bd75ca49632a5c2087186e8160e460cbbe3))
 
 ### [0.4.6](https://github.com/shinokada/svelte-remix-icons/compare/v0.4.5...v0.4.6) (2023-07-20)
 
-
 ### Features
 
-* layout update ([396fb7a](https://github.com/shinokada/svelte-remix-icons/commit/396fb7a18f3778c293667ee4543cae6cf53d0b00))
-
+- layout update ([396fb7a](https://github.com/shinokada/svelte-remix-icons/commit/396fb7a18f3778c293667ee4543cae6cf53d0b00))
 
 ### Bug Fixes
 
-* A24HoursFillFinance ([26095d2](https://github.com/shinokada/svelte-remix-icons/commit/26095d2fc47fe40abc2541ff3d9a1bc8fb57db6d))
-* A24HoursFillFinance ([a917b37](https://github.com/shinokada/svelte-remix-icons/commit/a917b378ca2530af2139c2b70a5a136715aae1c7))
-* homepage update ([ab13f12](https://github.com/shinokada/svelte-remix-icons/commit/ab13f124366ee29c5ab567a732c2c8d5e6895b8f))
-* update flowbite-svelte v0.40.1, add @floating-ui/dom remove flowbite and popper, add tests ([eea8db5](https://github.com/shinokada/svelte-remix-icons/commit/eea8db5f11164af5f4c3bf8dc1a40b47ebadbabb))
+- A24HoursFillFinance ([26095d2](https://github.com/shinokada/svelte-remix-icons/commit/26095d2fc47fe40abc2541ff3d9a1bc8fb57db6d))
+- A24HoursFillFinance ([a917b37](https://github.com/shinokada/svelte-remix-icons/commit/a917b378ca2530af2139c2b70a5a136715aae1c7))
+- homepage update ([ab13f12](https://github.com/shinokada/svelte-remix-icons/commit/ab13f124366ee29c5ab567a732c2c8d5e6895b8f))
+- update flowbite-svelte v0.40.1, add @floating-ui/dom remove flowbite and popper, add tests ([eea8db5](https://github.com/shinokada/svelte-remix-icons/commit/eea8db5f11164af5f4c3bf8dc1a40b47ebadbabb))
 
 ### [0.4.5](https://github.com/shinokada/svelte-remix-icons/compare/v0.4.4...v0.4.5) (2023-06-15)
 
