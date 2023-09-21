@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.2](https://github.com/shinokada/svelte-remix-icons/compare/v0.6.1...v0.6.2) (2023-09-21)
+
+
+### Features
+
+* add context ([db2a375](https://github.com/shinokada/svelte-remix-icons/commit/db2a375f3e88766b8aefcddcd8a482c5475530ab))
+* add sidebar menu ([e622a50](https://github.com/shinokada/svelte-remix-icons/commit/e622a5092fbf55b1563c5c0160c0209b6514ab05))
+
 ### [0.6.1](https://github.com/shinokada/svelte-remix-icons/compare/v0.5.2...v0.6.1) (2023-09-01)
 
 ### Features
