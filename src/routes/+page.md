@@ -68,10 +68,10 @@ If you need only a few icons from this library in your Svelte app, import them d
 
 ## Props
 
-- size = '16';
-- role = 'img';
-- color = 'currentColor';
-- ariaLabel = 'accessibility 16';
+- size = ctx.size || '24';
+- role = ctx.role || 'img';
+- color = ctx.color || 'currentColor';
+- ariaLabel = 'file name';
 
 ## IDE support
 
