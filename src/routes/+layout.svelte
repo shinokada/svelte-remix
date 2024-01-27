@@ -55,9 +55,9 @@
 
 <div class="max-h-screen overflow-auto relative w-full" id="svelte">
   <header
-    class="sticky top-0 z-40 flex-none w-full mx-auto bg-white border-b border-gray-200 dark:border-gray-600 dark:bg-slate-950"
+    class="sticky top-0 z-40 flex-none w-full mx-auto bg-white border-b border-gray-200 dark:border-gray-600 dark:bg-slate-900"
   >
-    <Navbar color="default" fluid let:hidden let:toggle class="dark:bg-slate-950 ">
+    <Navbar color="default" fluid let:hidden let:toggle class="dark:bg-slate-900 ">
       <NavBrand href="/">
         <span
           class="self-center whitespace-nowrap text-2xl font-semibold text-primary-900 dark:text-primary-500"
@@ -91,7 +91,7 @@
     <slot />
   </div>
 
-  <Footer footerType="logo" class="dark:bg-slate-950">
+  <Footer footerType="logo" class="dark:bg-slate-900">
     <div class="sm:flex sm:items-center sm:justify-between">
       <FooterBrand
         href="https://svelte-remix.vercel.app/"

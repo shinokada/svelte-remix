@@ -1,5 +1,3 @@
-
-
 # Svelte Remix
 
 <div class="flex gap-2 my-8">
@@ -90,7 +88,6 @@ If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by i
 ```html
 <BankFillBUILDINGS class="shrink-0 h-20 w-20" />
 ```
-
 
 ## Setting Global Icon using setContext
 
