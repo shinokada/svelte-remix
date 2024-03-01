@@ -20,16 +20,6 @@ Thank you for considering my open-source package. If you use it in a commercial 
 
 [GitHub Repo](https://github.com/shinokada/svelte-remix)
 
-## Original source
-
-[Remix-Design/RemixIcon](https://github.com/Remix-Design/RemixIcon)
-
-## License
-
-[Svelte-Remix License](https://github.com/shinokada/svelte-remix/blob/main/LICENSE)
-
-[Remix-Design/RemixIcon LICENSE](https://github.com/Remix-Design/RemixIcon/blob/master/License)
-
 ## Installation
 
 ```sh
@@ -352,6 +342,16 @@ Use `import * as Icon from 'svelte-remix`.
 <Icon.MailDownloadFillBUSINESS class="text-pink-700" />
 ```
 
+## Original source
+
+[Remix-Design/RemixIcon](https://github.com/Remix-Design/RemixIcon)
+
+## License
+
+[Svelte-Remix License](https://github.com/shinokada/svelte-remix/blob/main/LICENSE)
+
+[Remix-Design/RemixIcon LICENSE](https://github.com/Remix-Design/RemixIcon/blob/master/License)
+
 ## Other icons
 
-[Svelte-Icon-Sets](https://svelte-svg-icons.vercel.app/)
+[Svelte-Icon-Sets](https://svelte-svg-icons.codewithshin.com/)
