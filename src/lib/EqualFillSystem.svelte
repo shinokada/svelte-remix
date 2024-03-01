@@ -29,7 +29,7 @@
 
 <!--
 @component
-[Go to docs](https://svelte-remix.vercel.app/)
+[Go to docs](https://svelte-remix.codewithshin.com/)
 ## Props
 @prop export let size = ctx.size || '24';
 @prop export let role = ctx.role || 'img';

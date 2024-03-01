@@ -10239,6 +10239,7 @@
     "./ZzzLineHealthMedical.svelte": {
       "types": "./dist/ZzzLineHealthMedical.svelte.d.ts",
       "svelte": "./dist/ZzzLineHealthMedical.svelte"
-    }
+    },
+    "./package.json": "./package.json"
   }
 }
