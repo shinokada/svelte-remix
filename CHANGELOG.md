@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.2](https://github.com/shinokada/svelte-remix-icons/compare/v1.0.1...v1.0.2) (2024-03-01)
+
+
+### Bug Fixes
+
+* icon page bg color ([663bff3](https://github.com/shinokada/svelte-remix-icons/commit/663bff3fd0ea08ef7ef3e929430ff955e0611719))
+* layout update add class to NavHamburger ([9264fbf](https://github.com/shinokada/svelte-remix-icons/commit/9264fbf79f2e39fea5441055494916a3d8b65ea5))
+
 ### [1.0.1](https://github.com/shinokada/svelte-remix-icons/compare/v0.6.2...v1.0.1) (2024-01-27)
 
 ### [0.6.2](https://github.com/shinokada/svelte-remix-icons/compare/v0.6.1...v0.6.2) (2023-09-21)
