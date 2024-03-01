@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.3](https://github.com/shinokada/svelte-remix-icons/compare/v1.0.2...v1.0.3) (2024-03-01)
+
+
+### Bug Fixes
+
+* @typescript-eslint/eslint-plugin update ([f5bdec7](https://github.com/shinokada/svelte-remix-icons/commit/f5bdec788b519d1b107d3ca69200e38bfb495000))
+
 ### [1.0.2](https://github.com/shinokada/svelte-remix-icons/compare/v1.0.1...v1.0.2) (2024-03-01)
 
 
