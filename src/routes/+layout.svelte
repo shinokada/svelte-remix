@@ -30,7 +30,7 @@
   description="Remix icon set for Svelte"
   openGraph={{
     type: 'website',
-    url: 'https://svelte-remix.vercel.app/',
+    url: 'https://svelte-remix.codewithshin.com/',
     title: 'Svelte Remix',
     description: 'Remix icon set for Svelte',
     images: [
@@ -79,7 +79,7 @@
         <NavLi class="lg:px-2 lg:mb-0" href="https://github.com/shinokada/svelte-remix"
           >GitHub</NavLi
         >
-        <NavLi href="https://svelte-svg-icons.vercel.app/">Icon sets</NavLi>
+        <NavLi href="https://svelte-svg-icons.codewithshin.com/">Icon sets</NavLi>
       </NavUl>
       <div class="flex items-center ml-auto">
         <DarkMode class="inline-block dark:hover:text-white hover:text-gray-900" />
@@ -94,8 +94,8 @@
   <Footer footerType="logo" class="dark:bg-slate-900">
     <div class="sm:flex sm:items-center sm:justify-between">
       <FooterBrand
-        href="https://svelte-remix.vercel.app/"
-        name="Svelte Remix"
+        href="https://codewithshin.com"
+        name="codewithshin.com"
         classSpan="text-primary-700 dark:text-primary-500"
       />
       <FooterLinkGroup
@@ -106,7 +106,7 @@
         <FooterLink class="lg:px-2 lg:mb-0" href="https://github.com/shinokada/svelte-remix"
           >GitHub</FooterLink
         >
-        <FooterLink href="https://svelte-svg-icons.vercel.app/">Icon sets</FooterLink>
+        <FooterLink href="https://svelte-svg-icons.codewithshin.com/">Icon sets</FooterLink>
       </FooterLinkGroup>
     </div>
   </Footer>
