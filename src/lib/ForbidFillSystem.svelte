@@ -1,4 +1,4 @@
-<script lang='ts'>
+<script lang="ts">
   import { getContext } from 'svelte';
   type TitleType = {
     id?: string;
@@ -20,25 +20,25 @@
   }
   interface CtxType extends BaseProps {}
   const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps{
+  interface Props extends BaseProps {
     title?: TitleType;
     desc?: DescType;
     ariaLabel?: string;
   }
 
-  let { 
-    size = ctx.size || '24', 
-    role = ctx.role || 'img', 
-    color = ctx.color || 'currentColor', 
-    withEvents = ctx.withEvents || false, 
-    title, 
-    desc, 
-    class: classname, 
-    ariaLabel =  "forbid fill System" , 
-    onclick, 
-    onkeydown, 
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    color = ctx.color || 'currentColor',
+    withEvents = ctx.withEvents || false,
+    title,
+    desc,
+    class: classname,
+    ariaLabel = 'forbid fill System',
+    onclick,
+    onkeydown,
     onkeyup,
-    ...restProps 
+    ...restProps
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
@@ -57,17 +57,19 @@
     aria-label={ariaLabel}
     aria-describedby={hasDescription ? ariaDescribedby : undefined}
     viewBox="0 0 24 24"
-    onclick={onclick}
-    onkeydown={onkeydown}
-    onkeyup={onkeyup}
+    {onclick}
+    {onkeydown}
+    {onkeyup}
   >
     {#if title?.id && title.title}
-      <title id="{title.id}">{title.title}</title>
+      <title id={title.id}>{title.title}</title>
     {/if}
     {#if desc?.id && desc.desc}
-      <desc id="{desc.id}">{desc.desc}</desc>
+      <desc id={desc.id}>{desc.desc}</desc>
     {/if}
-      <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM8.52313 7.10891C8.25459 7.30029 7.99828 7.51644 7.75736 7.75736C7.51644 7.99828 7.30029 8.25459 7.10891 8.52313L15.4769 16.8911C15.7454 16.6997 16.0017 16.4836 16.2426 16.2426C16.4836 16.0017 16.6997 15.7454 16.8911 15.4769L8.52313 7.10891Z"/>
+    <path
+      d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM8.52313 7.10891C8.25459 7.30029 7.99828 7.51644 7.75736 7.75736C7.51644 7.99828 7.30029 8.25459 7.10891 8.52313L15.4769 16.8911C15.7454 16.6997 16.0017 16.4836 16.2426 16.2426C16.4836 16.0017 16.6997 15.7454 16.8911 15.4769L8.52313 7.10891Z"
+    />
   </svg>
 {:else}
   <svg
@@ -83,11 +85,20 @@
     viewBox="0 0 24 24"
   >
     {#if title?.id && title.title}
-      <title id="{title.id}">{title.title}</title>
+      <title id={title.id}>{title.title}</title>
     {/if}
     {#if desc?.id && desc.desc}
-      <desc id="{desc.id}">{desc.desc}</desc>
+      <desc id={desc.id}>{desc.desc}</desc>
     {/if}
-      <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM8.52313 7.10891C8.25459 7.30029 7.99828 7.51644 7.75736 7.75736C7.51644 7.99828 7.30029 8.25459 7.10891 8.52313L15.4769 16.8911C15.7454 16.6997 16.0017 16.4836 16.2426 16.2426C16.4836 16.0017 16.6997 15.7454 16.8911 15.4769L8.52313 7.10891Z"/>
+    <path
+      d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM8.52313 7.10891C8.25459 7.30029 7.99828 7.51644 7.75736 7.75736C7.51644 7.99828 7.30029 8.25459 7.10891 8.52313L15.4769 16.8911C15.7454 16.6997 16.0017 16.4836 16.2426 16.2426C16.4836 16.0017 16.6997 15.7454 16.8911 15.4769L8.52313 7.10891Z"
+    />
   </svg>
 {/if}
+
+<!--
+@component
+[Go to docs](https://svelte-remix.codewithshin.com/)
+## Props
+@props: 
+-->

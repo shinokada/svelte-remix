@@ -4,5 +4,5 @@
   "initialVersions": {
     "svelte-remix": "2.0.0-next.0"
   },
-  "changesets": []
+  "changesets": ["gold-rules-love"]
 }

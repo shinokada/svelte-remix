@@ -29,4 +29,3 @@ test('global-icon page has expected h1', async ({ page }) => {
   await page.goto('/guide/global-icons');
   await expect(page.locator('h1')).toHaveText('Setting Global Icon using setContext');
 });
-

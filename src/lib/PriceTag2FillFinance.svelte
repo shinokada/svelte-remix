@@ -1,4 +1,4 @@
-<script lang='ts'>
+<script lang="ts">
   import { getContext } from 'svelte';
   type TitleType = {
     id?: string;
@@ -20,25 +20,25 @@
   }
   interface CtxType extends BaseProps {}
   const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps{
+  interface Props extends BaseProps {
     title?: TitleType;
     desc?: DescType;
     ariaLabel?: string;
   }
 
-  let { 
-    size = ctx.size || '24', 
-    role = ctx.role || 'img', 
-    color = ctx.color || 'currentColor', 
-    withEvents = ctx.withEvents || false, 
-    title, 
-    desc, 
-    class: classname, 
-    ariaLabel =  "price tag 2 fill Finance" , 
-    onclick, 
-    onkeydown, 
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    color = ctx.color || 'currentColor',
+    withEvents = ctx.withEvents || false,
+    title,
+    desc,
+    class: classname,
+    ariaLabel = 'price tag 2 fill Finance',
+    onclick,
+    onkeydown,
     onkeyup,
-    ...restProps 
+    ...restProps
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
@@ -57,17 +57,19 @@
     aria-label={ariaLabel}
     aria-describedby={hasDescription ? ariaDescribedby : undefined}
     viewBox="0 0 24 24"
-    onclick={onclick}
-    onkeydown={onkeydown}
-    onkeyup={onkeyup}
+    {onclick}
+    {onkeydown}
+    {onkeyup}
   >
     {#if title?.id && title.title}
-      <title id="{title.id}">{title.title}</title>
+      <title id={title.id}>{title.title}</title>
     {/if}
     {#if desc?.id && desc.desc}
-      <desc id="{desc.id}">{desc.desc}</desc>
+      <desc id={desc.id}>{desc.desc}</desc>
     {/if}
-      <path d="M3.00488 6.99972L11.4502 1.36952C11.7861 1.14559 12.2237 1.14559 12.5596 1.36952L21.0049 6.99972V20.9997C21.0049 21.552 20.5572 21.9997 20.0049 21.9997H4.00488C3.4526 21.9997 3.00488 21.552 3.00488 20.9997V6.99972ZM12.0049 10.9997C13.1095 10.9997 14.0049 10.1043 14.0049 8.99972C14.0049 7.89515 13.1095 6.99972 12.0049 6.99972C10.9003 6.99972 10.0049 7.89515 10.0049 8.99972C10.0049 10.1043 10.9003 10.9997 12.0049 10.9997ZM8.00488 15.9997V17.9997H16.0049V15.9997H8.00488ZM8.00488 12.9997V14.9997H16.0049V12.9997H8.00488Z"/>
+    <path
+      d="M3.00488 6.99972L11.4502 1.36952C11.7861 1.14559 12.2237 1.14559 12.5596 1.36952L21.0049 6.99972V20.9997C21.0049 21.552 20.5572 21.9997 20.0049 21.9997H4.00488C3.4526 21.9997 3.00488 21.552 3.00488 20.9997V6.99972ZM12.0049 10.9997C13.1095 10.9997 14.0049 10.1043 14.0049 8.99972C14.0049 7.89515 13.1095 6.99972 12.0049 6.99972C10.9003 6.99972 10.0049 7.89515 10.0049 8.99972C10.0049 10.1043 10.9003 10.9997 12.0049 10.9997ZM8.00488 15.9997V17.9997H16.0049V15.9997H8.00488ZM8.00488 12.9997V14.9997H16.0049V12.9997H8.00488Z"
+    />
   </svg>
 {:else}
   <svg
@@ -83,11 +85,20 @@
     viewBox="0 0 24 24"
   >
     {#if title?.id && title.title}
-      <title id="{title.id}">{title.title}</title>
+      <title id={title.id}>{title.title}</title>
     {/if}
     {#if desc?.id && desc.desc}
-      <desc id="{desc.id}">{desc.desc}</desc>
+      <desc id={desc.id}>{desc.desc}</desc>
     {/if}
-      <path d="M3.00488 6.99972L11.4502 1.36952C11.7861 1.14559 12.2237 1.14559 12.5596 1.36952L21.0049 6.99972V20.9997C21.0049 21.552 20.5572 21.9997 20.0049 21.9997H4.00488C3.4526 21.9997 3.00488 21.552 3.00488 20.9997V6.99972ZM12.0049 10.9997C13.1095 10.9997 14.0049 10.1043 14.0049 8.99972C14.0049 7.89515 13.1095 6.99972 12.0049 6.99972C10.9003 6.99972 10.0049 7.89515 10.0049 8.99972C10.0049 10.1043 10.9003 10.9997 12.0049 10.9997ZM8.00488 15.9997V17.9997H16.0049V15.9997H8.00488ZM8.00488 12.9997V14.9997H16.0049V12.9997H8.00488Z"/>
+    <path
+      d="M3.00488 6.99972L11.4502 1.36952C11.7861 1.14559 12.2237 1.14559 12.5596 1.36952L21.0049 6.99972V20.9997C21.0049 21.552 20.5572 21.9997 20.0049 21.9997H4.00488C3.4526 21.9997 3.00488 21.552 3.00488 20.9997V6.99972ZM12.0049 10.9997C13.1095 10.9997 14.0049 10.1043 14.0049 8.99972C14.0049 7.89515 13.1095 6.99972 12.0049 6.99972C10.9003 6.99972 10.0049 7.89515 10.0049 8.99972C10.0049 10.1043 10.9003 10.9997 12.0049 10.9997ZM8.00488 15.9997V17.9997H16.0049V15.9997H8.00488ZM8.00488 12.9997V14.9997H16.0049V12.9997H8.00488Z"
+    />
   </svg>
 {/if}
+
+<!--
+@component
+[Go to docs](https://svelte-remix.codewithshin.com/)
+## Props
+@props: 
+-->

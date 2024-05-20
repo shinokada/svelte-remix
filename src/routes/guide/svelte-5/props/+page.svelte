@@ -78,12 +78,12 @@
 <HighlightCompo codeLang="ts" code={modules['./md/a11y-2.md'] as string} />
 
 <CodeWrapper>
-<AttachmentLineBusiness
-  title={{ id: 'my-title', title: 'A blue attachment icon' }}
-  desc={{ id: 'my-descrip', desc: 'A business attachement icon with blue color' }}
-  ariaLabel="attachement icon"
-  color="blue"
-/>
+  <AttachmentLineBusiness
+    title={{ id: 'my-title', title: 'A blue attachment icon' }}
+    desc={{ id: 'my-descrip', desc: 'A business attachement icon with blue color' }}
+    ariaLabel="attachement icon"
+    color="blue"
+  />
 </CodeWrapper>
 
 <H2>withEvents</H2>

@@ -6,11 +6,11 @@ export const load = () => {
     description: 'Icons page to change colors and sizes',
     og: {
       title: 'Icons - Svelte Remix',
-      description: 'Icons page to change colors and sizes',
+      description: 'Icons page to change colors and sizes'
     },
     twitter: {
       title: 'Icons - Svelte Remix',
-      description: 'Icons page to change colors and sizes',
+      description: 'Icons page to change colors and sizes'
     }
   }) satisfies MetaProps;
   return { pageMetaTags };

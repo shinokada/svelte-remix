@@ -24,7 +24,10 @@ test('Guide home page has expected meta og', async ({ page }) => {
   const metaOgDescription = page.locator('meta[property="og:description"]');
   await expect(metaOgDescription).toHaveAttribute('content', 'Getting Started - Svelte Remix');
   const metaOgUrl = page.locator('meta[property="og:url"]');
-  await expect(metaOgUrl).toHaveAttribute('content', 'http://localhost:4173/guide/svelte-4/getting-started');
+  await expect(metaOgUrl).toHaveAttribute(
+    'content',
+    'http://localhost:4173/guide/svelte-4/getting-started'
+  );
   const metaOgImage = page.locator('meta[property="og:image"]');
   await expect(metaOgImage).toHaveAttribute(
     'content',
