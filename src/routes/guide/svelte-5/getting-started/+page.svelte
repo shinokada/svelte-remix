@@ -17,7 +17,7 @@
     /></a
   >
   <a href="https://www.npmjs.com/package/svelte-remix" rel="nofollow" target="_blank"
-    ><img src="https://img.shields.io/npm/v/svelte-remix" alt="npm" /></a
+    ><img src="https://img.shields.io/npm/v/svelte-remix/next" alt="npm" /></a
   >
   <a href="https://opensource.org/licenses/MIT" rel="nofollow" target="_blank"
     ><img src="https://img.shields.io/github/license/shinokada/svelte-remix" alt="License" /></a
