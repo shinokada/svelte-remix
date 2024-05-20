@@ -1,41 +1,93 @@
-<script>
+<script lang='ts'>
   import { getContext } from 'svelte';
-  const ctx = getContext('iconCtx') ?? {};
-  export let size = ctx.size || '24';
-  export let role = ctx.role || 'img';
-  export let color = ctx.color || 'currentColor';
-  export let ariaLabel = 'thermometer line';
+  type TitleType = {
+    id?: string;
+    title?: string;
+  };
+  type DescType = {
+    id?: string;
+    desc?: string;
+  };
+  interface BaseProps {
+    size?: string;
+    role?: string;
+    color?: string;
+    withEvents?: boolean;
+    onclick?: (event: MouseEvent) => void;
+    onkeydown?: (event: KeyboardEvent) => void;
+    onkeyup?: (event: KeyboardEvent) => void;
+    class?: string;
+  }
+  interface CtxType extends BaseProps {}
+  const ctx: CtxType = getContext('iconCtx') ?? {};
+  interface Props extends BaseProps{
+    title?: TitleType;
+    desc?: DescType;
+    ariaLabel?: string;
+  }
+
+  let { 
+    size = ctx.size || '24', 
+    role = ctx.role || 'img', 
+    color = ctx.color || 'currentColor', 
+    withEvents = ctx.withEvents || false, 
+    title, 
+    desc, 
+    class: classname, 
+    ariaLabel =  "thermometer line Health replace_ariaLabel Medical" , 
+    onclick, 
+    onkeydown, 
+    onkeyup,
+    ...restProps 
+  }: Props = $props();
+
+  let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
+  const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-<svg
-  width={size}
-  height={size}
-  fill={color}
-  {...$$restProps}
-  {role}
-  aria-label={ariaLabel}
-  on:click
-  on:keydown
-  on:keyup
-  on:focus
-  on:blur
-  on:mouseenter
-  on:mouseleave
-  on:mouseover
-  on:mouseout
-  viewBox="0 0 24 24"
-  xmlns="http://www.w3.org/2000/svg"
-  ><path
-    d="M20.5565 3.44355C22.1186 5.00564 22.1186 7.5383 20.5565 9.1004L12.3563 17.3006C11.714 17.9429 10.8723 18.3474 9.96957 18.4477L6.59094 18.822L4.29304 21.1212C3.90252 21.5117 3.26936 21.5117 2.87883 21.1212C2.48831 20.7307 2.48831 20.0975 2.87883 19.707L5.17694 17.408L5.55231 14.0305C5.65261 13.1277 6.05716 12.286 6.69942 11.6438L14.8996 3.44355C16.4617 1.88145 18.9944 1.88145 20.5565 3.44355ZM16.3139 4.85776L8.11363 13.058C7.7925 13.3791 7.59023 13.8 7.54008 14.2513L7.264 16.736L9.74871 16.46C10.2001 16.4098 10.6209 16.2075 10.9421 15.8864L11.3639 15.464L9.9499 14.0501L11.3641 12.6359L12.7779 14.05L14.1919 12.636L12.7783 11.2217L14.1925 9.80751L15.6069 11.222L17.0209 9.80697L15.6068 8.39329L17.021 6.97908L18.4349 8.39297L19.1423 7.68619C19.9233 6.90514 19.9233 5.63881 19.1423 4.85776C18.3612 4.07671 17.0949 4.07671 16.3139 4.85776Z"
-  /></svg
->
-
-<!--
-@component
-[Go to docs](https://svelte-remix.codewithshin.com/)
-## Props
-@prop export let size = ctx.size || '24';
-@prop export let role = ctx.role || 'img';
-@prop export let color = ctx.color || 'currentColor';
-@prop export let ariaLabel = 'thermometer line';
--->
+{#if withEvents}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    {...restProps}
+    {role}
+    width={size}
+    height={size}
+    class={classname}
+    fill={color}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 24 24"
+    onclick={onclick}
+    onkeydown={onkeydown}
+    onkeyup={onkeyup}
+  >
+    {#if title?.id && title.title}
+      <title id="{title.id}">{title.title}</title>
+    {/if}
+    {#if desc?.id && desc.desc}
+      <desc id="{desc.id}">{desc.desc}</desc>
+    {/if}
+      <path d="M20.5565 3.44367C22.1186 5.00576 22.1186 7.53842 20.5565 9.10052L12.3563 17.3008C11.714 17.943 10.8723 18.3476 9.96957 18.4479L6.59094 18.8221L4.29304 21.1213C3.90252 21.5119 3.26936 21.5119 2.87883 21.1213C2.48831 20.7308 2.48831 20.0976 2.87883 19.7071L5.17694 17.4081L5.55231 14.0306C5.65261 13.1279 6.05716 12.2862 6.69942 11.6439L14.8996 3.44367C16.4617 1.88157 18.9944 1.88157 20.5565 3.44367ZM16.3139 4.85788L8.11363 13.0581C7.7925 13.3792 7.59023 13.8001 7.54008 14.2515L7.264 16.7362L9.74871 16.4601C10.2001 16.4099 10.6209 16.2077 10.9421 15.8865L11.3639 15.4641L9.9499 14.0503L11.3641 12.6361L12.7779 14.0501L14.1919 12.6361L12.7783 11.2218L14.1925 9.80763L15.6069 11.2221L17.0209 9.8071L15.6068 8.39341L17.021 6.9792L18.4349 8.39309L19.1423 7.68631C19.9233 6.90526 19.9233 5.63893 19.1423 4.85788C18.3612 4.07683 17.0949 4.07683 16.3139 4.85788Z"/>
+  </svg>
+{:else}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    {...restProps}
+    {role}
+    width={size}
+    height={size}
+    class={classname}
+    fill={color}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 24 24"
+  >
+    {#if title?.id && title.title}
+      <title id="{title.id}">{title.title}</title>
+    {/if}
+    {#if desc?.id && desc.desc}
+      <desc id="{desc.id}">{desc.desc}</desc>
+    {/if}
+      <path d="M20.5565 3.44367C22.1186 5.00576 22.1186 7.53842 20.5565 9.10052L12.3563 17.3008C11.714 17.943 10.8723 18.3476 9.96957 18.4479L6.59094 18.8221L4.29304 21.1213C3.90252 21.5119 3.26936 21.5119 2.87883 21.1213C2.48831 20.7308 2.48831 20.0976 2.87883 19.7071L5.17694 17.4081L5.55231 14.0306C5.65261 13.1279 6.05716 12.2862 6.69942 11.6439L14.8996 3.44367C16.4617 1.88157 18.9944 1.88157 20.5565 3.44367ZM16.3139 4.85788L8.11363 13.0581C7.7925 13.3792 7.59023 13.8001 7.54008 14.2515L7.264 16.7362L9.74871 16.4601C10.2001 16.4099 10.6209 16.2077 10.9421 15.8865L11.3639 15.4641L9.9499 14.0503L11.3641 12.6361L12.7779 14.0501L14.1919 12.6361L12.7783 11.2218L14.1925 9.80763L15.6069 11.2221L17.0209 9.8071L15.6068 8.39341L17.021 6.9792L18.4349 8.39309L19.1423 7.68631C19.9233 6.90526 19.9233 5.63893 19.1423 4.85788C18.3612 4.07683 17.0949 4.07683 16.3139 4.85788Z"/>
+  </svg>
+{/if}

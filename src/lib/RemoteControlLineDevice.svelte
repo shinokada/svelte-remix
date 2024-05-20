@@ -1,41 +1,93 @@
-<script>
+<script lang='ts'>
   import { getContext } from 'svelte';
-  const ctx = getContext('iconCtx') ?? {};
-  export let size = ctx.size || '24';
-  export let role = ctx.role || 'img';
-  export let color = ctx.color || 'currentColor';
-  export let ariaLabel = 'remote control line';
+  type TitleType = {
+    id?: string;
+    title?: string;
+  };
+  type DescType = {
+    id?: string;
+    desc?: string;
+  };
+  interface BaseProps {
+    size?: string;
+    role?: string;
+    color?: string;
+    withEvents?: boolean;
+    onclick?: (event: MouseEvent) => void;
+    onkeydown?: (event: KeyboardEvent) => void;
+    onkeyup?: (event: KeyboardEvent) => void;
+    class?: string;
+  }
+  interface CtxType extends BaseProps {}
+  const ctx: CtxType = getContext('iconCtx') ?? {};
+  interface Props extends BaseProps{
+    title?: TitleType;
+    desc?: DescType;
+    ariaLabel?: string;
+  }
+
+  let { 
+    size = ctx.size || '24', 
+    role = ctx.role || 'img', 
+    color = ctx.color || 'currentColor', 
+    withEvents = ctx.withEvents || false, 
+    title, 
+    desc, 
+    class: classname, 
+    ariaLabel =  "remote control line Device" , 
+    onclick, 
+    onkeydown, 
+    onkeyup,
+    ...restProps 
+  }: Props = $props();
+
+  let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
+  const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-<svg
-  width={size}
-  height={size}
-  fill={color}
-  {...$$restProps}
-  {role}
-  aria-label={ariaLabel}
-  on:click
-  on:keydown
-  on:keyup
-  on:focus
-  on:blur
-  on:mouseenter
-  on:mouseleave
-  on:mouseover
-  on:mouseout
-  viewBox="0 0 24 24"
-  xmlns="http://www.w3.org/2000/svg"
-  ><path
-    d="M17.0001 12C17.5524 12 18.0001 12.4477 18.0001 13V22H16.0001V14H8.00015V22H6.00015V13C6.00015 12.4477 6.44786 12 7.00015 12H17.0001ZM12.0001 16V18H10.0001V16H12.0001ZM12.0001 6C14.3491 6 16.3827 7.34978 17.3678 9.31602L15.5787 10.2108C14.922 8.89991 13.5662 8 12.0001 8C10.4341 8 9.07833 8.89991 8.42163 10.2108L6.63247 9.31602C7.61755 7.34978 9.65122 6 12.0001 6ZM12.0001 2C15.9153 2 19.3049 4.24991 20.9466 7.5273L19.1576 8.42242C17.8443 5.80019 15.1325 4 12.0001 4C8.86783 4 6.15596 5.80019 4.84271 8.42242L3.05371 7.5273C4.69541 4.24991 8.08503 2 12.0001 2Z"
-  /></svg
->
-
-<!--
-@component
-[Go to docs](https://svelte-remix.codewithshin.com/)
-## Props
-@prop export let size = ctx.size || '24';
-@prop export let role = ctx.role || 'img';
-@prop export let color = ctx.color || 'currentColor';
-@prop export let ariaLabel = 'remote control line';
--->
+{#if withEvents}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    {...restProps}
+    {role}
+    width={size}
+    height={size}
+    class={classname}
+    fill={color}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 24 24"
+    onclick={onclick}
+    onkeydown={onkeydown}
+    onkeyup={onkeyup}
+  >
+    {#if title?.id && title.title}
+      <title id="{title.id}">{title.title}</title>
+    {/if}
+    {#if desc?.id && desc.desc}
+      <desc id="{desc.id}">{desc.desc}</desc>
+    {/if}
+      <path d="M17.0001 12C17.5524 12 18.0001 12.4477 18.0001 13V22H16.0001V14H8.00015V22H6.00015V13C6.00015 12.4477 6.44786 12 7.00015 12H17.0001ZM12.0001 16V18H10.0001V16H12.0001ZM12.0001 6C14.3491 6 16.3827 7.34978 17.3678 9.31602L15.5787 10.2108C14.922 8.89991 13.5662 8 12.0001 8C10.4341 8 9.07833 8.89991 8.42163 10.2108L6.63247 9.31602C7.61755 7.34978 9.65122 6 12.0001 6ZM12.0001 2C15.9153 2 19.3049 4.24991 20.9466 7.5273L19.1576 8.42242C17.8443 5.80019 15.1325 4 12.0001 4C8.86783 4 6.15596 5.80019 4.84271 8.42242L3.05371 7.5273C4.69541 4.24991 8.08503 2 12.0001 2Z"/>
+  </svg>
+{:else}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    {...restProps}
+    {role}
+    width={size}
+    height={size}
+    class={classname}
+    fill={color}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 24 24"
+  >
+    {#if title?.id && title.title}
+      <title id="{title.id}">{title.title}</title>
+    {/if}
+    {#if desc?.id && desc.desc}
+      <desc id="{desc.id}">{desc.desc}</desc>
+    {/if}
+      <path d="M17.0001 12C17.5524 12 18.0001 12.4477 18.0001 13V22H16.0001V14H8.00015V22H6.00015V13C6.00015 12.4477 6.44786 12 7.00015 12H17.0001ZM12.0001 16V18H10.0001V16H12.0001ZM12.0001 6C14.3491 6 16.3827 7.34978 17.3678 9.31602L15.5787 10.2108C14.922 8.89991 13.5662 8 12.0001 8C10.4341 8 9.07833 8.89991 8.42163 10.2108L6.63247 9.31602C7.61755 7.34978 9.65122 6 12.0001 6ZM12.0001 2C15.9153 2 19.3049 4.24991 20.9466 7.5273L19.1576 8.42242C17.8443 5.80019 15.1325 4 12.0001 4C8.86783 4 6.15596 5.80019 4.84271 8.42242L3.05371 7.5273C4.69541 4.24991 8.08503 2 12.0001 2Z"/>
+  </svg>
+{/if}

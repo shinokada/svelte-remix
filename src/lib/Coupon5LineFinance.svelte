@@ -1,41 +1,93 @@
-<script>
+<script lang='ts'>
   import { getContext } from 'svelte';
-  const ctx = getContext('iconCtx') ?? {};
-  export let size = ctx.size || '24';
-  export let role = ctx.role || 'img';
-  export let color = ctx.color || 'currentColor';
-  export let ariaLabel = 'coupon 5 line';
+  type TitleType = {
+    id?: string;
+    title?: string;
+  };
+  type DescType = {
+    id?: string;
+    desc?: string;
+  };
+  interface BaseProps {
+    size?: string;
+    role?: string;
+    color?: string;
+    withEvents?: boolean;
+    onclick?: (event: MouseEvent) => void;
+    onkeydown?: (event: KeyboardEvent) => void;
+    onkeyup?: (event: KeyboardEvent) => void;
+    class?: string;
+  }
+  interface CtxType extends BaseProps {}
+  const ctx: CtxType = getContext('iconCtx') ?? {};
+  interface Props extends BaseProps{
+    title?: TitleType;
+    desc?: DescType;
+    ariaLabel?: string;
+  }
+
+  let { 
+    size = ctx.size || '24', 
+    role = ctx.role || 'img', 
+    color = ctx.color || 'currentColor', 
+    withEvents = ctx.withEvents || false, 
+    title, 
+    desc, 
+    class: classname, 
+    ariaLabel =  "coupon 5 line Finance" , 
+    onclick, 
+    onkeydown, 
+    onkeyup,
+    ...restProps 
+  }: Props = $props();
+
+  let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
+  const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-<svg
-  width={size}
-  height={size}
-  fill={color}
-  {...$$restProps}
-  {role}
-  aria-label={ariaLabel}
-  on:click
-  on:keydown
-  on:keyup
-  on:focus
-  on:blur
-  on:mouseenter
-  on:mouseleave
-  on:mouseover
-  on:mouseout
-  viewBox="0 0 24 24"
-  xmlns="http://www.w3.org/2000/svg"
-  ><path
-    d="M21.0049 14V21C21.0049 21.5523 20.5572 22 20.0049 22H4.00488C3.4526 22 3.00488 21.5523 3.00488 21V14C4.10945 14 5.00488 13.1046 5.00488 12C5.00488 10.8954 4.10945 10 3.00488 10V3C3.00488 2.44772 3.4526 2 4.00488 2H20.0049C20.5572 2 21.0049 2.44772 21.0049 3V10C19.9003 10 19.0049 10.8954 19.0049 12C19.0049 13.1046 19.9003 14 21.0049 14ZM19.0049 15.4649C17.8093 14.7733 17.0049 13.4806 17.0049 12C17.0049 10.5194 17.8093 9.22675 19.0049 8.53513V4H5.00488V8.53513C6.20049 9.22675 7.00488 10.5194 7.00488 12C7.00488 13.4806 6.20049 14.7733 5.00488 15.4649V20H19.0049V15.4649ZM9.00488 6H15.0049V8H9.00488V6ZM9.00488 16H15.0049V18H9.00488V16Z"
-  /></svg
->
-
-<!--
-@component
-[Go to docs](https://svelte-remix.codewithshin.com/)
-## Props
-@prop export let size = ctx.size || '24';
-@prop export let role = ctx.role || 'img';
-@prop export let color = ctx.color || 'currentColor';
-@prop export let ariaLabel = 'coupon 5 line';
--->
+{#if withEvents}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    {...restProps}
+    {role}
+    width={size}
+    height={size}
+    class={classname}
+    fill={color}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 24 24"
+    onclick={onclick}
+    onkeydown={onkeydown}
+    onkeyup={onkeyup}
+  >
+    {#if title?.id && title.title}
+      <title id="{title.id}">{title.title}</title>
+    {/if}
+    {#if desc?.id && desc.desc}
+      <desc id="{desc.id}">{desc.desc}</desc>
+    {/if}
+      <path d="M21.0049 13.9998V20.9998C21.0049 21.5521 20.5572 21.9998 20.0049 21.9998H4.00488C3.4526 21.9998 3.00488 21.5521 3.00488 20.9998V13.9998C4.10945 13.9998 5.00488 13.1044 5.00488 11.9998C5.00488 10.8952 4.10945 9.99979 3.00488 9.99979V2.99979C3.00488 2.4475 3.4526 1.99979 4.00488 1.99979H20.0049C20.5572 1.99979 21.0049 2.4475 21.0049 2.99979V9.99979C19.9003 9.99979 19.0049 10.8952 19.0049 11.9998C19.0049 13.1044 19.9003 13.9998 21.0049 13.9998ZM19.0049 15.4647C17.8093 14.773 17.0049 13.4804 17.0049 11.9998C17.0049 10.5192 17.8093 9.22653 19.0049 8.53491V3.99979H5.00488V8.53491C6.20049 9.22653 7.00488 10.5192 7.00488 11.9998C7.00488 13.4804 6.20049 14.773 5.00488 15.4647V19.9998H19.0049V15.4647ZM9.00488 5.99979H15.0049V7.99979H9.00488V5.99979ZM9.00488 15.9998H15.0049V17.9998H9.00488V15.9998Z"/>
+  </svg>
+{:else}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    {...restProps}
+    {role}
+    width={size}
+    height={size}
+    class={classname}
+    fill={color}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 24 24"
+  >
+    {#if title?.id && title.title}
+      <title id="{title.id}">{title.title}</title>
+    {/if}
+    {#if desc?.id && desc.desc}
+      <desc id="{desc.id}">{desc.desc}</desc>
+    {/if}
+      <path d="M21.0049 13.9998V20.9998C21.0049 21.5521 20.5572 21.9998 20.0049 21.9998H4.00488C3.4526 21.9998 3.00488 21.5521 3.00488 20.9998V13.9998C4.10945 13.9998 5.00488 13.1044 5.00488 11.9998C5.00488 10.8952 4.10945 9.99979 3.00488 9.99979V2.99979C3.00488 2.4475 3.4526 1.99979 4.00488 1.99979H20.0049C20.5572 1.99979 21.0049 2.4475 21.0049 2.99979V9.99979C19.9003 9.99979 19.0049 10.8952 19.0049 11.9998C19.0049 13.1044 19.9003 13.9998 21.0049 13.9998ZM19.0049 15.4647C17.8093 14.773 17.0049 13.4804 17.0049 11.9998C17.0049 10.5192 17.8093 9.22653 19.0049 8.53491V3.99979H5.00488V8.53491C6.20049 9.22653 7.00488 10.5192 7.00488 11.9998C7.00488 13.4804 6.20049 14.773 5.00488 15.4647V19.9998H19.0049V15.4647ZM9.00488 5.99979H15.0049V7.99979H9.00488V5.99979ZM9.00488 15.9998H15.0049V17.9998H9.00488V15.9998Z"/>
+  </svg>
+{/if}
