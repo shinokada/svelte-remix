@@ -9,7 +9,7 @@
   });
 </script>
 
-<h1>Props: Svelte Remix v2</h1>
+<h1>Props: Svelte Remix v2 for Svelte Runes</h1>
 
 <H2>Props</H2>
 

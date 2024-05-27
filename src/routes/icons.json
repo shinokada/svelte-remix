@@ -7,7 +7,7 @@
     "repo": "https://github.com/themesberg/flowbite-svelte"
   },
   {
-    "iconName": "Svelte Ant Design Icons",
+    "iconName": "Svelte Remix",
     "badges": ["Svelte 4/5/Runes"],
     "features": ["780+ SVG icons", "v1: 4/5, v2: 5:Runes"],
     "source": ["Ant Design Icons", "https://svelte-ant-design-icons.codewithshin.com"]
