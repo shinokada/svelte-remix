@@ -1,16 +1,22 @@
 import type { MetaProps } from 'runes-meta-tags';
 
+const title = 'Props - Svelte Remix v1'
+const description = 'How to use Svelte Remix v1 props'
+const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-remix'
+
 export const load = () => {
   const pageMetaTags = Object.freeze({
-    title: 'Props - Svelte Remix v1',
-    description: 'How to use props with Svelte Remix v1',
+    title,
+    description,
     og: {
-      title: 'Props - Svelte Remix v1',
-      description: 'How to use props with Svelte Remix v1'
+      title,
+      description,
+      image: imgUrl
     },
     twitter: {
-      title: 'Props - Svelte Remix v1',
-      description: 'How to use props with Svelte Remix v1'
+      title,
+      description,
+      image: imgUrl
     }
   }) satisfies MetaProps;
   return { pageMetaTags };

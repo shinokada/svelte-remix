@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { HighlightCompo, CodeWrapper, Code, H2, H3 } from 'runes-webkit';
+  import { HighlightCompo, Code, H2 } from 'runes-webkit';
   const modules = import.meta.glob('./md/*.md', {
     query: '?raw',
     import: 'default',
@@ -7,7 +7,7 @@
   });
 </script>
 
-<h1>Svelte Remix: v2</h1>
+<h1>Getting Started - Svelte Remix v2</h1>
 
 <div class="my-8 flex gap-2">
   <a href="https://github.com/sponsors/shinokada" target="_blank"

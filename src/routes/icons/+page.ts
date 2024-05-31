@@ -1,16 +1,24 @@
 import type { MetaProps } from 'runes-meta-tags';
 
-export const load = () => {
+const title = 'Icons - Svelte Remix'
+const description = 'Easily Find & Copy SVG Icon name for Your Project'
+const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-remix'
+const ogUrl = 'http://localhost:4173/icons'
+
+export const load = ({ url }) => {
   const pageMetaTags = Object.freeze({
-    title: 'Icons - Svelte Remix',
-    description: 'Explore all SVG icons for our library! Browse and search names, different colors, adjust size, and easily copy icon names with a single click. Find the perfect icon for your project.',
+    title,
+    description,
     og: {
-      title: 'Icons - Svelte Remix',
-      description: 'Explore all SVG icons for our library! Browse and search names, different colors, adjust size, and easily copy icon names with a single click. Find the perfect icon for your project.'
+      title,
+      description,
+      image: imgUrl,
+      url: ogUrl
     },
     twitter: {
-      title: 'Icons - Svelte Remix',
-      description: 'Explore all SVG icons for our library! Browse and search names, different colors, adjust size, and easily copy icon names with a single click. Find the perfect icon for your project.'
+      title,
+      description,
+      image: imgUrl
     }
   }) satisfies MetaProps;
   return { pageMetaTags };

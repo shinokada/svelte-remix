@@ -1,16 +1,21 @@
 import type { MetaProps } from 'runes-meta-tags';
 
+const title = 'Setting Global Icon - Svelte Remix'
+const description = 'How to create a global icon using setContext with Svelte Remix'
+const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-remix'
 export const load = () => {
   const pageMetaTags = Object.freeze({
-    title: 'Setting Global Icon - Svelte Remix',
-    description: 'Setting Global Icon using setContext with Svelte Remix',
+    title,
+    description,
     og: {
-      title: 'Setting Global Icon - Svelte Remix',
-      description: 'Setting Global Icon using setContext with Svelte Remix'
+      title,
+      description,
+      image: imgUrl
     },
     twitter: {
-      title: 'Setting Global Icon - Svelte Remix',
-      description: 'Setting Global Icon using setContext with Svelte Remix'
+      title,
+      description,
+      image: imgUrl
     }
   }) satisfies MetaProps;
   return { pageMetaTags };
