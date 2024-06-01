@@ -102,5 +102,16 @@
 @component
 [Go to docs](https://svelte-remix.codewithshin.com/)
 ## Props
-@props: 
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop color = ctx.color || 'currentColor'
+@prop withEvents = ctx.withEvents || false
+@prop title
+@prop desc
+@prop class: classname
+@prop ariaLabel = 'webhook line Logos'
+@prop onclick
+@prop onkeydown
+@prop onkeyup
+@prop ...restProps
 -->

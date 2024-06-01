@@ -30,9 +30,10 @@
 @component
 [Go to docs](https://svelte-remix.codewithshin.com/)
 ## Props
-@props: icon: Component;
-@props:size?:  string; = '24';
-@props:role?:  string; = 'img';
-@props:ariaLabel?:  string; = 'Icon';
-@props:class?: string;
+@prop icon
+@prop size = '24'
+@prop role = 'img'
+@prop ariaLabel = 'Icon'
+@prop class: classname
+@prop ...restProps
 -->
