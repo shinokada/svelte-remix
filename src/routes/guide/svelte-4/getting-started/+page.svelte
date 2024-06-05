@@ -39,7 +39,7 @@
 
 <H2>Installation</H2>
 
-<p>Install Svelte and TailwindCSS:</p>
+<p>Install Svelte and Svelte Remix:</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/installation.md'] as string} />
 
