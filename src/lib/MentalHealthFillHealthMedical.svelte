@@ -1,100 +1,64 @@
-<script lang="ts">
+<script lang='ts'>
   import { getContext } from 'svelte';
+  import type { SVGAttributes } from 'svelte/elements';
+
   type TitleType = {
-    id?: string;
-    title?: string;
+    id?: string | undefined | null;
+    title?: string | undefined | null;
   };
   type DescType = {
-    id?: string;
-    desc?: string;
+    id?: string | undefined | null;
+    desc?: string | undefined | null;
   };
-  interface BaseProps {
-    size?: string;
-    role?: string;
-    color?: string;
-    withEvents?: boolean;
-    onclick?: (event: MouseEvent) => void;
-    onkeydown?: (event: KeyboardEvent) => void;
-    onkeyup?: (event: KeyboardEvent) => void;
-    class?: string;
+  interface BaseProps extends SVGAttributes<SVGElement>{
+    size?: string | undefined | null;
+    role?: string | undefined | null;
+    color?: string | undefined | null;
+    class?: string | undefined | null;
   }
   interface CtxType extends BaseProps {}
   const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps {
+  interface Props extends BaseProps{
     title?: TitleType;
     desc?: DescType;
-    ariaLabel?: string;
+    ariaLabel?: string | undefined | null;
   }
 
-  let {
-    size = ctx.size || '24',
-    role = ctx.role || 'img',
-    color = ctx.color || 'currentColor',
-    withEvents = ctx.withEvents || false,
-    title,
-    desc,
-    class: classname,
-    ariaLabel = 'mental health fill Health replace_ariaLabel Medical',
-    onclick,
-    onkeydown,
-    onkeyup,
-    ...restProps
+  let { 
+    size = ctx.size || '24', 
+    role = ctx.role || 'img', 
+    color = ctx.color || 'currentColor', 
+    title, 
+    desc, 
+    class: classname, 
+    ariaLabel =  "mental health fill Health replace_ariaLabel Medical" ,
+    ...restProps 
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-{#if withEvents}
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    {...restProps}
-    {role}
-    width={size}
-    height={size}
-    class={classname}
-    fill={color}
-    aria-label={ariaLabel}
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    viewBox="0 0 24 24"
-    {onclick}
-    {onkeydown}
-    {onkeyup}
-  >
-    {#if title?.id && title.title}
-      <title id={title.id}>{title.title}</title>
-    {/if}
-    {#if desc?.id && desc.desc}
-      <desc id={desc.id}>{desc.desc}</desc>
-    {/if}
-    <path
-      d="M11 2C15.0675 2 18.426 5.03562 18.9337 8.96494L21.1842 12.5037C21.3324 12.7367 21.3025 13.0847 20.9593 13.2317L19 14.071V17C19 18.1046 18.1046 19 17 19H15.001L15 22H6L6.00025 18.3061C6.00033 17.1252 5.56351 16.0087 4.7555 15.0011C3.65707 13.6313 3 11.8924 3 10C3 5.58172 6.58172 2 11 2ZM10.4697 7.76256C9.78625 7.07915 8.67821 7.07915 7.9948 7.76256C7.31138 8.44598 7.31138 9.55402 7.9948 10.2374L11 13.2426L14.0052 10.2374C14.6886 9.55402 14.6886 8.44598 14.0052 7.76256C13.3218 7.07915 12.2137 7.07915 11.5303 7.76256L11 8.29289L10.4697 7.76256Z"
-    />
-  </svg>
-{:else}
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    {...restProps}
-    {role}
-    width={size}
-    height={size}
-    class={classname}
-    fill={color}
-    aria-label={ariaLabel}
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    viewBox="0 0 24 24"
-  >
-    {#if title?.id && title.title}
-      <title id={title.id}>{title.title}</title>
-    {/if}
-    {#if desc?.id && desc.desc}
-      <desc id={desc.id}>{desc.desc}</desc>
-    {/if}
-    <path
-      d="M11 2C15.0675 2 18.426 5.03562 18.9337 8.96494L21.1842 12.5037C21.3324 12.7367 21.3025 13.0847 20.9593 13.2317L19 14.071V17C19 18.1046 18.1046 19 17 19H15.001L15 22H6L6.00025 18.3061C6.00033 17.1252 5.56351 16.0087 4.7555 15.0011C3.65707 13.6313 3 11.8924 3 10C3 5.58172 6.58172 2 11 2ZM10.4697 7.76256C9.78625 7.07915 8.67821 7.07915 7.9948 7.76256C7.31138 8.44598 7.31138 9.55402 7.9948 10.2374L11 13.2426L14.0052 10.2374C14.6886 9.55402 14.6886 8.44598 14.0052 7.76256C13.3218 7.07915 12.2137 7.07915 11.5303 7.76256L11 8.29289L10.4697 7.76256Z"
-    />
-  </svg>
-{/if}
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  {...restProps}
+  {role}
+  width={size}
+  height={size}
+  class={classname}
+  fill={color}
+  aria-label={ariaLabel}
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  viewBox="0 0 24 24"
+>
+  {#if title?.id && title.title}
+    <title id="{title.id}">{title.title}</title>
+  {/if}
+  {#if desc?.id && desc.desc}
+    <desc id="{desc.id}">{desc.desc}</desc>
+  {/if}
+    <path d="M11 2C15.0675 2 18.426 5.03562 18.9337 8.96494L21.1842 12.5037C21.3324 12.7367 21.3025 13.0847 20.9593 13.2317L19 14.071V17C19 18.1046 18.1046 19 17 19H15.001L15 22H6L6.00025 18.3061C6.00033 17.1252 5.56351 16.0087 4.7555 15.0011C3.65707 13.6313 3 11.8924 3 10C3 5.58172 6.58172 2 11 2ZM10.4697 7.76256C9.78625 7.07915 8.67821 7.07915 7.9948 7.76256C7.31138 8.44598 7.31138 9.55402 7.9948 10.2374L11 13.2426L14.0052 10.2374C14.6886 9.55402 14.6886 8.44598 14.0052 7.76256C13.3218 7.07915 12.2137 7.07915 11.5303 7.76256L11 8.29289L10.4697 7.76256Z"/>
+</svg>
 
 <!--
 @component
@@ -103,13 +67,9 @@
 @prop size = ctx.size || '24'
 @prop role = ctx.role || 'img'
 @prop color = ctx.color || 'currentColor'
-@prop withEvents = ctx.withEvents || false
 @prop title
 @prop desc
 @prop class: classname
-@prop ariaLabel = 'mental health fill Health replace_ariaLabel Medical'
-@prop onclick
-@prop onkeydown
-@prop onkeyup
+@prop ariaLabel =  "mental health fill Health replace_ariaLabel Medical"
 @prop ...restProps
 -->

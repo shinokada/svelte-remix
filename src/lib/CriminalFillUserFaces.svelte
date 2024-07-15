@@ -1,100 +1,64 @@
-<script lang="ts">
+<script lang='ts'>
   import { getContext } from 'svelte';
+  import type { SVGAttributes } from 'svelte/elements';
+
   type TitleType = {
-    id?: string;
-    title?: string;
+    id?: string | undefined | null;
+    title?: string | undefined | null;
   };
   type DescType = {
-    id?: string;
-    desc?: string;
+    id?: string | undefined | null;
+    desc?: string | undefined | null;
   };
-  interface BaseProps {
-    size?: string;
-    role?: string;
-    color?: string;
-    withEvents?: boolean;
-    onclick?: (event: MouseEvent) => void;
-    onkeydown?: (event: KeyboardEvent) => void;
-    onkeyup?: (event: KeyboardEvent) => void;
-    class?: string;
+  interface BaseProps extends SVGAttributes<SVGElement>{
+    size?: string | undefined | null;
+    role?: string | undefined | null;
+    color?: string | undefined | null;
+    class?: string | undefined | null;
   }
   interface CtxType extends BaseProps {}
   const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps {
+  interface Props extends BaseProps{
     title?: TitleType;
     desc?: DescType;
-    ariaLabel?: string;
+    ariaLabel?: string | undefined | null;
   }
 
-  let {
-    size = ctx.size || '24',
-    role = ctx.role || 'img',
-    color = ctx.color || 'currentColor',
-    withEvents = ctx.withEvents || false,
-    title,
-    desc,
-    class: classname,
-    ariaLabel = 'criminal fill User replace_ariaLabel Faces',
-    onclick,
-    onkeydown,
-    onkeyup,
-    ...restProps
+  let { 
+    size = ctx.size || '24', 
+    role = ctx.role || 'img', 
+    color = ctx.color || 'currentColor', 
+    title, 
+    desc, 
+    class: classname, 
+    ariaLabel =  "criminal fill User replace_ariaLabel Faces" ,
+    ...restProps 
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-{#if withEvents}
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    {...restProps}
-    {role}
-    width={size}
-    height={size}
-    class={classname}
-    fill={color}
-    aria-label={ariaLabel}
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    viewBox="0 0 24 24"
-    {onclick}
-    {onkeydown}
-    {onkeyup}
-  >
-    {#if title?.id && title.title}
-      <title id={title.id}>{title.title}</title>
-    {/if}
-    {#if desc?.id && desc.desc}
-      <desc id={desc.id}>{desc.desc}</desc>
-    {/if}
-    <path
-      d="M12 2C16.9706 2 21 6.02944 21 11C21 13.2031 20.2084 15.2213 18.8941 16.7858C20.1491 17.6156 20.9275 18.6754 20.9952 19.835L21 20L12 22L3 20L3.00481 19.835C3.0725 18.6755 3.85076 17.6158 5.10554 16.7859C3.79194 15.2222 3 13.2036 3 11C3 6.02944 7.02944 2 12 2ZM12 13C10.6193 13 9.5 13.6716 9.5 14.5C9.5 15.3284 10.6193 16 12 16C13.3807 16 14.5 15.3284 14.5 14.5C14.5 13.6716 13.3807 13 12 13ZM9 8C7.89543 8 7 8.67157 7 9.5C7 10.3284 7.89543 11 9 11C10.1046 11 11 10.3284 11 9.5C11 8.67157 10.1046 8 9 8ZM15 8C13.8954 8 13 8.67157 13 9.5C13 10.3284 13.8954 11 15 11C16.1046 11 17 10.3284 17 9.5C17 8.67157 16.1046 8 15 8Z"
-    />
-  </svg>
-{:else}
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    {...restProps}
-    {role}
-    width={size}
-    height={size}
-    class={classname}
-    fill={color}
-    aria-label={ariaLabel}
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    viewBox="0 0 24 24"
-  >
-    {#if title?.id && title.title}
-      <title id={title.id}>{title.title}</title>
-    {/if}
-    {#if desc?.id && desc.desc}
-      <desc id={desc.id}>{desc.desc}</desc>
-    {/if}
-    <path
-      d="M12 2C16.9706 2 21 6.02944 21 11C21 13.2031 20.2084 15.2213 18.8941 16.7858C20.1491 17.6156 20.9275 18.6754 20.9952 19.835L21 20L12 22L3 20L3.00481 19.835C3.0725 18.6755 3.85076 17.6158 5.10554 16.7859C3.79194 15.2222 3 13.2036 3 11C3 6.02944 7.02944 2 12 2ZM12 13C10.6193 13 9.5 13.6716 9.5 14.5C9.5 15.3284 10.6193 16 12 16C13.3807 16 14.5 15.3284 14.5 14.5C14.5 13.6716 13.3807 13 12 13ZM9 8C7.89543 8 7 8.67157 7 9.5C7 10.3284 7.89543 11 9 11C10.1046 11 11 10.3284 11 9.5C11 8.67157 10.1046 8 9 8ZM15 8C13.8954 8 13 8.67157 13 9.5C13 10.3284 13.8954 11 15 11C16.1046 11 17 10.3284 17 9.5C17 8.67157 16.1046 8 15 8Z"
-    />
-  </svg>
-{/if}
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  {...restProps}
+  {role}
+  width={size}
+  height={size}
+  class={classname}
+  fill={color}
+  aria-label={ariaLabel}
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  viewBox="0 0 24 24"
+>
+  {#if title?.id && title.title}
+    <title id="{title.id}">{title.title}</title>
+  {/if}
+  {#if desc?.id && desc.desc}
+    <desc id="{desc.id}">{desc.desc}</desc>
+  {/if}
+    <path d="M12 2C16.9706 2 21 6.02944 21 11C21 13.2031 20.2084 15.2213 18.8941 16.7858C20.1491 17.6156 20.9275 18.6754 20.9952 19.835L21 20L12 22L3 20L3.00481 19.835C3.0725 18.6755 3.85076 17.6158 5.10554 16.7859C3.79194 15.2222 3 13.2036 3 11C3 6.02944 7.02944 2 12 2ZM12 13C10.6193 13 9.5 13.6716 9.5 14.5C9.5 15.3284 10.6193 16 12 16C13.3807 16 14.5 15.3284 14.5 14.5C14.5 13.6716 13.3807 13 12 13ZM9 8C7.89543 8 7 8.67157 7 9.5C7 10.3284 7.89543 11 9 11C10.1046 11 11 10.3284 11 9.5C11 8.67157 10.1046 8 9 8ZM15 8C13.8954 8 13 8.67157 13 9.5C13 10.3284 13.8954 11 15 11C16.1046 11 17 10.3284 17 9.5C17 8.67157 16.1046 8 15 8Z"/>
+</svg>
 
 <!--
 @component
@@ -103,13 +67,9 @@
 @prop size = ctx.size || '24'
 @prop role = ctx.role || 'img'
 @prop color = ctx.color || 'currentColor'
-@prop withEvents = ctx.withEvents || false
 @prop title
 @prop desc
 @prop class: classname
-@prop ariaLabel = 'criminal fill User replace_ariaLabel Faces'
-@prop onclick
-@prop onkeydown
-@prop onkeyup
+@prop ariaLabel =  "criminal fill User replace_ariaLabel Faces"
 @prop ...restProps
 -->

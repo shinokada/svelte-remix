@@ -1,1 +1,0 @@
-<AttachmentLineBusiness tabindex="0" withEvents />

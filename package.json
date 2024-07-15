@@ -46,30 +46,30 @@
     "@svitejs/changesets-changelog-github-compact": "^1.1.0",
     "@types/eslint": "^8.56.10",
     "autoprefixer": "^10.4.19",
-    "eslint": "^9.6.0",
+    "eslint": "^9.7.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-svelte": "2.39.0",
+    "eslint-plugin-svelte": "2.42.0",
     "highlight.js": "^11.10.0",
     "postcss": "^8.4.39",
-    "prettier": "^3.3.2",
+    "prettier": "^3.3.3",
     "prettier-plugin-svelte": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.6.5",
     "publint": "^0.2.8",
     "runatics": "^0.1.3",
     "runes-meta-tags": "^0.3.2",
-    "runes-webkit": "^0.8.4",
+    "runes-webkit": "^0.8.8",
     "svelte": "5.0.0-next.178",
-    "svelte-5-ui-lib": "^0.5.4",
+    "svelte-5-ui-lib": "^0.7.0",
     "svelte-check": "^3.8.4",
     "svelte-lib-helpers": "^0.4.6",
-    "svelte-preprocess": "^5.1.4",
+    "svelte-preprocess": "^6.0.2",
     "svelte-rune-highlight": "^0.5.9",
     "tailwind-merge": "^2.4.0",
-    "tailwindcss": "^3.4.4",
+    "tailwindcss": "^3.4.5",
     "tslib": "^2.6.3",
     "typescript": "^5.5.3",
     "vite": "^5.3.3",
-    "vitest": "^1.6.0"
+    "vitest": "^2.0.3"
   },
   "files": [
     "dist",
@@ -504,10 +504,6 @@
     "./ArmchairLineOthers.svelte": {
       "types": "./dist/ArmchairLineOthers.svelte.d.ts",
       "svelte": "./dist/ArmchairLineOthers.svelte"
-    },
-    "./ArrowDownCircleFill2Arrows.svelte": {
-      "types": "./dist/ArrowDownCircleFill2Arrows.svelte.d.ts",
-      "svelte": "./dist/ArrowDownCircleFill2Arrows.svelte"
     },
     "./ArrowDownCircleFillArrows.svelte": {
       "types": "./dist/ArrowDownCircleFillArrows.svelte.d.ts",
@@ -1013,10 +1009,6 @@
       "types": "./dist/BatteryLineDevice.svelte.d.ts",
       "svelte": "./dist/BatteryLineDevice.svelte"
     },
-    "./BatteryLowFill2Device.svelte": {
-      "types": "./dist/BatteryLowFill2Device.svelte.d.ts",
-      "svelte": "./dist/BatteryLowFill2Device.svelte"
-    },
     "./BatteryLowFillDevice.svelte": {
       "types": "./dist/BatteryLowFillDevice.svelte.d.ts",
       "svelte": "./dist/BatteryLowFillDevice.svelte"
@@ -1237,6 +1229,14 @@
       "types": "./dist/BookReadLineDocument.svelte.d.ts",
       "svelte": "./dist/BookReadLineDocument.svelte"
     },
+    "./BookShelfFillOthers.svelte": {
+      "types": "./dist/BookShelfFillOthers.svelte.d.ts",
+      "svelte": "./dist/BookShelfFillOthers.svelte"
+    },
+    "./BookShelfLineOthers.svelte": {
+      "types": "./dist/BookShelfLineOthers.svelte.d.ts",
+      "svelte": "./dist/BookShelfLineOthers.svelte"
+    },
     "./BookletFillDocument.svelte": {
       "types": "./dist/BookletFillDocument.svelte.d.ts",
       "svelte": "./dist/BookletFillDocument.svelte"
@@ -1332,6 +1332,14 @@
     "./BracketsLineDevelopment.svelte": {
       "types": "./dist/BracketsLineDevelopment.svelte.d.ts",
       "svelte": "./dist/BracketsLineDevelopment.svelte"
+    },
+    "./Brain2FillHealthMedical.svelte": {
+      "types": "./dist/Brain2FillHealthMedical.svelte.d.ts",
+      "svelte": "./dist/Brain2FillHealthMedical.svelte"
+    },
+    "./Brain2LineHealthMedical.svelte": {
+      "types": "./dist/Brain2LineHealthMedical.svelte.d.ts",
+      "svelte": "./dist/Brain2LineHealthMedical.svelte"
     },
     "./BrainFillHealthMedical.svelte": {
       "types": "./dist/BrainFillHealthMedical.svelte.d.ts",
@@ -1781,10 +1789,6 @@
       "types": "./dist/ChargingPileLineMap.svelte.d.ts",
       "svelte": "./dist/ChargingPileLineMap.svelte"
     },
-    "./Chat1Fill2Communication.svelte": {
-      "types": "./dist/Chat1Fill2Communication.svelte.d.ts",
-      "svelte": "./dist/Chat1Fill2Communication.svelte"
-    },
     "./Chat1FillCommunication.svelte": {
       "types": "./dist/Chat1FillCommunication.svelte.d.ts",
       "svelte": "./dist/Chat1FillCommunication.svelte"
@@ -1913,6 +1917,14 @@
       "types": "./dist/ChatQuoteLineCommunication.svelte.d.ts",
       "svelte": "./dist/ChatQuoteLineCommunication.svelte"
     },
+    "./ChatSearchFillCommunication.svelte": {
+      "types": "./dist/ChatSearchFillCommunication.svelte.d.ts",
+      "svelte": "./dist/ChatSearchFillCommunication.svelte"
+    },
+    "./ChatSearchLineCommunication.svelte": {
+      "types": "./dist/ChatSearchLineCommunication.svelte.d.ts",
+      "svelte": "./dist/ChatSearchLineCommunication.svelte"
+    },
     "./ChatSettingsFillCommunication.svelte": {
       "types": "./dist/ChatSettingsFillCommunication.svelte.d.ts",
       "svelte": "./dist/ChatSettingsFillCommunication.svelte"
@@ -1952,6 +1964,14 @@
     "./ChatThreadLineCommunication.svelte": {
       "types": "./dist/ChatThreadLineCommunication.svelte.d.ts",
       "svelte": "./dist/ChatThreadLineCommunication.svelte"
+    },
+    "./ChatUnreadFillCommunication.svelte": {
+      "types": "./dist/ChatUnreadFillCommunication.svelte.d.ts",
+      "svelte": "./dist/ChatUnreadFillCommunication.svelte"
+    },
+    "./ChatUnreadLineCommunication.svelte": {
+      "types": "./dist/ChatUnreadLineCommunication.svelte.d.ts",
+      "svelte": "./dist/ChatUnreadLineCommunication.svelte"
     },
     "./ChatUploadFillCommunication.svelte": {
       "types": "./dist/ChatUploadFillCommunication.svelte.d.ts",
@@ -2256,6 +2276,22 @@
     "./CollapseDiagonalLineArrows.svelte": {
       "types": "./dist/CollapseDiagonalLineArrows.svelte.d.ts",
       "svelte": "./dist/CollapseDiagonalLineArrows.svelte"
+    },
+    "./CollapseHorizontalFillArrows.svelte": {
+      "types": "./dist/CollapseHorizontalFillArrows.svelte.d.ts",
+      "svelte": "./dist/CollapseHorizontalFillArrows.svelte"
+    },
+    "./CollapseHorizontalLineArrows.svelte": {
+      "types": "./dist/CollapseHorizontalLineArrows.svelte.d.ts",
+      "svelte": "./dist/CollapseHorizontalLineArrows.svelte"
+    },
+    "./CollapseVerticalFillArrows.svelte": {
+      "types": "./dist/CollapseVerticalFillArrows.svelte.d.ts",
+      "svelte": "./dist/CollapseVerticalFillArrows.svelte"
+    },
+    "./CollapseVerticalLineArrows.svelte": {
+      "types": "./dist/CollapseVerticalLineArrows.svelte.d.ts",
+      "svelte": "./dist/CollapseVerticalLineArrows.svelte"
     },
     "./ColorFilterFillDesign.svelte": {
       "types": "./dist/ColorFilterFillDesign.svelte.d.ts",
@@ -3049,6 +3085,14 @@
       "types": "./dist/DivideLineSystem.svelte.d.ts",
       "svelte": "./dist/DivideLineSystem.svelte"
     },
+    "./DnaFillHealthMedical.svelte": {
+      "types": "./dist/DnaFillHealthMedical.svelte.d.ts",
+      "svelte": "./dist/DnaFillHealthMedical.svelte"
+    },
+    "./DnaLineHealthMedical.svelte": {
+      "types": "./dist/DnaLineHealthMedical.svelte.d.ts",
+      "svelte": "./dist/DnaLineHealthMedical.svelte"
+    },
     "./DonutChartFillBusiness.svelte": {
       "types": "./dist/DonutChartFillBusiness.svelte.d.ts",
       "svelte": "./dist/DonutChartFillBusiness.svelte"
@@ -3248,6 +3292,14 @@
     "./DropdownListEditor.svelte": {
       "types": "./dist/DropdownListEditor.svelte.d.ts",
       "svelte": "./dist/DropdownListEditor.svelte"
+    },
+    "./DropperFillHealthMedical.svelte": {
+      "types": "./dist/DropperFillHealthMedical.svelte.d.ts",
+      "svelte": "./dist/DropperFillHealthMedical.svelte"
+    },
+    "./DropperLineHealthMedical.svelte": {
+      "types": "./dist/DropperLineHealthMedical.svelte.d.ts",
+      "svelte": "./dist/DropperLineHealthMedical.svelte"
     },
     "./DualSim1FillDevice.svelte": {
       "types": "./dist/DualSim1FillDevice.svelte.d.ts",
@@ -3581,6 +3633,22 @@
       "types": "./dist/ExpandDiagonalLineArrows.svelte.d.ts",
       "svelte": "./dist/ExpandDiagonalLineArrows.svelte"
     },
+    "./ExpandDiagonalS2FillArrows.svelte": {
+      "types": "./dist/ExpandDiagonalS2FillArrows.svelte.d.ts",
+      "svelte": "./dist/ExpandDiagonalS2FillArrows.svelte"
+    },
+    "./ExpandDiagonalS2LineArrows.svelte": {
+      "types": "./dist/ExpandDiagonalS2LineArrows.svelte.d.ts",
+      "svelte": "./dist/ExpandDiagonalS2LineArrows.svelte"
+    },
+    "./ExpandDiagonalSFillArrows.svelte": {
+      "types": "./dist/ExpandDiagonalSFillArrows.svelte.d.ts",
+      "svelte": "./dist/ExpandDiagonalSFillArrows.svelte"
+    },
+    "./ExpandDiagonalSLineArrows.svelte": {
+      "types": "./dist/ExpandDiagonalSLineArrows.svelte.d.ts",
+      "svelte": "./dist/ExpandDiagonalSLineArrows.svelte"
+    },
     "./ExpandHeightFillArrows.svelte": {
       "types": "./dist/ExpandHeightFillArrows.svelte.d.ts",
       "svelte": "./dist/ExpandHeightFillArrows.svelte"
@@ -3588,6 +3656,22 @@
     "./ExpandHeightLineArrows.svelte": {
       "types": "./dist/ExpandHeightLineArrows.svelte.d.ts",
       "svelte": "./dist/ExpandHeightLineArrows.svelte"
+    },
+    "./ExpandHorizontalFillArrows.svelte": {
+      "types": "./dist/ExpandHorizontalFillArrows.svelte.d.ts",
+      "svelte": "./dist/ExpandHorizontalFillArrows.svelte"
+    },
+    "./ExpandHorizontalLineArrows.svelte": {
+      "types": "./dist/ExpandHorizontalLineArrows.svelte.d.ts",
+      "svelte": "./dist/ExpandHorizontalLineArrows.svelte"
+    },
+    "./ExpandHorizontalSFillArrows.svelte": {
+      "types": "./dist/ExpandHorizontalSFillArrows.svelte.d.ts",
+      "svelte": "./dist/ExpandHorizontalSFillArrows.svelte"
+    },
+    "./ExpandHorizontalSLineArrows.svelte": {
+      "types": "./dist/ExpandHorizontalSLineArrows.svelte.d.ts",
+      "svelte": "./dist/ExpandHorizontalSLineArrows.svelte"
     },
     "./ExpandLeftFillArrows.svelte": {
       "types": "./dist/ExpandLeftFillArrows.svelte.d.ts",
@@ -3620,6 +3704,22 @@
     "./ExpandUpDownLineArrows.svelte": {
       "types": "./dist/ExpandUpDownLineArrows.svelte.d.ts",
       "svelte": "./dist/ExpandUpDownLineArrows.svelte"
+    },
+    "./ExpandVerticalFillArrows.svelte": {
+      "types": "./dist/ExpandVerticalFillArrows.svelte.d.ts",
+      "svelte": "./dist/ExpandVerticalFillArrows.svelte"
+    },
+    "./ExpandVerticalLineArrows.svelte": {
+      "types": "./dist/ExpandVerticalLineArrows.svelte.d.ts",
+      "svelte": "./dist/ExpandVerticalLineArrows.svelte"
+    },
+    "./ExpandVerticalSFillArrows.svelte": {
+      "types": "./dist/ExpandVerticalSFillArrows.svelte.d.ts",
+      "svelte": "./dist/ExpandVerticalSFillArrows.svelte"
+    },
+    "./ExpandVerticalSLineArrows.svelte": {
+      "types": "./dist/ExpandVerticalSLineArrows.svelte.d.ts",
+      "svelte": "./dist/ExpandVerticalSLineArrows.svelte"
     },
     "./ExpandWidthFillArrows.svelte": {
       "types": "./dist/ExpandWidthFillArrows.svelte.d.ts",
@@ -3720,10 +3820,6 @@
     "./File2FillDocument.svelte": {
       "types": "./dist/File2FillDocument.svelte.d.ts",
       "svelte": "./dist/File2FillDocument.svelte"
-    },
-    "./File2Line2Document.svelte": {
-      "types": "./dist/File2Line2Document.svelte.d.ts",
-      "svelte": "./dist/File2Line2Document.svelte"
     },
     "./File2LineDocument.svelte": {
       "types": "./dist/File2LineDocument.svelte.d.ts",
@@ -4913,6 +5009,14 @@
       "types": "./dist/GatsbyLineLogos.svelte.d.ts",
       "svelte": "./dist/GatsbyLineLogos.svelte"
     },
+    "./GeminiFillLogos.svelte": {
+      "types": "./dist/GeminiFillLogos.svelte.d.ts",
+      "svelte": "./dist/GeminiFillLogos.svelte"
+    },
+    "./GeminiLineLogos.svelte": {
+      "types": "./dist/GeminiLineLogos.svelte.d.ts",
+      "svelte": "./dist/GeminiLineLogos.svelte"
+    },
     "./GenderlessFillUserFaces.svelte": {
       "types": "./dist/GenderlessFillUserFaces.svelte.d.ts",
       "svelte": "./dist/GenderlessFillUserFaces.svelte"
@@ -5285,10 +5389,6 @@
       "types": "./dist/HandbagLineOthers.svelte.d.ts",
       "svelte": "./dist/HandbagLineOthers.svelte"
     },
-    "./HardDrive2Fill2Device.svelte": {
-      "types": "./dist/HardDrive2Fill2Device.svelte.d.ts",
-      "svelte": "./dist/HardDrive2Fill2Device.svelte"
-    },
     "./HardDrive2FillDevice.svelte": {
       "types": "./dist/HardDrive2FillDevice.svelte.d.ts",
       "svelte": "./dist/HardDrive2FillDevice.svelte"
@@ -5340,10 +5440,6 @@
     "./HdLineMedia.svelte": {
       "types": "./dist/HdLineMedia.svelte.d.ts",
       "svelte": "./dist/HdLineMedia.svelte"
-    },
-    "./Heading2Editor.svelte": {
-      "types": "./dist/Heading2Editor.svelte.d.ts",
-      "svelte": "./dist/Heading2Editor.svelte"
     },
     "./HeadingEditor.svelte": {
       "types": "./dist/HeadingEditor.svelte.d.ts",
@@ -6841,10 +6937,6 @@
       "types": "./dist/MenuFold3FillSystem.svelte.d.ts",
       "svelte": "./dist/MenuFold3FillSystem.svelte"
     },
-    "./MenuFold3Line2System.svelte": {
-      "types": "./dist/MenuFold3Line2System.svelte.d.ts",
-      "svelte": "./dist/MenuFold3Line2System.svelte"
-    },
     "./MenuFold3LineSystem.svelte": {
       "types": "./dist/MenuFold3LineSystem.svelte.d.ts",
       "svelte": "./dist/MenuFold3LineSystem.svelte"
@@ -6889,10 +6981,6 @@
       "types": "./dist/MenuUnfold3FillSystem.svelte.d.ts",
       "svelte": "./dist/MenuUnfold3FillSystem.svelte"
     },
-    "./MenuUnfold3Line2System.svelte": {
-      "types": "./dist/MenuUnfold3Line2System.svelte.d.ts",
-      "svelte": "./dist/MenuUnfold3Line2System.svelte"
-    },
     "./MenuUnfold3LineSystem.svelte": {
       "types": "./dist/MenuUnfold3LineSystem.svelte.d.ts",
       "svelte": "./dist/MenuUnfold3LineSystem.svelte"
@@ -6900,10 +6988,6 @@
     "./MenuUnfold4FillSystem.svelte": {
       "types": "./dist/MenuUnfold4FillSystem.svelte.d.ts",
       "svelte": "./dist/MenuUnfold4FillSystem.svelte"
-    },
-    "./MenuUnfold4Line2System.svelte": {
-      "types": "./dist/MenuUnfold4Line2System.svelte.d.ts",
-      "svelte": "./dist/MenuUnfold4Line2System.svelte"
     },
     "./MenuUnfold4LineSystem.svelte": {
       "types": "./dist/MenuUnfold4LineSystem.svelte.d.ts",
@@ -8557,6 +8641,22 @@
       "types": "./dist/ReservedLineOthers.svelte.d.ts",
       "svelte": "./dist/ReservedLineOthers.svelte"
     },
+    "./ResetLeftFillSystem.svelte": {
+      "types": "./dist/ResetLeftFillSystem.svelte.d.ts",
+      "svelte": "./dist/ResetLeftFillSystem.svelte"
+    },
+    "./ResetLeftLineSystem.svelte": {
+      "types": "./dist/ResetLeftLineSystem.svelte.d.ts",
+      "svelte": "./dist/ResetLeftLineSystem.svelte"
+    },
+    "./ResetRightFillSystem.svelte": {
+      "types": "./dist/ResetRightFillSystem.svelte.d.ts",
+      "svelte": "./dist/ResetRightFillSystem.svelte"
+    },
+    "./ResetRightLineSystem.svelte": {
+      "types": "./dist/ResetRightLineSystem.svelte.d.ts",
+      "svelte": "./dist/ResetRightLineSystem.svelte"
+    },
     "./RestTimeFillHealthMedical.svelte": {
       "types": "./dist/RestTimeFillHealthMedical.svelte.d.ts",
       "svelte": "./dist/RestTimeFillHealthMedical.svelte"
@@ -9897,6 +9997,14 @@
       "types": "./dist/StackshareLineLogos.svelte.d.ts",
       "svelte": "./dist/StackshareLineLogos.svelte"
     },
+    "./StairsFillOthers.svelte": {
+      "types": "./dist/StairsFillOthers.svelte.d.ts",
+      "svelte": "./dist/StairsFillOthers.svelte"
+    },
+    "./StairsLineOthers.svelte": {
+      "types": "./dist/StairsLineOthers.svelte.d.ts",
+      "svelte": "./dist/StairsLineOthers.svelte"
+    },
     "./StarFillSystem.svelte": {
       "types": "./dist/StarFillSystem.svelte.d.ts",
       "svelte": "./dist/StarFillSystem.svelte"
@@ -9968,10 +10076,6 @@
     "./StethoscopeLineHealthMedical.svelte": {
       "types": "./dist/StethoscopeLineHealthMedical.svelte.d.ts",
       "svelte": "./dist/StethoscopeLineHealthMedical.svelte"
-    },
-    "./StickyNote2Fill2Document.svelte": {
-      "types": "./dist/StickyNote2Fill2Document.svelte.d.ts",
-      "svelte": "./dist/StickyNote2Fill2Document.svelte"
     },
     "./StickyNote2FillDocument.svelte": {
       "types": "./dist/StickyNote2FillDocument.svelte.d.ts",
@@ -10385,6 +10489,14 @@
       "types": "./dist/TeamLineUserFaces.svelte.d.ts",
       "svelte": "./dist/TeamLineUserFaces.svelte"
     },
+    "./Telegram2FillLogos.svelte": {
+      "types": "./dist/Telegram2FillLogos.svelte.d.ts",
+      "svelte": "./dist/Telegram2FillLogos.svelte"
+    },
+    "./Telegram2LineLogos.svelte": {
+      "types": "./dist/Telegram2LineLogos.svelte.d.ts",
+      "svelte": "./dist/Telegram2LineLogos.svelte"
+    },
     "./TelegramFillLogos.svelte": {
       "types": "./dist/TelegramFillLogos.svelte.d.ts",
       "svelte": "./dist/TelegramFillLogos.svelte"
@@ -10713,6 +10825,14 @@
       "types": "./dist/TriangleLineDesign.svelte.d.ts",
       "svelte": "./dist/TriangleLineDesign.svelte"
     },
+    "./TriangularFlagFillBusiness.svelte": {
+      "types": "./dist/TriangularFlagFillBusiness.svelte.d.ts",
+      "svelte": "./dist/TriangularFlagFillBusiness.svelte"
+    },
+    "./TriangularFlagLineBusiness.svelte": {
+      "types": "./dist/TriangularFlagLineBusiness.svelte.d.ts",
+      "svelte": "./dist/TriangularFlagLineBusiness.svelte"
+    },
     "./TrophyFillFinance.svelte": {
       "types": "./dist/TrophyFillFinance.svelte.d.ts",
       "svelte": "./dist/TrophyFillFinance.svelte"
@@ -10964,6 +11084,14 @@
     "./UserLocationLineUserFaces.svelte": {
       "types": "./dist/UserLocationLineUserFaces.svelte.d.ts",
       "svelte": "./dist/UserLocationLineUserFaces.svelte"
+    },
+    "./UserMinusFillUserFaces.svelte": {
+      "types": "./dist/UserMinusFillUserFaces.svelte.d.ts",
+      "svelte": "./dist/UserMinusFillUserFaces.svelte"
+    },
+    "./UserMinusLineUserFaces.svelte": {
+      "types": "./dist/UserMinusLineUserFaces.svelte.d.ts",
+      "svelte": "./dist/UserMinusLineUserFaces.svelte"
     },
     "./UserReceived2FillUserFaces.svelte": {
       "types": "./dist/UserReceived2FillUserFaces.svelte.d.ts",

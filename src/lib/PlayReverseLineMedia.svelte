@@ -1,100 +1,64 @@
-<script lang="ts">
+<script lang='ts'>
   import { getContext } from 'svelte';
+  import type { SVGAttributes } from 'svelte/elements';
+
   type TitleType = {
-    id?: string;
-    title?: string;
+    id?: string | undefined | null;
+    title?: string | undefined | null;
   };
   type DescType = {
-    id?: string;
-    desc?: string;
+    id?: string | undefined | null;
+    desc?: string | undefined | null;
   };
-  interface BaseProps {
-    size?: string;
-    role?: string;
-    color?: string;
-    withEvents?: boolean;
-    onclick?: (event: MouseEvent) => void;
-    onkeydown?: (event: KeyboardEvent) => void;
-    onkeyup?: (event: KeyboardEvent) => void;
-    class?: string;
+  interface BaseProps extends SVGAttributes<SVGElement>{
+    size?: string | undefined | null;
+    role?: string | undefined | null;
+    color?: string | undefined | null;
+    class?: string | undefined | null;
   }
   interface CtxType extends BaseProps {}
   const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps {
+  interface Props extends BaseProps{
     title?: TitleType;
     desc?: DescType;
-    ariaLabel?: string;
+    ariaLabel?: string | undefined | null;
   }
 
-  let {
-    size = ctx.size || '24',
-    role = ctx.role || 'img',
-    color = ctx.color || 'currentColor',
-    withEvents = ctx.withEvents || false,
-    title,
-    desc,
-    class: classname,
-    ariaLabel = 'play reverse line Media',
-    onclick,
-    onkeydown,
-    onkeyup,
-    ...restProps
+  let { 
+    size = ctx.size || '24', 
+    role = ctx.role || 'img', 
+    color = ctx.color || 'currentColor', 
+    title, 
+    desc, 
+    class: classname, 
+    ariaLabel =  "play reverse line Media" ,
+    ...restProps 
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-{#if withEvents}
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    {...restProps}
-    {role}
-    width={size}
-    height={size}
-    class={classname}
-    fill={color}
-    aria-label={ariaLabel}
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    viewBox="0 0 24 24"
-    {onclick}
-    {onkeydown}
-    {onkeyup}
-  >
-    {#if title?.id && title.title}
-      <title id={title.id}>{title.title}</title>
-    {/if}
-    {#if desc?.id && desc.desc}
-      <desc id={desc.id}>{desc.desc}</desc>
-    {/if}
-    <path
-      d="M7.60558 12.0001L14 7.7371V16.263L7.60558 12.0001ZM4.62407 12.4161L15.2227 19.4818C15.4524 19.635 15.7629 19.5729 15.9161 19.3432C15.9708 19.261 16 19.1645 16 19.0658V4.93433C16 4.65818 15.7762 4.43433 15.5 4.43433C15.4013 4.43433 15.3048 4.46355 15.2227 4.5183L4.62407 11.584C4.39431 11.7372 4.33222 12.0477 4.4854 12.2774C4.52201 12.3323 4.56914 12.3795 4.62407 12.4161Z"
-    />
-  </svg>
-{:else}
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    {...restProps}
-    {role}
-    width={size}
-    height={size}
-    class={classname}
-    fill={color}
-    aria-label={ariaLabel}
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    viewBox="0 0 24 24"
-  >
-    {#if title?.id && title.title}
-      <title id={title.id}>{title.title}</title>
-    {/if}
-    {#if desc?.id && desc.desc}
-      <desc id={desc.id}>{desc.desc}</desc>
-    {/if}
-    <path
-      d="M7.60558 12.0001L14 7.7371V16.263L7.60558 12.0001ZM4.62407 12.4161L15.2227 19.4818C15.4524 19.635 15.7629 19.5729 15.9161 19.3432C15.9708 19.261 16 19.1645 16 19.0658V4.93433C16 4.65818 15.7762 4.43433 15.5 4.43433C15.4013 4.43433 15.3048 4.46355 15.2227 4.5183L4.62407 11.584C4.39431 11.7372 4.33222 12.0477 4.4854 12.2774C4.52201 12.3323 4.56914 12.3795 4.62407 12.4161Z"
-    />
-  </svg>
-{/if}
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  {...restProps}
+  {role}
+  width={size}
+  height={size}
+  class={classname}
+  fill={color}
+  aria-label={ariaLabel}
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  viewBox="0 0 24 24"
+>
+  {#if title?.id && title.title}
+    <title id="{title.id}">{title.title}</title>
+  {/if}
+  {#if desc?.id && desc.desc}
+    <desc id="{desc.id}">{desc.desc}</desc>
+  {/if}
+    <path d="M7.60558 12.0001L14 7.7371V16.263L7.60558 12.0001ZM4.62407 12.4161L15.2227 19.4818C15.4524 19.635 15.7629 19.5729 15.9161 19.3432C15.9708 19.261 16 19.1645 16 19.0658V4.93433C16 4.65818 15.7762 4.43433 15.5 4.43433C15.4013 4.43433 15.3048 4.46355 15.2227 4.5183L4.62407 11.584C4.39431 11.7372 4.33222 12.0477 4.4854 12.2774C4.52201 12.3323 4.56914 12.3795 4.62407 12.4161Z"/>
+</svg>
 
 <!--
 @component
@@ -103,13 +67,9 @@
 @prop size = ctx.size || '24'
 @prop role = ctx.role || 'img'
 @prop color = ctx.color || 'currentColor'
-@prop withEvents = ctx.withEvents || false
 @prop title
 @prop desc
 @prop class: classname
-@prop ariaLabel = 'play reverse line Media'
-@prop onclick
-@prop onkeydown
-@prop onkeyup
+@prop ariaLabel =  "play reverse line Media"
 @prop ...restProps
 -->

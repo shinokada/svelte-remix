@@ -1,100 +1,64 @@
-<script lang="ts">
+<script lang='ts'>
   import { getContext } from 'svelte';
+  import type { SVGAttributes } from 'svelte/elements';
+
   type TitleType = {
-    id?: string;
-    title?: string;
+    id?: string | undefined | null;
+    title?: string | undefined | null;
   };
   type DescType = {
-    id?: string;
-    desc?: string;
+    id?: string | undefined | null;
+    desc?: string | undefined | null;
   };
-  interface BaseProps {
-    size?: string;
-    role?: string;
-    color?: string;
-    withEvents?: boolean;
-    onclick?: (event: MouseEvent) => void;
-    onkeydown?: (event: KeyboardEvent) => void;
-    onkeyup?: (event: KeyboardEvent) => void;
-    class?: string;
+  interface BaseProps extends SVGAttributes<SVGElement>{
+    size?: string | undefined | null;
+    role?: string | undefined | null;
+    color?: string | undefined | null;
+    class?: string | undefined | null;
   }
   interface CtxType extends BaseProps {}
   const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps {
+  interface Props extends BaseProps{
     title?: TitleType;
     desc?: DescType;
-    ariaLabel?: string;
+    ariaLabel?: string | undefined | null;
   }
 
-  let {
-    size = ctx.size || '24',
-    role = ctx.role || 'img',
-    color = ctx.color || 'currentColor',
-    withEvents = ctx.withEvents || false,
-    title,
-    desc,
-    class: classname,
-    ariaLabel = 'token swap line Finance',
-    onclick,
-    onkeydown,
-    onkeyup,
-    ...restProps
+  let { 
+    size = ctx.size || '24', 
+    role = ctx.role || 'img', 
+    color = ctx.color || 'currentColor', 
+    title, 
+    desc, 
+    class: classname, 
+    ariaLabel =  "token swap line Finance" ,
+    ...restProps 
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-{#if withEvents}
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    {...restProps}
-    {role}
-    width={size}
-    height={size}
-    class={classname}
-    fill={color}
-    aria-label={ariaLabel}
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    viewBox="0 0 24 24"
-    {onclick}
-    {onkeydown}
-    {onkeyup}
-  >
-    {#if title?.id && title.title}
-      <title id={title.id}>{title.title}</title>
-    {/if}
-    {#if desc?.id && desc.desc}
-      <desc id={desc.id}>{desc.desc}</desc>
-    {/if}
-    <path
-      d="M9 12.5 6.5 15 9 17.5 11.5 15 9 12.5ZM15 2.5C11.5724 2.5 8.76444 5.15304 8.51763 8.51763 5.15304 8.76445 2.5 11.5724 2.5 15 2.5 18.5899 5.41015 21.5 9 21.5 12.4276 21.5 15.2356 18.847 15.4824 15.4824 18.847 15.2356 21.5 12.4276 21.5 9 21.5 5.41015 18.5899 2.5 15 2.5ZM15.3234 13.4886C14.7575 11.1126 12.8874 9.24245 10.5114 8.67665 10.6772 6.34229 12.6234 4.5 15 4.5 17.4853 4.5 19.5 6.51472 19.5 9 19.5 11.3766 17.6577 13.3228 15.3234 13.4886ZM13.5 15C13.5 17.4853 11.4853 19.5 9 19.5 6.51472 19.5 4.5 17.4853 4.5 15 4.5 12.5147 6.51472 10.5 9 10.5 11.4853 10.5 13.5 12.5147 13.5 15ZM3 7C3 4.79086 4.79086 3 7 3H8.5V5H7C5.89543 5 5 5.89543 5 7V8.5H3V7ZM19 17V15.5H21V17C21 19.2091 19.2091 21 17 21H15.5V19H17C18.1046 19 19 18.1046 19 17Z"
-    />
-  </svg>
-{:else}
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    {...restProps}
-    {role}
-    width={size}
-    height={size}
-    class={classname}
-    fill={color}
-    aria-label={ariaLabel}
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    viewBox="0 0 24 24"
-  >
-    {#if title?.id && title.title}
-      <title id={title.id}>{title.title}</title>
-    {/if}
-    {#if desc?.id && desc.desc}
-      <desc id={desc.id}>{desc.desc}</desc>
-    {/if}
-    <path
-      d="M9 12.5 6.5 15 9 17.5 11.5 15 9 12.5ZM15 2.5C11.5724 2.5 8.76444 5.15304 8.51763 8.51763 5.15304 8.76445 2.5 11.5724 2.5 15 2.5 18.5899 5.41015 21.5 9 21.5 12.4276 21.5 15.2356 18.847 15.4824 15.4824 18.847 15.2356 21.5 12.4276 21.5 9 21.5 5.41015 18.5899 2.5 15 2.5ZM15.3234 13.4886C14.7575 11.1126 12.8874 9.24245 10.5114 8.67665 10.6772 6.34229 12.6234 4.5 15 4.5 17.4853 4.5 19.5 6.51472 19.5 9 19.5 11.3766 17.6577 13.3228 15.3234 13.4886ZM13.5 15C13.5 17.4853 11.4853 19.5 9 19.5 6.51472 19.5 4.5 17.4853 4.5 15 4.5 12.5147 6.51472 10.5 9 10.5 11.4853 10.5 13.5 12.5147 13.5 15ZM3 7C3 4.79086 4.79086 3 7 3H8.5V5H7C5.89543 5 5 5.89543 5 7V8.5H3V7ZM19 17V15.5H21V17C21 19.2091 19.2091 21 17 21H15.5V19H17C18.1046 19 19 18.1046 19 17Z"
-    />
-  </svg>
-{/if}
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  {...restProps}
+  {role}
+  width={size}
+  height={size}
+  class={classname}
+  fill={color}
+  aria-label={ariaLabel}
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  viewBox="0 0 24 24"
+>
+  {#if title?.id && title.title}
+    <title id="{title.id}">{title.title}</title>
+  {/if}
+  {#if desc?.id && desc.desc}
+    <desc id="{desc.id}">{desc.desc}</desc>
+  {/if}
+    <path d="M9 12.5 6.5 15 9 17.5 11.5 15 9 12.5ZM15 2.5C11.5724 2.5 8.76444 5.15304 8.51763 8.51763 5.15304 8.76445 2.5 11.5724 2.5 15 2.5 18.5899 5.41015 21.5 9 21.5 12.4276 21.5 15.2356 18.847 15.4824 15.4824 18.847 15.2356 21.5 12.4276 21.5 9 21.5 5.41015 18.5899 2.5 15 2.5ZM15.3234 13.4886C14.7575 11.1126 12.8874 9.24245 10.5114 8.67665 10.6772 6.34229 12.6234 4.5 15 4.5 17.4853 4.5 19.5 6.51472 19.5 9 19.5 11.3766 17.6577 13.3228 15.3234 13.4886ZM13.5 15C13.5 17.4853 11.4853 19.5 9 19.5 6.51472 19.5 4.5 17.4853 4.5 15 4.5 12.5147 6.51472 10.5 9 10.5 11.4853 10.5 13.5 12.5147 13.5 15ZM3 7C3 4.79086 4.79086 3 7 3H8.5V5H7C5.89543 5 5 5.89543 5 7V8.5H3V7ZM19 17V15.5H21V17C21 19.2091 19.2091 21 17 21H15.5V19H17C18.1046 19 19 18.1046 19 17Z"/>
+</svg>
 
 <!--
 @component
@@ -103,13 +67,9 @@
 @prop size = ctx.size || '24'
 @prop role = ctx.role || 'img'
 @prop color = ctx.color || 'currentColor'
-@prop withEvents = ctx.withEvents || false
 @prop title
 @prop desc
 @prop class: classname
-@prop ariaLabel = 'token swap line Finance'
-@prop onclick
-@prop onkeydown
-@prop onkeyup
+@prop ariaLabel =  "token swap line Finance"
 @prop ...restProps
 -->

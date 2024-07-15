@@ -1,100 +1,64 @@
-<script lang="ts">
+<script lang='ts'>
   import { getContext } from 'svelte';
+  import type { SVGAttributes } from 'svelte/elements';
+
   type TitleType = {
-    id?: string;
-    title?: string;
+    id?: string | undefined | null;
+    title?: string | undefined | null;
   };
   type DescType = {
-    id?: string;
-    desc?: string;
+    id?: string | undefined | null;
+    desc?: string | undefined | null;
   };
-  interface BaseProps {
-    size?: string;
-    role?: string;
-    color?: string;
-    withEvents?: boolean;
-    onclick?: (event: MouseEvent) => void;
-    onkeydown?: (event: KeyboardEvent) => void;
-    onkeyup?: (event: KeyboardEvent) => void;
-    class?: string;
+  interface BaseProps extends SVGAttributes<SVGElement>{
+    size?: string | undefined | null;
+    role?: string | undefined | null;
+    color?: string | undefined | null;
+    class?: string | undefined | null;
   }
   interface CtxType extends BaseProps {}
   const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps {
+  interface Props extends BaseProps{
     title?: TitleType;
     desc?: DescType;
-    ariaLabel?: string;
+    ariaLabel?: string | undefined | null;
   }
 
-  let {
-    size = ctx.size || '24',
-    role = ctx.role || 'img',
-    color = ctx.color || 'currentColor',
-    withEvents = ctx.withEvents || false,
-    title,
-    desc,
-    class: classname,
-    ariaLabel = 'douban fill Logos',
-    onclick,
-    onkeydown,
-    onkeyup,
-    ...restProps
+  let { 
+    size = ctx.size || '24', 
+    role = ctx.role || 'img', 
+    color = ctx.color || 'currentColor', 
+    title, 
+    desc, 
+    class: classname, 
+    ariaLabel =  "douban fill Logos" ,
+    ...restProps 
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-{#if withEvents}
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    {...restProps}
-    {role}
-    width={size}
-    height={size}
-    class={classname}
-    fill={color}
-    aria-label={ariaLabel}
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    viewBox="0 0 24 24"
-    {onclick}
-    {onkeydown}
-    {onkeyup}
-  >
-    {#if title?.id && title.title}
-      <title id={title.id}>{title.title}</title>
-    {/if}
-    {#if desc?.id && desc.desc}
-      <desc id={desc.id}>{desc.desc}</desc>
-    {/if}
-    <path
-      d="M16.3143 19.1379H20.3793C20.7221 19.1379 21 19.4158 21 19.7586V20.3793C21 20.7221 20.7221 21 20.3793 21H3.62069C3.27789 21 3 20.7221 3 20.3793V19.7586C3 19.4158 3.27789 19.1379 3.62069 19.1379H7.37438L6.41379 16.0345H8.60436C8.87152 16.0345 9.10871 16.2054 9.19319 16.4589L10.0862 19.1379H13.5988L14.8236 15.1034H5.17241C4.82962 15.1034 4.55172 14.8256 4.55172 14.4828V7.34483C4.55172 7.00203 4.82962 6.72414 5.17241 6.72414H18.8276C19.1704 6.72414 19.4483 7.00203 19.4483 7.34483V14.4828C19.4483 14.8256 19.1704 15.1034 18.8276 15.1034H17.5391L16.3143 19.1379ZM3.93103 3H20.069C20.4118 3 20.6897 3.27789 20.6897 3.62069V4.24138C20.6897 4.58418 20.4118 4.86207 20.069 4.86207H3.93103C3.58824 4.86207 3.31034 4.58418 3.31034 4.24138V3.62069C3.31034 3.27789 3.58824 3 3.93103 3ZM7.18966 8.58621C7.10396 8.58621 7.03448 8.65568 7.03448 8.74138V12.7759C7.03448 12.8616 7.10396 12.931 7.18966 12.931H16.8103C16.896 12.931 16.9655 12.8616 16.9655 12.7759V8.74138C16.9655 8.65568 16.896 8.58621 16.8103 8.58621H7.18966Z"
-    />
-  </svg>
-{:else}
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    {...restProps}
-    {role}
-    width={size}
-    height={size}
-    class={classname}
-    fill={color}
-    aria-label={ariaLabel}
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    viewBox="0 0 24 24"
-  >
-    {#if title?.id && title.title}
-      <title id={title.id}>{title.title}</title>
-    {/if}
-    {#if desc?.id && desc.desc}
-      <desc id={desc.id}>{desc.desc}</desc>
-    {/if}
-    <path
-      d="M16.3143 19.1379H20.3793C20.7221 19.1379 21 19.4158 21 19.7586V20.3793C21 20.7221 20.7221 21 20.3793 21H3.62069C3.27789 21 3 20.7221 3 20.3793V19.7586C3 19.4158 3.27789 19.1379 3.62069 19.1379H7.37438L6.41379 16.0345H8.60436C8.87152 16.0345 9.10871 16.2054 9.19319 16.4589L10.0862 19.1379H13.5988L14.8236 15.1034H5.17241C4.82962 15.1034 4.55172 14.8256 4.55172 14.4828V7.34483C4.55172 7.00203 4.82962 6.72414 5.17241 6.72414H18.8276C19.1704 6.72414 19.4483 7.00203 19.4483 7.34483V14.4828C19.4483 14.8256 19.1704 15.1034 18.8276 15.1034H17.5391L16.3143 19.1379ZM3.93103 3H20.069C20.4118 3 20.6897 3.27789 20.6897 3.62069V4.24138C20.6897 4.58418 20.4118 4.86207 20.069 4.86207H3.93103C3.58824 4.86207 3.31034 4.58418 3.31034 4.24138V3.62069C3.31034 3.27789 3.58824 3 3.93103 3ZM7.18966 8.58621C7.10396 8.58621 7.03448 8.65568 7.03448 8.74138V12.7759C7.03448 12.8616 7.10396 12.931 7.18966 12.931H16.8103C16.896 12.931 16.9655 12.8616 16.9655 12.7759V8.74138C16.9655 8.65568 16.896 8.58621 16.8103 8.58621H7.18966Z"
-    />
-  </svg>
-{/if}
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  {...restProps}
+  {role}
+  width={size}
+  height={size}
+  class={classname}
+  fill={color}
+  aria-label={ariaLabel}
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  viewBox="0 0 24 24"
+>
+  {#if title?.id && title.title}
+    <title id="{title.id}">{title.title}</title>
+  {/if}
+  {#if desc?.id && desc.desc}
+    <desc id="{desc.id}">{desc.desc}</desc>
+  {/if}
+    <path d="M16.3143 19.1379H20.3793C20.7221 19.1379 21 19.4158 21 19.7586V20.3793C21 20.7221 20.7221 21 20.3793 21H3.62069C3.27789 21 3 20.7221 3 20.3793V19.7586C3 19.4158 3.27789 19.1379 3.62069 19.1379H7.37438L6.41379 16.0345H8.60436C8.87152 16.0345 9.10871 16.2054 9.19319 16.4589L10.0862 19.1379H13.5988L14.8236 15.1034H5.17241C4.82962 15.1034 4.55172 14.8256 4.55172 14.4828V7.34483C4.55172 7.00203 4.82962 6.72414 5.17241 6.72414H18.8276C19.1704 6.72414 19.4483 7.00203 19.4483 7.34483V14.4828C19.4483 14.8256 19.1704 15.1034 18.8276 15.1034H17.5391L16.3143 19.1379ZM3.93103 3H20.069C20.4118 3 20.6897 3.27789 20.6897 3.62069V4.24138C20.6897 4.58418 20.4118 4.86207 20.069 4.86207H3.93103C3.58824 4.86207 3.31034 4.58418 3.31034 4.24138V3.62069C3.31034 3.27789 3.58824 3 3.93103 3ZM7.18966 8.58621C7.10396 8.58621 7.03448 8.65568 7.03448 8.74138V12.7759C7.03448 12.8616 7.10396 12.931 7.18966 12.931H16.8103C16.896 12.931 16.9655 12.8616 16.9655 12.7759V8.74138C16.9655 8.65568 16.896 8.58621 16.8103 8.58621H7.18966Z"/>
+</svg>
 
 <!--
 @component
@@ -103,13 +67,9 @@
 @prop size = ctx.size || '24'
 @prop role = ctx.role || 'img'
 @prop color = ctx.color || 'currentColor'
-@prop withEvents = ctx.withEvents || false
 @prop title
 @prop desc
 @prop class: classname
-@prop ariaLabel = 'douban fill Logos'
-@prop onclick
-@prop onkeydown
-@prop onkeyup
+@prop ariaLabel =  "douban fill Logos"
 @prop ...restProps
 -->

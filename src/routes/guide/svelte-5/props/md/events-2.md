@@ -1,1 +1,0 @@
-<AttachmentLineBusiness withEvents onclick="{handleClick}" />
