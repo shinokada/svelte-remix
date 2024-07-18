@@ -1,38 +1,17 @@
-<script lang='ts'>
+<script lang="ts">
   import { getContext } from 'svelte';
-  import type { SVGAttributes } from 'svelte/elements';
+  import type { CtxType, Props } from './types';
 
-  type TitleType = {
-    id?: string | undefined | null;
-    title?: string | undefined | null;
-  };
-  type DescType = {
-    id?: string | undefined | null;
-    desc?: string | undefined | null;
-  };
-  interface BaseProps extends SVGAttributes<SVGElement>{
-    size?: string | undefined | null;
-    role?: string | undefined | null;
-    color?: string | undefined | null;
-    class?: string | undefined | null;
-  }
-  interface CtxType extends BaseProps {}
   const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps{
-    title?: TitleType;
-    desc?: DescType;
-    ariaLabel?: string | undefined | null;
-  }
 
-  let { 
-    size = ctx.size || '24', 
-    role = ctx.role || 'img', 
-    color = ctx.color || 'currentColor', 
-    title, 
-    desc, 
-    class: classname, 
-    ariaLabel =  "cloudy 2 line Weather" ,
-    ...restProps 
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    color = ctx.color || 'currentColor',
+    title,
+    desc,
+    ariaLabel = 'cloudy 2 line Weather',
+    ...restProps
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
@@ -45,19 +24,20 @@
   {role}
   width={size}
   height={size}
-  class={classname}
   fill={color}
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
   viewBox="0 0 24 24"
 >
   {#if title?.id && title.title}
-    <title id="{title.id}">{title.title}</title>
+    <title id={title.id}>{title.title}</title>
   {/if}
   {#if desc?.id && desc.desc}
-    <desc id="{desc.id}">{desc.desc}</desc>
+    <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-    <path d="M17 21H7C3.68629 21 1 18.3137 1 15C1 12.3846 2.67346 10.16 5.00804 9.33857C5.0027 9.22639 5 9.11351 5 9C5 5.13401 8.13401 2 12 2C15.866 2 19 5.13401 19 9C19 9.11351 18.9973 9.22639 18.992 9.33857C21.3265 10.16 23 12.3846 23 15C23 18.3137 20.3137 21 17 21ZM7 19H17C19.2091 19 21 17.2091 21 15C21 12.7909 19.2091 11 17 11C16.8561 11 16.714 11.0076 16.5741 11.0224C16.8479 10.4041 17 9.71979 17 9C17 6.23858 14.7614 4 12 4C9.23858 4 7 6.23858 7 9C7 9.71979 7.15209 10.4041 7.4259 11.0224C7.28596 11.0076 7.14387 11 7 11C4.79086 11 3 12.7909 3 15C3 17.2091 4.79086 19 7 19Z"/>
+  <path
+    d="M17 21H7C3.68629 21 1 18.3137 1 15C1 12.3846 2.67346 10.16 5.00804 9.33857C5.0027 9.22639 5 9.11351 5 9C5 5.13401 8.13401 2 12 2C15.866 2 19 5.13401 19 9C19 9.11351 18.9973 9.22639 18.992 9.33857C21.3265 10.16 23 12.3846 23 15C23 18.3137 20.3137 21 17 21ZM7 19H17C19.2091 19 21 17.2091 21 15C21 12.7909 19.2091 11 17 11C16.8561 11 16.714 11.0076 16.5741 11.0224C16.8479 10.4041 17 9.71979 17 9C17 6.23858 14.7614 4 12 4C9.23858 4 7 6.23858 7 9C7 9.71979 7.15209 10.4041 7.4259 11.0224C7.28596 11.0076 7.14387 11 7 11C4.79086 11 3 12.7909 3 15C3 17.2091 4.79086 19 7 19Z"
+  />
 </svg>
 
 <!--
@@ -69,7 +49,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop class: classname
-@prop ariaLabel =  "cloudy 2 line Weather"
+@prop ariaLabel = 'cloudy 2 line Weather'
 @prop ...restProps
 -->

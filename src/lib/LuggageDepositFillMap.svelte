@@ -1,38 +1,17 @@
-<script lang='ts'>
+<script lang="ts">
   import { getContext } from 'svelte';
-  import type { SVGAttributes } from 'svelte/elements';
+  import type { CtxType, Props } from './types';
 
-  type TitleType = {
-    id?: string | undefined | null;
-    title?: string | undefined | null;
-  };
-  type DescType = {
-    id?: string | undefined | null;
-    desc?: string | undefined | null;
-  };
-  interface BaseProps extends SVGAttributes<SVGElement>{
-    size?: string | undefined | null;
-    role?: string | undefined | null;
-    color?: string | undefined | null;
-    class?: string | undefined | null;
-  }
-  interface CtxType extends BaseProps {}
   const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps{
-    title?: TitleType;
-    desc?: DescType;
-    ariaLabel?: string | undefined | null;
-  }
 
-  let { 
-    size = ctx.size || '24', 
-    role = ctx.role || 'img', 
-    color = ctx.color || 'currentColor', 
-    title, 
-    desc, 
-    class: classname, 
-    ariaLabel =  "luggage deposit fill Map" ,
-    ...restProps 
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    color = ctx.color || 'currentColor',
+    title,
+    desc,
+    ariaLabel = 'luggage deposit fill Map',
+    ...restProps
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
@@ -45,19 +24,20 @@
   {role}
   width={size}
   height={size}
-  class={classname}
   fill={color}
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
   viewBox="0 0 24 24"
 >
   {#if title?.id && title.title}
-    <title id="{title.id}">{title.title}</title>
+    <title id={title.id}>{title.title}</title>
   {/if}
   {#if desc?.id && desc.desc}
-    <desc id="{desc.id}">{desc.desc}</desc>
+    <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-    <path d="M15 3C15.5523 3 16 3.44772 16 4V6H20C20.5523 6 21 6.44772 21 7V19H23V21H1V19H3V7C3 6.44772 3.44772 6 4 6H8V4C8 3.44772 8.44772 3 9 3H15ZM10 8H8V19H10V8ZM16 8H14V19H16V8ZM14 5H10V6H14V5Z"/>
+  <path
+    d="M15 3C15.5523 3 16 3.44772 16 4V6H20C20.5523 6 21 6.44772 21 7V19H23V21H1V19H3V7C3 6.44772 3.44772 6 4 6H8V4C8 3.44772 8.44772 3 9 3H15ZM10 8H8V19H10V8ZM16 8H14V19H16V8ZM14 5H10V6H14V5Z"
+  />
 </svg>
 
 <!--
@@ -69,7 +49,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop class: classname
-@prop ariaLabel =  "luggage deposit fill Map"
+@prop ariaLabel = 'luggage deposit fill Map'
 @prop ...restProps
 -->

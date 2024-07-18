@@ -1,38 +1,17 @@
-<script lang='ts'>
+<script lang="ts">
   import { getContext } from 'svelte';
-  import type { SVGAttributes } from 'svelte/elements';
+  import type { CtxType, Props } from './types';
 
-  type TitleType = {
-    id?: string | undefined | null;
-    title?: string | undefined | null;
-  };
-  type DescType = {
-    id?: string | undefined | null;
-    desc?: string | undefined | null;
-  };
-  interface BaseProps extends SVGAttributes<SVGElement>{
-    size?: string | undefined | null;
-    role?: string | undefined | null;
-    color?: string | undefined | null;
-    class?: string | undefined | null;
-  }
-  interface CtxType extends BaseProps {}
   const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps{
-    title?: TitleType;
-    desc?: DescType;
-    ariaLabel?: string | undefined | null;
-  }
 
-  let { 
-    size = ctx.size || '24', 
-    role = ctx.role || 'img', 
-    color = ctx.color || 'currentColor', 
-    title, 
-    desc, 
-    class: classname, 
-    ariaLabel =  "xing line Logos" ,
-    ...restProps 
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    color = ctx.color || 'currentColor',
+    title,
+    desc,
+    ariaLabel = 'xing line Logos',
+    ...restProps
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
@@ -45,19 +24,20 @@
   {role}
   width={size}
   height={size}
-  class={classname}
   fill={color}
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
   viewBox="0 0 24 24"
 >
   {#if title?.id && title.title}
-    <title id="{title.id}">{title.title}</title>
+    <title id={title.id}>{title.title}</title>
   {/if}
   {#if desc?.id && desc.desc}
-    <desc id="{desc.id}">{desc.desc}</desc>
+    <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-    <path d="M20.4443 3.5L13.8099 14.9901L17.8573 22H15.5473L11.5021 14.9914L11.5003 14.9904L18.1343 3.5H20.4443ZM8.31033 7L10.7324 11.1962L10.7305 11.1973L7.66933 16.5H5.36133L8.42215 11.1951L6.00133 7H8.31033Z"/>
+  <path
+    d="M20.4443 3.5L13.8099 14.9901L17.8573 22H15.5473L11.5021 14.9914L11.5003 14.9904L18.1343 3.5H20.4443ZM8.31033 7L10.7324 11.1962L10.7305 11.1973L7.66933 16.5H5.36133L8.42215 11.1951L6.00133 7H8.31033Z"
+  />
 </svg>
 
 <!--
@@ -69,7 +49,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop class: classname
-@prop ariaLabel =  "xing line Logos"
+@prop ariaLabel = 'xing line Logos'
 @prop ...restProps
 -->

@@ -1,38 +1,17 @@
-<script lang='ts'>
+<script lang="ts">
   import { getContext } from 'svelte';
-  import type { SVGAttributes } from 'svelte/elements';
+  import type { CtxType, Props } from './types';
 
-  type TitleType = {
-    id?: string | undefined | null;
-    title?: string | undefined | null;
-  };
-  type DescType = {
-    id?: string | undefined | null;
-    desc?: string | undefined | null;
-  };
-  interface BaseProps extends SVGAttributes<SVGElement>{
-    size?: string | undefined | null;
-    role?: string | undefined | null;
-    color?: string | undefined | null;
-    class?: string | undefined | null;
-  }
-  interface CtxType extends BaseProps {}
   const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps{
-    title?: TitleType;
-    desc?: DescType;
-    ariaLabel?: string | undefined | null;
-  }
 
-  let { 
-    size = ctx.size || '24', 
-    role = ctx.role || 'img', 
-    color = ctx.color || 'currentColor', 
-    title, 
-    desc, 
-    class: classname, 
-    ariaLabel =  "folder unknow fill Document" ,
-    ...restProps 
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    color = ctx.color || 'currentColor',
+    title,
+    desc,
+    ariaLabel = 'folder unknow fill Document',
+    ...restProps
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
@@ -45,19 +24,20 @@
   {role}
   width={size}
   height={size}
-  class={classname}
   fill={color}
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
   viewBox="0 0 24 24"
 >
   {#if title?.id && title.title}
-    <title id="{title.id}">{title.title}</title>
+    <title id={title.id}>{title.title}</title>
   {/if}
   {#if desc?.id && desc.desc}
-    <desc id="{desc.id}">{desc.desc}</desc>
+    <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-    <path d="M12.4142 5H21C21.5523 5 22 5.44772 22 6V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H10.4142L12.4142 5ZM11 16V18H13V16H11ZM8.56731 10.8135L10.5288 11.2058C10.6656 10.5182 11.2723 10 12 10C12.8284 10 13.5 10.6716 13.5 11.5C13.5 12.3284 12.8284 13 12 13H11V15H12C13.933 15 15.5 13.433 15.5 11.5C15.5 9.567 13.933 8 12 8C10.302 8 8.88637 9.20919 8.56731 10.8135Z"/>
+  <path
+    d="M12.4142 5H21C21.5523 5 22 5.44772 22 6V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H10.4142L12.4142 5ZM11 16V18H13V16H11ZM8.56731 10.8135L10.5288 11.2058C10.6656 10.5182 11.2723 10 12 10C12.8284 10 13.5 10.6716 13.5 11.5C13.5 12.3284 12.8284 13 12 13H11V15H12C13.933 15 15.5 13.433 15.5 11.5C15.5 9.567 13.933 8 12 8C10.302 8 8.88637 9.20919 8.56731 10.8135Z"
+  />
 </svg>
 
 <!--
@@ -69,7 +49,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop class: classname
-@prop ariaLabel =  "folder unknow fill Document"
+@prop ariaLabel = 'folder unknow fill Document'
 @prop ...restProps
 -->

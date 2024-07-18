@@ -1,38 +1,17 @@
-<script lang='ts'>
+<script lang="ts">
   import { getContext } from 'svelte';
-  import type { SVGAttributes } from 'svelte/elements';
+  import type { CtxType, Props } from './types';
 
-  type TitleType = {
-    id?: string | undefined | null;
-    title?: string | undefined | null;
-  };
-  type DescType = {
-    id?: string | undefined | null;
-    desc?: string | undefined | null;
-  };
-  interface BaseProps extends SVGAttributes<SVGElement>{
-    size?: string | undefined | null;
-    role?: string | undefined | null;
-    color?: string | undefined | null;
-    class?: string | undefined | null;
-  }
-  interface CtxType extends BaseProps {}
   const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps{
-    title?: TitleType;
-    desc?: DescType;
-    ariaLabel?: string | undefined | null;
-  }
 
-  let { 
-    size = ctx.size || '24', 
-    role = ctx.role || 'img', 
-    color = ctx.color || 'currentColor', 
-    title, 
-    desc, 
-    class: classname, 
-    ariaLabel =  "collage line Design" ,
-    ...restProps 
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    color = ctx.color || 'currentColor',
+    title,
+    desc,
+    ariaLabel = 'collage line Design',
+    ...restProps
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
@@ -45,19 +24,20 @@
   {role}
   width={size}
   height={size}
-  class={classname}
   fill={color}
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
   viewBox="0 0 24 24"
 >
   {#if title?.id && title.title}
-    <title id="{title.id}">{title.title}</title>
+    <title id={title.id}>{title.title}</title>
   {/if}
   {#if desc?.id && desc.desc}
-    <desc id="{desc.id}">{desc.desc}</desc>
+    <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-    <path d="M20 3.10669C20.5523 3.10669 21 3.5544 21 4.10669V20.1067C21 20.659 20.5523 21.1067 20 21.1067H4C3.44772 21.1067 3 20.659 3 20.1067V4.10669C3 3.5544 3.44772 3.10669 4 3.10669H20ZM11.1888 13.2651L5 14.3557V19.1067H12.218L11.1888 13.2651ZM19 5.10669H11.781L14.249 19.1067H19V5.10669ZM9.75 5.10669H5V12.3247L10.8415 11.2955L9.75 5.10669Z"/>
+  <path
+    d="M20 3.10669C20.5523 3.10669 21 3.5544 21 4.10669V20.1067C21 20.659 20.5523 21.1067 20 21.1067H4C3.44772 21.1067 3 20.659 3 20.1067V4.10669C3 3.5544 3.44772 3.10669 4 3.10669H20ZM11.1888 13.2651L5 14.3557V19.1067H12.218L11.1888 13.2651ZM19 5.10669H11.781L14.249 19.1067H19V5.10669ZM9.75 5.10669H5V12.3247L10.8415 11.2955L9.75 5.10669Z"
+  />
 </svg>
 
 <!--
@@ -69,7 +49,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop class: classname
-@prop ariaLabel =  "collage line Design"
+@prop ariaLabel = 'collage line Design'
 @prop ...restProps
 -->

@@ -1,38 +1,17 @@
-<script lang='ts'>
+<script lang="ts">
   import { getContext } from 'svelte';
-  import type { SVGAttributes } from 'svelte/elements';
+  import type { CtxType, Props } from './types';
 
-  type TitleType = {
-    id?: string | undefined | null;
-    title?: string | undefined | null;
-  };
-  type DescType = {
-    id?: string | undefined | null;
-    desc?: string | undefined | null;
-  };
-  interface BaseProps extends SVGAttributes<SVGElement>{
-    size?: string | undefined | null;
-    role?: string | undefined | null;
-    color?: string | undefined | null;
-    class?: string | undefined | null;
-  }
-  interface CtxType extends BaseProps {}
   const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps{
-    title?: TitleType;
-    desc?: DescType;
-    ariaLabel?: string | undefined | null;
-  }
 
-  let { 
-    size = ctx.size || '24', 
-    role = ctx.role || 'img', 
-    color = ctx.color || 'currentColor', 
-    title, 
-    desc, 
-    class: classname, 
-    ariaLabel =  "mastercard fill Logos" ,
-    ...restProps 
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    color = ctx.color || 'currentColor',
+    title,
+    desc,
+    ariaLabel = 'mastercard fill Logos',
+    ...restProps
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
@@ -45,19 +24,20 @@
   {role}
   width={size}
   height={size}
-  class={classname}
   fill={color}
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
   viewBox="0 0 24 24"
 >
   {#if title?.id && title.title}
-    <title id="{title.id}">{title.title}</title>
+    <title id={title.id}>{title.title}</title>
   {/if}
   {#if desc?.id && desc.desc}
-    <desc id="{desc.id}">{desc.desc}</desc>
+    <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-    <path d="M12.001 6.65407C13.5816 7.89878 14.5965 9.82972 14.5965 11.9977C14.5965 14.1657 13.5816 16.0966 12.001 17.3413C10.4204 16.0966 9.40547 14.1657 9.40547 11.9977C9.40547 9.82972 10.4204 7.89878 12.001 6.65407ZM11.1316 6.0717C9.46024 7.50229 8.40098 9.62742 8.40098 12C8.40098 14.371 9.45891 16.4949 11.1285 17.9255C10.1444 18.4795 9.00847 18.7955 7.79873 18.7955C4.04443 18.7955 1.00098 15.752 1.00098 11.9977C1.00098 8.24341 4.04443 5.19995 7.79873 5.19995C9.00976 5.19995 10.1468 5.51663 11.1316 6.0717ZM12.8735 17.9255C14.543 16.4949 15.601 14.371 15.601 12C15.601 9.62742 14.5417 7.50229 12.8703 6.0717C13.8551 5.51663 14.9922 5.19995 16.2032 5.19995C19.9575 5.19995 23.001 8.24341 23.001 11.9977C23.001 15.752 19.9575 18.7955 16.2032 18.7955C14.9935 18.7955 13.8576 18.4795 12.8735 17.9255Z"/>
+  <path
+    d="M12.001 6.65407C13.5816 7.89878 14.5965 9.82972 14.5965 11.9977C14.5965 14.1657 13.5816 16.0966 12.001 17.3413C10.4204 16.0966 9.40547 14.1657 9.40547 11.9977C9.40547 9.82972 10.4204 7.89878 12.001 6.65407ZM11.1316 6.0717C9.46024 7.50229 8.40098 9.62742 8.40098 12C8.40098 14.371 9.45891 16.4949 11.1285 17.9255C10.1444 18.4795 9.00847 18.7955 7.79873 18.7955C4.04443 18.7955 1.00098 15.752 1.00098 11.9977C1.00098 8.24341 4.04443 5.19995 7.79873 5.19995C9.00976 5.19995 10.1468 5.51663 11.1316 6.0717ZM12.8735 17.9255C14.543 16.4949 15.601 14.371 15.601 12C15.601 9.62742 14.5417 7.50229 12.8703 6.0717C13.8551 5.51663 14.9922 5.19995 16.2032 5.19995C19.9575 5.19995 23.001 8.24341 23.001 11.9977C23.001 15.752 19.9575 18.7955 16.2032 18.7955C14.9935 18.7955 13.8576 18.4795 12.8735 17.9255Z"
+  />
 </svg>
 
 <!--
@@ -69,7 +49,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop class: classname
-@prop ariaLabel =  "mastercard fill Logos"
+@prop ariaLabel = 'mastercard fill Logos'
 @prop ...restProps
 -->

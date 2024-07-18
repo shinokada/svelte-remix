@@ -1,38 +1,17 @@
-<script lang='ts'>
+<script lang="ts">
   import { getContext } from 'svelte';
-  import type { SVGAttributes } from 'svelte/elements';
+  import type { CtxType, Props } from './types';
 
-  type TitleType = {
-    id?: string | undefined | null;
-    title?: string | undefined | null;
-  };
-  type DescType = {
-    id?: string | undefined | null;
-    desc?: string | undefined | null;
-  };
-  interface BaseProps extends SVGAttributes<SVGElement>{
-    size?: string | undefined | null;
-    role?: string | undefined | null;
-    color?: string | undefined | null;
-    class?: string | undefined | null;
-  }
-  interface CtxType extends BaseProps {}
   const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps{
-    title?: TitleType;
-    desc?: DescType;
-    ariaLabel?: string | undefined | null;
-  }
 
-  let { 
-    size = ctx.size || '24', 
-    role = ctx.role || 'img', 
-    color = ctx.color || 'currentColor', 
-    title, 
-    desc, 
-    class: classname, 
-    ariaLabel =  "file hwp line Document" ,
-    ...restProps 
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    color = ctx.color || 'currentColor',
+    title,
+    desc,
+    ariaLabel = 'file hwp line Document',
+    ...restProps
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
@@ -45,19 +24,20 @@
   {role}
   width={size}
   height={size}
-  class={classname}
   fill={color}
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
   viewBox="0 0 24 24"
 >
   {#if title?.id && title.title}
-    <title id="{title.id}">{title.title}</title>
+    <title id={title.id}>{title.title}</title>
   {/if}
   {#if desc?.id && desc.desc}
-    <desc id="{desc.id}">{desc.desc}</desc>
+    <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-    <path d="M16 2L20.9997 7L21 20.9925C21 21.5489 20.5551 22 20.0066 22H3.9934C3.44476 22 3 21.5447 3 21.0082V2.9918C3 2.44405 3.44749 2 3.9985 2H16ZM16 8.66667H8V7.33333L11.333 7.333L11.3333 6H12.6667L12.666 7.333H14.999L15 4H5V20H19V8L16 7.999V8.66667ZM9.33333 14.6667L9.333 16.666L16 16.6667V18H8V14.6667H9.33333ZM12 14.3333C12.5523 14.3333 13 14.781 13 15.3333C13 15.8856 12.5523 16.3333 12 16.3333C11.4477 16.3333 11 15.8856 11 15.3333C11 14.781 11.4477 14.3333 12 14.3333ZM12 9C13.3807 9 14.5 10.1193 14.5 11.5C14.5 12.8807 13.3807 14 12 14C10.6193 14 9.5 12.8807 9.5 11.5C9.5 10.1193 10.6193 9 12 9ZM12 10.3333C11.3557 10.3333 10.8333 10.8557 10.8333 11.5C10.8333 12.1443 11.3557 12.6667 12 12.6667C12.6443 12.6667 13.1667 12.1443 13.1667 11.5C13.1667 10.8557 12.6443 10.3333 12 10.3333Z"/>
+  <path
+    d="M16 2L20.9997 7L21 20.9925C21 21.5489 20.5551 22 20.0066 22H3.9934C3.44476 22 3 21.5447 3 21.0082V2.9918C3 2.44405 3.44749 2 3.9985 2H16ZM16 8.66667H8V7.33333L11.333 7.333L11.3333 6H12.6667L12.666 7.333H14.999L15 4H5V20H19V8L16 7.999V8.66667ZM9.33333 14.6667L9.333 16.666L16 16.6667V18H8V14.6667H9.33333ZM12 14.3333C12.5523 14.3333 13 14.781 13 15.3333C13 15.8856 12.5523 16.3333 12 16.3333C11.4477 16.3333 11 15.8856 11 15.3333C11 14.781 11.4477 14.3333 12 14.3333ZM12 9C13.3807 9 14.5 10.1193 14.5 11.5C14.5 12.8807 13.3807 14 12 14C10.6193 14 9.5 12.8807 9.5 11.5C9.5 10.1193 10.6193 9 12 9ZM12 10.3333C11.3557 10.3333 10.8333 10.8557 10.8333 11.5C10.8333 12.1443 11.3557 12.6667 12 12.6667C12.6443 12.6667 13.1667 12.1443 13.1667 11.5C13.1667 10.8557 12.6443 10.3333 12 10.3333Z"
+  />
 </svg>
 
 <!--
@@ -69,7 +49,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop class: classname
-@prop ariaLabel =  "file hwp line Document"
+@prop ariaLabel = 'file hwp line Document'
 @prop ...restProps
 -->

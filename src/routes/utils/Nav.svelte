@@ -138,12 +138,11 @@
       {/if}
       <div class="ml-auto flex items-center lg:order-1">
         {#if include}
-        <div class="hidden sm:block">
-          <DynamicCodeBlockStyle />
-        </div>
+          <div class="hidden sm:block">
+            <DynamicCodeBlockStyle />
+          </div>
         {/if}
         <DotsHorizontalOutline
-          withEvents
           onclick={dropdown.toggle}
           class="ml-6 mr-4 dark:text-white"
           size="lg"
@@ -166,7 +165,7 @@
               </DropdownItem>
             {/if}
             <DropdownItem>
-              <Darkmode class="p-2 m-0" />
+              <Darkmode class="m-0 p-2" />
             </DropdownItem>
           </Dropdown>
         </div>
@@ -220,8 +219,8 @@
   </div>
   <Sidebar
     sidebarList={newSidebarList}
-    s_b_aside="w-60 p-0 border-none mx-2 mt-20 !important"
-    s_b_div="bg-transparent p-0"
+    asideClass="w-60 p-0 border-none mx-2 mt-20 !important"
+    divClass="dark_bg_theme"
     sidebarClose={closeNavDrawer}
   />
 </Drawer>

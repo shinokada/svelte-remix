@@ -1,38 +1,17 @@
-<script lang='ts'>
+<script lang="ts">
   import { getContext } from 'svelte';
-  import type { SVGAttributes } from 'svelte/elements';
+  import type { CtxType, Props } from './types';
 
-  type TitleType = {
-    id?: string | undefined | null;
-    title?: string | undefined | null;
-  };
-  type DescType = {
-    id?: string | undefined | null;
-    desc?: string | undefined | null;
-  };
-  interface BaseProps extends SVGAttributes<SVGElement>{
-    size?: string | undefined | null;
-    role?: string | undefined | null;
-    color?: string | undefined | null;
-    class?: string | undefined | null;
-  }
-  interface CtxType extends BaseProps {}
   const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps{
-    title?: TitleType;
-    desc?: DescType;
-    ariaLabel?: string | undefined | null;
-  }
 
-  let { 
-    size = ctx.size || '24', 
-    role = ctx.role || 'img', 
-    color = ctx.color || 'currentColor', 
-    title, 
-    desc, 
-    class: classname, 
-    ariaLabel =  "surgical mask fill Health replace_ariaLabel Medical" ,
-    ...restProps 
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    color = ctx.color || 'currentColor',
+    title,
+    desc,
+    ariaLabel = 'surgical mask fill Health replace_ariaLabel Medical',
+    ...restProps
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
@@ -45,19 +24,20 @@
   {role}
   width={size}
   height={size}
-  class={classname}
   fill={color}
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
   viewBox="0 0 24 24"
 >
   {#if title?.id && title.title}
-    <title id="{title.id}">{title.title}</title>
+    <title id={title.id}>{title.title}</title>
   {/if}
   {#if desc?.id && desc.desc}
-    <desc id="{desc.id}">{desc.desc}</desc>
+    <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-    <path d="M12.4851 3.12124L20.2425 5.0606C20.6877 5.1719 21 5.57188 21 6.03075V6.99952L22 6.99997C23.1 6.99997 24 7.89997 24 8.99997V12C24 13.6568 22.6569 15 21 15L20.5789 15.0003C20.0443 16.3501 19.0275 17.4862 17.6833 18.1583L12.8944 20.5528C12.3314 20.8343 11.6686 20.8343 11.1056 20.5528L6.31672 18.1583C4.97252 17.4862 3.95573 16.3501 3.42113 15.0003L3 15C1.34315 15 0 13.6568 0 12V8.99997C0 7.8954 0.89543 6.99997 2 6.99997L3 6.99952V6.03075C3 5.57188 3.3123 5.1719 3.75746 5.0606L11.5149 3.12124C11.8334 3.04162 12.1666 3.04162 12.4851 3.12124ZM3 8.99997H2V12C2 12.5523 2.44772 13 3 13V8.99997ZM22 8.99997H21V13C21.5523 13 22 12.5523 22 12V8.99997Z"/>
+  <path
+    d="M12.4851 3.12124L20.2425 5.0606C20.6877 5.1719 21 5.57188 21 6.03075V6.99952L22 6.99997C23.1 6.99997 24 7.89997 24 8.99997V12C24 13.6568 22.6569 15 21 15L20.5789 15.0003C20.0443 16.3501 19.0275 17.4862 17.6833 18.1583L12.8944 20.5528C12.3314 20.8343 11.6686 20.8343 11.1056 20.5528L6.31672 18.1583C4.97252 17.4862 3.95573 16.3501 3.42113 15.0003L3 15C1.34315 15 0 13.6568 0 12V8.99997C0 7.8954 0.89543 6.99997 2 6.99997L3 6.99952V6.03075C3 5.57188 3.3123 5.1719 3.75746 5.0606L11.5149 3.12124C11.8334 3.04162 12.1666 3.04162 12.4851 3.12124ZM3 8.99997H2V12C2 12.5523 2.44772 13 3 13V8.99997ZM22 8.99997H21V13C21.5523 13 22 12.5523 22 12V8.99997Z"
+  />
 </svg>
 
 <!--
@@ -69,7 +49,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop class: classname
-@prop ariaLabel =  "surgical mask fill Health replace_ariaLabel Medical"
+@prop ariaLabel = 'surgical mask fill Health replace_ariaLabel Medical'
 @prop ...restProps
 -->

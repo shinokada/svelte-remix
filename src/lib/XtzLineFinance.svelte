@@ -1,38 +1,17 @@
-<script lang='ts'>
+<script lang="ts">
   import { getContext } from 'svelte';
-  import type { SVGAttributes } from 'svelte/elements';
+  import type { CtxType, Props } from './types';
 
-  type TitleType = {
-    id?: string | undefined | null;
-    title?: string | undefined | null;
-  };
-  type DescType = {
-    id?: string | undefined | null;
-    desc?: string | undefined | null;
-  };
-  interface BaseProps extends SVGAttributes<SVGElement>{
-    size?: string | undefined | null;
-    role?: string | undefined | null;
-    color?: string | undefined | null;
-    class?: string | undefined | null;
-  }
-  interface CtxType extends BaseProps {}
   const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps{
-    title?: TitleType;
-    desc?: DescType;
-    ariaLabel?: string | undefined | null;
-  }
 
-  let { 
-    size = ctx.size || '24', 
-    role = ctx.role || 'img', 
-    color = ctx.color || 'currentColor', 
-    title, 
-    desc, 
-    class: classname, 
-    ariaLabel =  "xtz line Finance" ,
-    ...restProps 
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    color = ctx.color || 'currentColor',
+    title,
+    desc,
+    ariaLabel = 'xtz line Finance',
+    ...restProps
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
@@ -45,19 +24,20 @@
   {role}
   width={size}
   height={size}
-  class={classname}
   fill={color}
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
   viewBox="0 0 24 24"
 >
   {#if title?.id && title.title}
-    <title id="{title.id}">{title.title}</title>
+    <title id={title.id}>{title.title}</title>
   {/if}
   {#if desc?.id && desc.desc}
-    <desc id="{desc.id}">{desc.desc}</desc>
+    <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-    <path d="M9 6V2H7V6H4.5V8H7V13C7 15.2091 8.79086 17 11 17C12.0238 17 12.9599 16.614 13.6669 15.9812L12.3331 14.491C11.9786 14.8083 11.5129 15 11 15C9.89543 15 9 14.1046 9 13V8H15.6249L11.5 11.9749L11.5 13.5H12.5C15.5671 13.5 17.5 15.6792 17.5 17.5C17.5 19.3827 15.8727 21 13.75 21C11.9274 21 10.4568 19.7978 10.0902 18.2671L8.14521 18.7329C8.73856 21.2102 11.0514 23 13.75 23C16.874 23 19.5 20.5878 19.5 17.5C19.5 14.9348 17.4658 12.5683 14.5864 11.7783L19 7.5251V6H9Z"/>
+  <path
+    d="M9 6V2H7V6H4.5V8H7V13C7 15.2091 8.79086 17 11 17C12.0238 17 12.9599 16.614 13.6669 15.9812L12.3331 14.491C11.9786 14.8083 11.5129 15 11 15C9.89543 15 9 14.1046 9 13V8H15.6249L11.5 11.9749L11.5 13.5H12.5C15.5671 13.5 17.5 15.6792 17.5 17.5C17.5 19.3827 15.8727 21 13.75 21C11.9274 21 10.4568 19.7978 10.0902 18.2671L8.14521 18.7329C8.73856 21.2102 11.0514 23 13.75 23C16.874 23 19.5 20.5878 19.5 17.5C19.5 14.9348 17.4658 12.5683 14.5864 11.7783L19 7.5251V6H9Z"
+  />
 </svg>
 
 <!--
@@ -69,7 +49,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop class: classname
-@prop ariaLabel =  "xtz line Finance"
+@prop ariaLabel = 'xtz line Finance'
 @prop ...restProps
 -->

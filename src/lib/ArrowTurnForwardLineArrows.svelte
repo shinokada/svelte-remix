@@ -1,38 +1,17 @@
-<script lang='ts'>
+<script lang="ts">
   import { getContext } from 'svelte';
-  import type { SVGAttributes } from 'svelte/elements';
+  import type { CtxType, Props } from './types';
 
-  type TitleType = {
-    id?: string | undefined | null;
-    title?: string | undefined | null;
-  };
-  type DescType = {
-    id?: string | undefined | null;
-    desc?: string | undefined | null;
-  };
-  interface BaseProps extends SVGAttributes<SVGElement>{
-    size?: string | undefined | null;
-    role?: string | undefined | null;
-    color?: string | undefined | null;
-    class?: string | undefined | null;
-  }
-  interface CtxType extends BaseProps {}
   const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps{
-    title?: TitleType;
-    desc?: DescType;
-    ariaLabel?: string | undefined | null;
-  }
 
-  let { 
-    size = ctx.size || '24', 
-    role = ctx.role || 'img', 
-    color = ctx.color || 'currentColor', 
-    title, 
-    desc, 
-    class: classname, 
-    ariaLabel =  "arrow turn forward line Arrows" ,
-    ...restProps 
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    color = ctx.color || 'currentColor',
+    title,
+    desc,
+    ariaLabel = 'arrow turn forward line Arrows',
+    ...restProps
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
@@ -45,19 +24,20 @@
   {role}
   width={size}
   height={size}
-  class={classname}
   fill={color}
   aria-label={ariaLabel}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
   viewBox="0 0 24 24"
 >
   {#if title?.id && title.title}
-    <title id="{title.id}">{title.title}</title>
+    <title id={title.id}>{title.title}</title>
   {/if}
   {#if desc?.id && desc.desc}
-    <desc id="{desc.id}">{desc.desc}</desc>
+    <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-    <path d="M17.0005 5.82843V13C17.0005 16.3137 14.3142 19 11.0005 19C7.68674 19 5.00045 16.3137 5.00045 13V4H3.00045V13C3.00045 17.4183 6.58217 21 11.0005 21C15.4187 21 19.0005 17.4183 19.0005 13V5.82843L21.536 8.36396L22.9502 6.94975L18.0005 2L13.0507 6.94975L14.4649 8.36396L17.0005 5.82843Z"/>
+  <path
+    d="M17.0005 5.82843V13C17.0005 16.3137 14.3142 19 11.0005 19C7.68674 19 5.00045 16.3137 5.00045 13V4H3.00045V13C3.00045 17.4183 6.58217 21 11.0005 21C15.4187 21 19.0005 17.4183 19.0005 13V5.82843L21.536 8.36396L22.9502 6.94975L18.0005 2L13.0507 6.94975L14.4649 8.36396L17.0005 5.82843Z"
+  />
 </svg>
 
 <!--
@@ -69,7 +49,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop class: classname
-@prop ariaLabel =  "arrow turn forward line Arrows"
+@prop ariaLabel = 'arrow turn forward line Arrows'
 @prop ...restProps
 -->

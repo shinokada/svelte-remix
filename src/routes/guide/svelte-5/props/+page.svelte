@@ -1,6 +1,6 @@
 <script lang="ts">
   import { HighlightCompo, CodeWrapper, Code, H2, H3 } from 'runes-webkit';
-  import { A } from 'svelte-5-ui-lib';
+  import { A, P } from 'svelte-5-ui-lib';
   import { AttachmentLineBusiness } from '$lib';
   const modules = import.meta.glob('./md/*.md', {
     query: '?raw',
@@ -15,6 +15,14 @@
 
 <HighlightCompo codeLang="ts" code={modules['./md/props.md'] as string} />
 
+<H2>Types</H2>
+<P>
+  All icons are extended <A
+    href="https://github.com/sveltejs/svelte/blob/main/packages/svelte/elements.d.ts"
+    >SVGAttributes from svelte/elements</A
+  >.
+</P>
+<HighlightCompo codeLang="ts" code={modules['./md/types.md'] as string} />
 <H2>Size</H2>
 
 <p>
@@ -86,21 +94,18 @@
   />
 </CodeWrapper>
 
-<H2>Events</H2>
-
-<p>
-  As default all icons are extend <A href='https://github.com/sveltejs/svelte/blob/svelte%405.0.0-next.182/packages/svelte/elements.d.ts'>SVGAttributes SVGElement</A>. You can add all the events and other props described in the type.
-</p>
-
-<CodeWrapper>
-  <AttachmentLineBusiness onclick={() => console.log('hello')} class='cursor-pointer dark:text-white'/> 
-</CodeWrapper>
-<HighlightCompo codeLang="ts" code={modules['./md/withevents.md'] as string} />
-
 <H2>Passing down other attributes</H2>
 
-<p>Since all icons have <Code>...restProps</Code>, you can pass other attibutes as well.</p>
+<P>
+  As default all icons are extend <A href='https://github.com/sveltejs/svelte/blob/svelte%405.0.0-next.182/packages/svelte/elements.d.ts'>SVGAttributes SVGElement</A>. You can add all the events and other props described in the type.
+</P>
+
 <CodeWrapper>
-  <AttachmentLineBusiness id="my-svg" transform="rotate(45)" class='dark:text-white'/>
+  <AttachmentLineBusiness 
+  id="my-svg" 
+  transform="rotate(45)" 
+  class="hover:cursor-pointer dark:text-white"
+  onclick={() => alert('hello')}
+/>
 </CodeWrapper>
 <HighlightCompo codeLang="ts" code={modules['./md/passing-down-other-attributes.md'] as string} />
