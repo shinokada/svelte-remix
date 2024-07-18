@@ -1,5 +1,11 @@
 # svelte-remix
 
+## 2.0.0-next.3
+
+### Patch Changes
+
+- feat: extends SVGAttributes<SVGElement> ([`c0ff727b94bccb04ca2a6ad00c0c8c6c8f41dfeb`](https://github.com/shinokada/svelte-remix/commit/c0ff727b94bccb04ca2a6ad00c0c8c6c8f41dfeb))
+
 ## 2.0.0-next.2
 
 ### Patch Changes
