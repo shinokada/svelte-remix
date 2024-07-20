@@ -97,15 +97,18 @@
 <H2>Passing down other attributes</H2>
 
 <P>
-  As default all icons are extend <A href='https://github.com/sveltejs/svelte/blob/svelte%405.0.0-next.182/packages/svelte/elements.d.ts'>SVGAttributes SVGElement</A>. You can add all the events and other props described in the type.
+  As default all icons are extend <A
+    href="https://github.com/sveltejs/svelte/blob/svelte%405.0.0-next.182/packages/svelte/elements.d.ts"
+    >SVGAttributes SVGElement</A
+  >. You can add all the events and other props described in the type.
 </P>
 
 <CodeWrapper>
-  <AttachmentLineBusiness 
-  id="my-svg" 
-  transform="rotate(45)" 
-  class="hover:cursor-pointer dark:text-white"
-  onclick={() => alert('hello')}
-/>
+  <AttachmentLineBusiness
+    id="my-svg"
+    transform="rotate(45)"
+    class="hover:cursor-pointer dark:text-white"
+    onclick={() => alert('hello')}
+  />
 </CodeWrapper>
 <HighlightCompo codeLang="ts" code={modules['./md/passing-down-other-attributes.md'] as string} />

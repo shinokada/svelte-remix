@@ -1,5 +1,11 @@
 # svelte-remix
 
+## 2.0.0-next.4
+
+### Patch Changes
+
+- fix: peerDependencies ([`851c03b35892b0e229ef7a7d81e185a99cbe7e26`](https://github.com/shinokada/svelte-remix/commit/851c03b35892b0e229ef7a7d81e185a99cbe7e26))
+
 ## 2.0.0-next.3
 
 ### Patch Changes

@@ -4,9 +4,5 @@
   "initialVersions": {
     "svelte-remix": "2.0.0-next.0"
   },
-  "changesets": [
-    "chatty-hairs-film",
-    "gold-rules-love",
-    "itchy-boats-tell"
-  ]
+  "changesets": ["chatty-hairs-film", "gold-rules-love", "itchy-boats-tell", "sour-drinks-turn"]
 }
