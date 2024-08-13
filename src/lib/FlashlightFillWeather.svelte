@@ -38,3 +38,15 @@
     <path d="M13 10H20L11 23V14H4L13 1V10Z"/>
 </svg>
 
+<!--
+@component
+[Go to docs](https://svelte-remix.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop desc
+@prop ariaLabel =  "flashlight fill Weather"
+@prop ...restProps
+-->

@@ -38,3 +38,15 @@
     <path d="M12 13H4V11H12V4L20 12L12 20V13Z"/>
 </svg>
 
+<!--
+@component
+[Go to docs](https://svelte-remix.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop desc
+@prop ariaLabel =  "arrow right fill Arrows"
+@prop ...restProps
+-->

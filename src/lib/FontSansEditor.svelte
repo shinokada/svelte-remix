@@ -38,3 +38,15 @@
     <path d="M7 4H19V6H10V12H18V14H10V21H7V4Z"/>
 </svg>
 
+<!--
+@component
+[Go to docs](https://svelte-remix.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop desc
+@prop ariaLabel =  "font sans Editor"
+@prop ...restProps
+-->

@@ -38,3 +38,15 @@
     <path d="M10 10.1111V1L21 7V21H3V7L10 10.1111Z"/>
 </svg>
 
+<!--
+@component
+[Go to docs](https://svelte-remix.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop desc
+@prop ariaLabel =  "building 3 fill Buildings"
+@prop ...restProps
+-->

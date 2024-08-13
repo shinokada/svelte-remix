@@ -38,3 +38,15 @@
     <path d="M14 1.5V22H12V3.704L7.5 4.91V2.839L12.5 1.5H14Z"/>
 </svg>
 
+<!--
+@component
+[Go to docs](https://svelte-remix.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop desc
+@prop ariaLabel =  "number 1 Editor"
+@prop ...restProps
+-->

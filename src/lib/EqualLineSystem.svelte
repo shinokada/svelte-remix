@@ -38,3 +38,15 @@
     <path d="M19 8H5V10H19V8ZM19 14H5V16H19V14Z"/>
 </svg>
 
+<!--
+@component
+[Go to docs](https://svelte-remix.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop desc
+@prop ariaLabel =  "equal line System"
+@prop ...restProps
+-->

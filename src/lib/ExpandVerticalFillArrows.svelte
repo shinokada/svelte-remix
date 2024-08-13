@@ -38,3 +38,15 @@
     <path d="M11.9995 0.499512L16.9493 5.44926L12.9995 5.44827V9.99951H10.9995V5.44777L7.05225 5.44678L11.9995 0.499512ZM10.9995 13.9995L10.9995 18.5496L7.05029 18.5496L12 23.4995L16.9497 18.5498L12.9995 18.5497V13.9995H10.9995Z"/>
 </svg>
 
+<!--
+@component
+[Go to docs](https://svelte-remix.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop desc
+@prop ariaLabel =  "expand vertical fill Arrows"
+@prop ...restProps
+-->

@@ -38,3 +38,15 @@
     <path d="M3 19H21V21H3V19ZM13 9H20L12 17L4 9H11V1H13V9Z"/>
 </svg>
 
+<!--
+@component
+[Go to docs](https://svelte-remix.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop desc
+@prop ariaLabel =  "download fill System"
+@prop ...restProps
+-->

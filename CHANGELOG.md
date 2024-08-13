@@ -1,5 +1,11 @@
 # svelte-remix
 
+## 2.0.0-next.5
+
+### Patch Changes
+
+- fix: remove svelte:component from Icon.svelte ([`91d65dccb230e658d3f50ba8156301383cf02a8a`](https://github.com/shinokada/svelte-remix/commit/91d65dccb230e658d3f50ba8156301383cf02a8a))
+
 ## 2.0.0-next.4
 
 ### Patch Changes
