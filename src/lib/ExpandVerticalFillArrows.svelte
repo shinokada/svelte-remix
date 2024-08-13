@@ -1,17 +1,17 @@
-<script lang="ts">
+<script lang='ts'>
   import { getContext } from 'svelte';
-  import type { CtxType, Props } from './types';
+  import type { CtxType, Props } from './types'
 
   const ctx: CtxType = getContext('iconCtx') ?? {};
 
-  let {
+  let { 
     size = ctx.size || '24',
     role = ctx.role || 'img',
     color = ctx.color || 'currentColor',
     title,
     desc,
-    ariaLabel = 'expand vertical fill Arrows',
-    ...restProps
+    ariaLabel =  "expand vertical fill Arrows" ,
+    ...restProps 
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
@@ -30,25 +30,11 @@
   viewBox="0 0 24 24"
 >
   {#if title?.id && title.title}
-    <title id={title.id}>{title.title}</title>
+    <title id="{title.id}">{title.title}</title>
   {/if}
   {#if desc?.id && desc.desc}
-    <desc id={desc.id}>{desc.desc}</desc>
+    <desc id="{desc.id}">{desc.desc}</desc>
   {/if}
-  <path
-    d="M11.9995 0.499512L16.9493 5.44926L12.9995 5.44827V9.99951H10.9995V5.44777L7.05225 5.44678L11.9995 0.499512ZM10.9995 13.9995L10.9995 18.5496L7.05029 18.5496L12 23.4995L16.9497 18.5498L12.9995 18.5497V13.9995H10.9995Z"
-  />
+    <path d="M11.9995 0.499512L16.9493 5.44926L12.9995 5.44827V9.99951H10.9995V5.44777L7.05225 5.44678L11.9995 0.499512ZM10.9995 13.9995L10.9995 18.5496L7.05029 18.5496L12 23.4995L16.9497 18.5498L12.9995 18.5497V13.9995H10.9995Z"/>
 </svg>
 
-<!--
-@component
-[Go to docs](https://svelte-remix.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop color = ctx.color || 'currentColor'
-@prop title
-@prop desc
-@prop ariaLabel = 'expand vertical fill Arrows'
-@prop ...restProps
--->

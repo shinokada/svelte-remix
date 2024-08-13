@@ -1,17 +1,17 @@
-<script lang="ts">
+<script lang='ts'>
   import { getContext } from 'svelte';
-  import type { CtxType, Props } from './types';
+  import type { CtxType, Props } from './types'
 
   const ctx: CtxType = getContext('iconCtx') ?? {};
 
-  let {
+  let { 
     size = ctx.size || '24',
     role = ctx.role || 'img',
     color = ctx.color || 'currentColor',
     title,
     desc,
-    ariaLabel = 'shining line Weather',
-    ...restProps
+    ariaLabel =  "shining line Weather" ,
+    ...restProps 
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
@@ -30,25 +30,11 @@
   viewBox="0 0 24 24"
 >
   {#if title?.id && title.title}
-    <title id={title.id}>{title.title}</title>
+    <title id="{title.id}">{title.title}</title>
   {/if}
   {#if desc?.id && desc.desc}
-    <desc id={desc.id}>{desc.desc}</desc>
+    <desc id="{desc.id}">{desc.desc}</desc>
   {/if}
-  <path
-    d="M1 11C6.52285 11 11 6.52285 11 1H13C13 6.52285 17.4772 11 23 11V13C17.4772 13 13 17.4772 13 23H11C11 17.4772 6.52285 13 1 13V11ZM5.80342 12C8.56895 13.2093 10.7907 15.431 12 18.1966C13.2093 15.431 15.431 13.2093 18.1966 12C15.431 10.7907 13.2093 8.56895 12 5.80342C10.7907 8.56895 8.56895 10.7907 5.80342 12Z"
-  />
+    <path d="M1 11C6.52285 11 11 6.52285 11 1H13C13 6.52285 17.4772 11 23 11V13C17.4772 13 13 17.4772 13 23H11C11 17.4772 6.52285 13 1 13V11ZM5.80342 12C8.56895 13.2093 10.7907 15.431 12 18.1966C13.2093 15.431 15.431 13.2093 18.1966 12C15.431 10.7907 13.2093 8.56895 12 5.80342C10.7907 8.56895 8.56895 10.7907 5.80342 12Z"/>
 </svg>
 
-<!--
-@component
-[Go to docs](https://svelte-remix.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop color = ctx.color || 'currentColor'
-@prop title
-@prop desc
-@prop ariaLabel = 'shining line Weather'
-@prop ...restProps
--->
