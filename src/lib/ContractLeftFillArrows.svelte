@@ -1,17 +1,17 @@
-<script lang='ts'>
+<script lang="ts">
   import { getContext } from 'svelte';
-  import type { CtxType, Props } from './types'
+  import type { BaseProps, Props } from './types';
 
-  const ctx: CtxType = getContext('iconCtx') ?? {};
+  const ctx: BaseProps = getContext('iconCtx') ?? {};
 
-  let { 
+  let {
     size = ctx.size || '24',
     role = ctx.role || 'img',
     color = ctx.color || 'currentColor',
     title,
     desc,
-    ariaLabel =  "contract left fill Arrows" ,
-    ...restProps 
+    ariaLabel = 'contract left fill Arrows',
+    ...restProps
   }: Props = $props();
 
   let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
@@ -30,23 +30,12 @@
   viewBox="0 0 24 24"
 >
   {#if title?.id && title.title}
-    <title id="{title.id}">{title.title}</title>
+    <title id={title.id}>{title.title}</title>
   {/if}
   {#if desc?.id && desc.desc}
-    <desc id="{desc.id}">{desc.desc}</desc>
+    <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-    <path d="M15.0001 4.99976V10.9998L21.0001 11.0001L21.0001 13.0001L15.0001 12.9998V18.9998L7.99985 12L15.0001 4.99976ZM4.00006 18.9999L4.00006 4.99993H6.00006L6.00006 18.9999H4.00006Z"/>
+  <path
+    d="M15.0001 4.99976V10.9998L21.0001 11.0001L21.0001 13.0001L15.0001 12.9998V18.9998L7.99985 12L15.0001 4.99976ZM4.00006 18.9999L4.00006 4.99993H6.00006L6.00006 18.9999H4.00006Z"
+  />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-remix.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop color = ctx.color || 'currentColor'
-@prop title
-@prop desc
-@prop ariaLabel =  "contract left fill Arrows"
-@prop ...restProps
--->
