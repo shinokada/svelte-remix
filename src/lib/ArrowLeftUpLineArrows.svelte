@@ -37,3 +37,16 @@
   {/if}
   <path d="M9.41421 8L18.0208 16.6066L16.6066 18.0208L8 9.41421V17H6V6H17V8H9.41421Z" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-remix.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop desc
+@prop ariaLabel = 'arrow left up line Arrows'
+@prop ...restProps
+-->

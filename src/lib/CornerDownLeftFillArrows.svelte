@@ -39,3 +39,16 @@
     d="M19.0001 13.9999L19.0002 5L17.0002 4.99997L17.0001 11.9999L9.41405 11.9999V6.58578L2.99985 13L9.41405 19.4142L9.41406 13.9999L19.0001 13.9999Z"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-remix.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop desc
+@prop ariaLabel = 'corner down left fill Arrows'
+@prop ...restProps
+-->

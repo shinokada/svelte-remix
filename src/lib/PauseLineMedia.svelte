@@ -37,3 +37,16 @@
   {/if}
   <path d="M6 5H8V19H6V5ZM16 5H18V19H16V5Z" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-remix.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop desc
+@prop ariaLabel = 'pause line Media'
+@prop ...restProps
+-->

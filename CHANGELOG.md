@@ -1,5 +1,11 @@
 # svelte-remix
 
+## 2.0.0-next.6
+
+### Patch Changes
+
+- types: update ([`2329a90598b7f7f4c794cddc768ae54052d3dac7`](https://github.com/shinokada/svelte-remix/commit/2329a90598b7f7f4c794cddc768ae54052d3dac7))
+
 ## 2.0.0-next.5
 
 ### Patch Changes

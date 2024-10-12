@@ -37,3 +37,16 @@
   {/if}
   <path d="M19 11H5V13H19V11Z" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-remix.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop desc
+@prop ariaLabel = 'subtract fill System'
+@prop ...restProps
+-->

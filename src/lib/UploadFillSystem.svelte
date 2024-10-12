@@ -37,3 +37,16 @@
   {/if}
   <path d="M3 19H21V21H3V19ZM13 10V18H11V10H4L12 2L20 10H13Z" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-remix.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop desc
+@prop ariaLabel = 'upload fill System'
+@prop ...restProps
+-->
