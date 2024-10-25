@@ -1,5 +1,11 @@
 # svelte-remix
 
+## 2.0.1
+
+### Patch Changes
+
+- docs: README update
+
 ## 2.0.0
 
 ### Patch Changes
