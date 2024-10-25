@@ -1,3 +1,4 @@
-npm create svelte@latest my-project
-cd my-project
-pnpm i -D svelte-remix
+npm create svelte@latest myapp
+cd myapp
+pnpm i -D svelte-remix@v1-latest
+pnpm dev

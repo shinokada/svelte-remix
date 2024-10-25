@@ -52,14 +52,6 @@
 
 <HighlightCompo codeLang="ts" code={modules['./md/installation.md'] as string} />
 
-<p>Install <Code>svelte-remix v2</Code>:</p>
-
-<HighlightCompo codeLang="ts" code={modules['./md/installation-2.md'] as string} />
-
-<p>Enable Runes in <Code>svelte.config.js</Code>:</p>
-
-<HighlightCompo codeLang="ts" code={modules['./md/installation-3.md'] as string} />
-
 <H2>Basic Usage</H2>
 
 <p>In a svelte file:</p>
