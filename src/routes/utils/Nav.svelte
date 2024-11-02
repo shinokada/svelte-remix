@@ -48,8 +48,7 @@
     twitterUrl,
     githubUrl,
     headerClass,
-    urlsToIncludeSwitcher = ['/guide'],
-    ...restProps
+    urlsToIncludeSwitcher = ['/guide']
   }: Props = $props();
 
   let transitionParams = {
