@@ -12,7 +12,7 @@
     DropdownUl,
     DropdownLi,
     Drawer
-  } from 'flowbite-svelte';
+  } from 'svelte-5-ui-lib';
   import { page } from '$app/stores';
   import {
     GithubSolid,
