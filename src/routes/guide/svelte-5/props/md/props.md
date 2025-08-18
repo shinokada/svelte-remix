@@ -3,5 +3,5 @@
 - color = ctx.color || 'currentColor'
 - title
 - desc
-- ariaLabel =  "wheelchair fill Others"
+- ariaLabel = "wheelchair fill Others"
 - class, id, name, role, and all other props from SVGAttributes

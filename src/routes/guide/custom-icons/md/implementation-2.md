@@ -4,4 +4,3 @@
 </script>
 
 <MyIcon Icon={AttachmentLineBusiness} />
-
