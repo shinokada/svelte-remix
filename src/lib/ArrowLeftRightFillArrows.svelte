@@ -10,11 +10,12 @@
     color = ctx.color || 'currentColor',
     title,
     desc,
-    ariaLabel = 'arrow left right fill Arrows',
+    focusable = 'false',
+    ariaLabel,
     ...restProps
   }: Props = $props();
 
-  let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
+  let ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
@@ -25,7 +26,9 @@
   width={size}
   height={size}
   fill={color}
-  aria-label={ariaLabel}
+  {focusable}
+  aria-label={title?.id ? undefined : ariaLabel}
+  aria-labelledby={title?.id || undefined}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
   viewBox="0 0 24 24"
 >
@@ -47,6 +50,7 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel = 'arrow left right fill Arrows'
+@prop focusable = 'false'
+@prop ariaLabel
 @prop ...restProps
 -->

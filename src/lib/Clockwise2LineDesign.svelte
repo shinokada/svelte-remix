@@ -10,11 +10,12 @@
     color = ctx.color || 'currentColor',
     title,
     desc,
-    ariaLabel = 'clockwise 2 line Design',
+    focusable = 'false',
+    ariaLabel,
     ...restProps
   }: Props = $props();
 
-  let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
+  let ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
@@ -25,7 +26,9 @@
   width={size}
   height={size}
   fill={color}
-  aria-label={ariaLabel}
+  {focusable}
+  aria-label={title?.id ? undefined : ariaLabel}
+  aria-labelledby={title?.id || undefined}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
   viewBox="0 0 24 24"
 >
@@ -36,7 +39,7 @@
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
   <path
-    d="M10.5858 4.00003L8.75736 2.1716L10.1716 0.757385L14.4142 5.00003L10.1716 9.24267L8.75736 7.82845L10.5858 6.00003H8C6.34315 6.00003 5 7.34317 5 9.00003V13H3V9.00003C3 6.2386 5.23858 4.00003 8 4.00003H10.5858ZM9 11C9 10.4477 9.44772 10 10 10H20C20.5523 10 21 10.4477 21 11V21C21 21.5523 20.5523 22 20 22H10C9.44772 22 9 21.5523 9 21V11ZM11 12V20H19V12H11Z"
+    d="M10.5858 3.99997L8.75736 2.17154L10.1716 0.757324L14.4142 4.99997L10.1716 9.24261L8.75736 7.82839L10.5858 5.99997H8C6.34315 5.99997 5 7.34311 5 8.99997V13H3V8.99997C3 6.23854 5.23858 3.99997 8 3.99997H10.5858ZM9 11C9 10.4477 9.44772 9.99997 10 9.99997H20C20.5523 9.99997 21 10.4477 21 11V21C21 21.5522 20.5523 22 20 22H10C9.44772 22 9 21.5522 9 21V11ZM11 12V20H19V12H11Z"
   />
 </svg>
 
@@ -49,6 +52,7 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel = 'clockwise 2 line Design'
+@prop focusable = 'false'
+@prop ariaLabel
 @prop ...restProps
 -->

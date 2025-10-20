@@ -10,11 +10,12 @@
     color = ctx.color || 'currentColor',
     title,
     desc,
-    ariaLabel = 'contract left right line Arrows',
+    focusable = 'false',
+    ariaLabel,
     ...restProps
   }: Props = $props();
 
-  let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
+  let ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
@@ -25,7 +26,9 @@
   width={size}
   height={size}
   fill={color}
-  aria-label={ariaLabel}
+  {focusable}
+  aria-label={title?.id ? undefined : ariaLabel}
+  aria-labelledby={title?.id || undefined}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
   viewBox="0 0 24 24"
 >
@@ -36,7 +39,7 @@
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
   <path
-    d="M18.7931 5.79285 12.586 12 18.7931 18.2071 20.2073 16.7928 15.4144 12 20.2073 7.20706 18.7931 5.79285ZM5.20697 18.2072 11.4141 12.0001 5.20697 5.793 3.79276 7.20721 8.58565 12.0001 3.79276 16.793 5.20697 18.2072Z"
+    d="M18.793 5.79285 12.5859 12 18.793 18.2071 20.2072 16.7928 15.4143 12 20.2072 7.20706 18.793 5.79285ZM5.20694 18.2072 11.414 12.0001 5.20694 5.793 3.79272 7.20721 8.58562 12.0001 3.79272 16.793 5.20694 18.2072Z"
   />
 </svg>
 
@@ -49,6 +52,7 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel = 'contract left right line Arrows'
+@prop focusable = 'false'
+@prop ariaLabel
 @prop ...restProps
 -->

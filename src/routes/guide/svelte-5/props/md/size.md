@@ -1,1 +1,1 @@
-<AttachmentLineBusiness size="40" />
+<AlignLeftEditor size="40" />

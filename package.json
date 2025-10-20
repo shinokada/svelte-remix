@@ -1,7 +1,7 @@
 {
   "name": "svelte-remix",
-  "version": "2.0.2",
-  "description": "2270+ Remix SVG icons for Svelte 4, 5, and Runes",
+  "version": "3.0.0",
+  "description": "Remix SVG icons for Svelte 4, 5, and Runes",
   "license": "MIT",
   "homepage": "https://svelte-remix.codewithshin.com/",
   "author": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/shinokada/svelte-remix"
+    "url": "git+https://github.com/shinokada/svelte-remix.git"
   },
   "bugs": "https://github.com/shinokada/svelte-remix/issues",
   "keywords": [
@@ -25,7 +25,8 @@
   "contributors": [
     {
       "name": "Remix-Design/RemixIcon",
-      "url": "https://github.com/Remix-Design/RemixIcon"
+      "url": "https://github.com/Remix-Design/RemixIcon",
+      "iconVersion": "4.7.0"
     }
   ],
   "scripts": {
@@ -114,6 +115,11 @@
       "types": "./dist/index.d.ts",
       "svelte": "./dist/index.js"
     },
+    "./types": {
+      "types": "./dist/types.d.ts",
+      "import": "./dist/types.js",
+      "default": "./dist/types.js"
+    },
     "./A24HoursFillFinance.svelte": {
       "types": "./dist/A24HoursFillFinance.svelte.d.ts",
       "svelte": "./dist/A24HoursFillFinance.svelte"
@@ -134,6 +140,22 @@
       "types": "./dist/ABEditor.svelte.d.ts",
       "svelte": "./dist/ABEditor.svelte"
     },
+    "./AccessibilityFillOthers.svelte": {
+      "types": "./dist/AccessibilityFillOthers.svelte.d.ts",
+      "svelte": "./dist/AccessibilityFillOthers.svelte"
+    },
+    "./AccessibilityLineOthers.svelte": {
+      "types": "./dist/AccessibilityLineOthers.svelte.d.ts",
+      "svelte": "./dist/AccessibilityLineOthers.svelte"
+    },
+    "./AccountBox2FillUserFaces.svelte": {
+      "types": "./dist/AccountBox2FillUserFaces.svelte.d.ts",
+      "svelte": "./dist/AccountBox2FillUserFaces.svelte"
+    },
+    "./AccountBox2LineUserFaces.svelte": {
+      "types": "./dist/AccountBox2LineUserFaces.svelte.d.ts",
+      "svelte": "./dist/AccountBox2LineUserFaces.svelte"
+    },
     "./AccountBoxFillUserFaces.svelte": {
       "types": "./dist/AccountBoxFillUserFaces.svelte.d.ts",
       "svelte": "./dist/AccountBoxFillUserFaces.svelte"
@@ -141,6 +163,14 @@
     "./AccountBoxLineUserFaces.svelte": {
       "types": "./dist/AccountBoxLineUserFaces.svelte.d.ts",
       "svelte": "./dist/AccountBoxLineUserFaces.svelte"
+    },
+    "./AccountCircle2FillUserFaces.svelte": {
+      "types": "./dist/AccountCircle2FillUserFaces.svelte.d.ts",
+      "svelte": "./dist/AccountCircle2FillUserFaces.svelte"
+    },
+    "./AccountCircle2LineUserFaces.svelte": {
+      "types": "./dist/AccountCircle2LineUserFaces.svelte.d.ts",
+      "svelte": "./dist/AccountCircle2LineUserFaces.svelte"
     },
     "./AccountCircleFillUserFaces.svelte": {
       "types": "./dist/AccountCircleFillUserFaces.svelte.d.ts",
@@ -230,9 +260,45 @@
       "types": "./dist/AedLineHealthMedical.svelte.d.ts",
       "svelte": "./dist/AedLineHealthMedical.svelte"
     },
+    "./AiAgentFillUserFaces.svelte": {
+      "types": "./dist/AiAgentFillUserFaces.svelte.d.ts",
+      "svelte": "./dist/AiAgentFillUserFaces.svelte"
+    },
+    "./AiAgentLineUserFaces.svelte": {
+      "types": "./dist/AiAgentLineUserFaces.svelte.d.ts",
+      "svelte": "./dist/AiAgentLineUserFaces.svelte"
+    },
+    "./AiEditor.svelte": {
+      "types": "./dist/AiEditor.svelte.d.ts",
+      "svelte": "./dist/AiEditor.svelte"
+    },
+    "./AiGenerate2Editor.svelte": {
+      "types": "./dist/AiGenerate2Editor.svelte.d.ts",
+      "svelte": "./dist/AiGenerate2Editor.svelte"
+    },
+    "./AiGenerate2FillDesign.svelte": {
+      "types": "./dist/AiGenerate2FillDesign.svelte.d.ts",
+      "svelte": "./dist/AiGenerate2FillDesign.svelte"
+    },
+    "./AiGenerate2LineDesign.svelte": {
+      "types": "./dist/AiGenerate2LineDesign.svelte.d.ts",
+      "svelte": "./dist/AiGenerate2LineDesign.svelte"
+    },
+    "./AiGenerate3dFillOthers.svelte": {
+      "types": "./dist/AiGenerate3dFillOthers.svelte.d.ts",
+      "svelte": "./dist/AiGenerate3dFillOthers.svelte"
+    },
+    "./AiGenerate3dLineOthers.svelte": {
+      "types": "./dist/AiGenerate3dLineOthers.svelte.d.ts",
+      "svelte": "./dist/AiGenerate3dLineOthers.svelte"
+    },
     "./AiGenerateEditor.svelte": {
       "types": "./dist/AiGenerateEditor.svelte.d.ts",
       "svelte": "./dist/AiGenerateEditor.svelte"
+    },
+    "./AiGenerateTextEditor.svelte": {
+      "types": "./dist/AiGenerateTextEditor.svelte.d.ts",
+      "svelte": "./dist/AiGenerateTextEditor.svelte"
     },
     "./AirplayFillDevice.svelte": {
       "types": "./dist/AirplayFillDevice.svelte.d.ts",
@@ -242,6 +308,14 @@
       "types": "./dist/AirplayLineDevice.svelte.d.ts",
       "svelte": "./dist/AirplayLineDevice.svelte"
     },
+    "./AlarmAddFillSystem.svelte": {
+      "types": "./dist/AlarmAddFillSystem.svelte.d.ts",
+      "svelte": "./dist/AlarmAddFillSystem.svelte"
+    },
+    "./AlarmAddLineSystem.svelte": {
+      "types": "./dist/AlarmAddLineSystem.svelte.d.ts",
+      "svelte": "./dist/AlarmAddLineSystem.svelte"
+    },
     "./AlarmFillSystem.svelte": {
       "types": "./dist/AlarmFillSystem.svelte.d.ts",
       "svelte": "./dist/AlarmFillSystem.svelte"
@@ -249,6 +323,14 @@
     "./AlarmLineSystem.svelte": {
       "types": "./dist/AlarmLineSystem.svelte.d.ts",
       "svelte": "./dist/AlarmLineSystem.svelte"
+    },
+    "./AlarmSnoozeFillSystem.svelte": {
+      "types": "./dist/AlarmSnoozeFillSystem.svelte.d.ts",
+      "svelte": "./dist/AlarmSnoozeFillSystem.svelte"
+    },
+    "./AlarmSnoozeLineSystem.svelte": {
+      "types": "./dist/AlarmSnoozeLineSystem.svelte.d.ts",
+      "svelte": "./dist/AlarmSnoozeLineSystem.svelte"
     },
     "./AlarmWarningFillSystem.svelte": {
       "types": "./dist/AlarmWarningFillSystem.svelte.d.ts",
@@ -422,6 +504,14 @@
       "types": "./dist/AngularjsLineLogos.svelte.d.ts",
       "svelte": "./dist/AngularjsLineLogos.svelte"
     },
+    "./AnthropicFillLogos.svelte": {
+      "types": "./dist/AnthropicFillLogos.svelte.d.ts",
+      "svelte": "./dist/AnthropicFillLogos.svelte"
+    },
+    "./AnthropicLineLogos.svelte": {
+      "types": "./dist/AnthropicLineLogos.svelte.d.ts",
+      "svelte": "./dist/AnthropicLineLogos.svelte"
+    },
     "./Anticlockwise2FillDesign.svelte": {
       "types": "./dist/Anticlockwise2FillDesign.svelte.d.ts",
       "svelte": "./dist/Anticlockwise2FillDesign.svelte"
@@ -462,6 +552,14 @@
       "types": "./dist/Apps2AddLineSystem.svelte.d.ts",
       "svelte": "./dist/Apps2AddLineSystem.svelte"
     },
+    "./Apps2AiFillSystem.svelte": {
+      "types": "./dist/Apps2AiFillSystem.svelte.d.ts",
+      "svelte": "./dist/Apps2AiFillSystem.svelte"
+    },
+    "./Apps2AiLineSystem.svelte": {
+      "types": "./dist/Apps2AiLineSystem.svelte.d.ts",
+      "svelte": "./dist/Apps2AiLineSystem.svelte"
+    },
     "./Apps2FillSystem.svelte": {
       "types": "./dist/Apps2FillSystem.svelte.d.ts",
       "svelte": "./dist/Apps2FillSystem.svelte"
@@ -469,6 +567,14 @@
     "./Apps2LineSystem.svelte": {
       "types": "./dist/Apps2LineSystem.svelte.d.ts",
       "svelte": "./dist/Apps2LineSystem.svelte"
+    },
+    "./AppsAiFillSystem.svelte": {
+      "types": "./dist/AppsAiFillSystem.svelte.d.ts",
+      "svelte": "./dist/AppsAiFillSystem.svelte"
+    },
+    "./AppsAiLineSystem.svelte": {
+      "types": "./dist/AppsAiLineSystem.svelte.d.ts",
+      "svelte": "./dist/AppsAiLineSystem.svelte"
     },
     "./AppsFillSystem.svelte": {
       "types": "./dist/AppsFillSystem.svelte.d.ts",
@@ -518,6 +624,14 @@
       "types": "./dist/ArmchairLineOthers.svelte.d.ts",
       "svelte": "./dist/ArmchairLineOthers.svelte"
     },
+    "./ArrowDownBoxFillArrows.svelte": {
+      "types": "./dist/ArrowDownBoxFillArrows.svelte.d.ts",
+      "svelte": "./dist/ArrowDownBoxFillArrows.svelte"
+    },
+    "./ArrowDownBoxLineArrows.svelte": {
+      "types": "./dist/ArrowDownBoxLineArrows.svelte.d.ts",
+      "svelte": "./dist/ArrowDownBoxLineArrows.svelte"
+    },
     "./ArrowDownCircleFillArrows.svelte": {
       "types": "./dist/ArrowDownCircleFillArrows.svelte.d.ts",
       "svelte": "./dist/ArrowDownCircleFillArrows.svelte"
@@ -541,6 +655,14 @@
     "./ArrowDownLineArrows.svelte": {
       "types": "./dist/ArrowDownLineArrows.svelte.d.ts",
       "svelte": "./dist/ArrowDownLineArrows.svelte"
+    },
+    "./ArrowDownLongFillArrows.svelte": {
+      "types": "./dist/ArrowDownLongFillArrows.svelte.d.ts",
+      "svelte": "./dist/ArrowDownLongFillArrows.svelte"
+    },
+    "./ArrowDownLongLineArrows.svelte": {
+      "types": "./dist/ArrowDownLongLineArrows.svelte.d.ts",
+      "svelte": "./dist/ArrowDownLongLineArrows.svelte"
     },
     "./ArrowDownSFillArrows.svelte": {
       "types": "./dist/ArrowDownSFillArrows.svelte.d.ts",
@@ -606,6 +728,14 @@
       "types": "./dist/ArrowGoForwardLineArrows.svelte.d.ts",
       "svelte": "./dist/ArrowGoForwardLineArrows.svelte"
     },
+    "./ArrowLeftBoxFillArrows.svelte": {
+      "types": "./dist/ArrowLeftBoxFillArrows.svelte.d.ts",
+      "svelte": "./dist/ArrowLeftBoxFillArrows.svelte"
+    },
+    "./ArrowLeftBoxLineArrows.svelte": {
+      "types": "./dist/ArrowLeftBoxLineArrows.svelte.d.ts",
+      "svelte": "./dist/ArrowLeftBoxLineArrows.svelte"
+    },
     "./ArrowLeftCircleFillArrows.svelte": {
       "types": "./dist/ArrowLeftCircleFillArrows.svelte.d.ts",
       "svelte": "./dist/ArrowLeftCircleFillArrows.svelte"
@@ -622,6 +752,14 @@
       "types": "./dist/ArrowLeftDoubleLineArrows.svelte.d.ts",
       "svelte": "./dist/ArrowLeftDoubleLineArrows.svelte"
     },
+    "./ArrowLeftDownBoxFillArrows.svelte": {
+      "types": "./dist/ArrowLeftDownBoxFillArrows.svelte.d.ts",
+      "svelte": "./dist/ArrowLeftDownBoxFillArrows.svelte"
+    },
+    "./ArrowLeftDownBoxLineArrows.svelte": {
+      "types": "./dist/ArrowLeftDownBoxLineArrows.svelte.d.ts",
+      "svelte": "./dist/ArrowLeftDownBoxLineArrows.svelte"
+    },
     "./ArrowLeftDownFillArrows.svelte": {
       "types": "./dist/ArrowLeftDownFillArrows.svelte.d.ts",
       "svelte": "./dist/ArrowLeftDownFillArrows.svelte"
@@ -630,6 +768,14 @@
       "types": "./dist/ArrowLeftDownLineArrows.svelte.d.ts",
       "svelte": "./dist/ArrowLeftDownLineArrows.svelte"
     },
+    "./ArrowLeftDownLongFillArrows.svelte": {
+      "types": "./dist/ArrowLeftDownLongFillArrows.svelte.d.ts",
+      "svelte": "./dist/ArrowLeftDownLongFillArrows.svelte"
+    },
+    "./ArrowLeftDownLongLineArrows.svelte": {
+      "types": "./dist/ArrowLeftDownLongLineArrows.svelte.d.ts",
+      "svelte": "./dist/ArrowLeftDownLongLineArrows.svelte"
+    },
     "./ArrowLeftFillArrows.svelte": {
       "types": "./dist/ArrowLeftFillArrows.svelte.d.ts",
       "svelte": "./dist/ArrowLeftFillArrows.svelte"
@@ -637,6 +783,14 @@
     "./ArrowLeftLineArrows.svelte": {
       "types": "./dist/ArrowLeftLineArrows.svelte.d.ts",
       "svelte": "./dist/ArrowLeftLineArrows.svelte"
+    },
+    "./ArrowLeftLongFillArrows.svelte": {
+      "types": "./dist/ArrowLeftLongFillArrows.svelte.d.ts",
+      "svelte": "./dist/ArrowLeftLongFillArrows.svelte"
+    },
+    "./ArrowLeftLongLineArrows.svelte": {
+      "types": "./dist/ArrowLeftLongLineArrows.svelte.d.ts",
+      "svelte": "./dist/ArrowLeftLongLineArrows.svelte"
     },
     "./ArrowLeftRightFillArrows.svelte": {
       "types": "./dist/ArrowLeftRightFillArrows.svelte.d.ts",
@@ -654,6 +808,14 @@
       "types": "./dist/ArrowLeftSLineArrows.svelte.d.ts",
       "svelte": "./dist/ArrowLeftSLineArrows.svelte"
     },
+    "./ArrowLeftUpBoxFillArrows.svelte": {
+      "types": "./dist/ArrowLeftUpBoxFillArrows.svelte.d.ts",
+      "svelte": "./dist/ArrowLeftUpBoxFillArrows.svelte"
+    },
+    "./ArrowLeftUpBoxLineArrows.svelte": {
+      "types": "./dist/ArrowLeftUpBoxLineArrows.svelte.d.ts",
+      "svelte": "./dist/ArrowLeftUpBoxLineArrows.svelte"
+    },
     "./ArrowLeftUpFillArrows.svelte": {
       "types": "./dist/ArrowLeftUpFillArrows.svelte.d.ts",
       "svelte": "./dist/ArrowLeftUpFillArrows.svelte"
@@ -662,6 +824,14 @@
       "types": "./dist/ArrowLeftUpLineArrows.svelte.d.ts",
       "svelte": "./dist/ArrowLeftUpLineArrows.svelte"
     },
+    "./ArrowLeftUpLongFillArrows.svelte": {
+      "types": "./dist/ArrowLeftUpLongFillArrows.svelte.d.ts",
+      "svelte": "./dist/ArrowLeftUpLongFillArrows.svelte"
+    },
+    "./ArrowLeftUpLongLineArrows.svelte": {
+      "types": "./dist/ArrowLeftUpLongLineArrows.svelte.d.ts",
+      "svelte": "./dist/ArrowLeftUpLongLineArrows.svelte"
+    },
     "./ArrowLeftWideFillArrows.svelte": {
       "types": "./dist/ArrowLeftWideFillArrows.svelte.d.ts",
       "svelte": "./dist/ArrowLeftWideFillArrows.svelte"
@@ -669,6 +839,14 @@
     "./ArrowLeftWideLineArrows.svelte": {
       "types": "./dist/ArrowLeftWideLineArrows.svelte.d.ts",
       "svelte": "./dist/ArrowLeftWideLineArrows.svelte"
+    },
+    "./ArrowRightBoxFillArrows.svelte": {
+      "types": "./dist/ArrowRightBoxFillArrows.svelte.d.ts",
+      "svelte": "./dist/ArrowRightBoxFillArrows.svelte"
+    },
+    "./ArrowRightBoxLineArrows.svelte": {
+      "types": "./dist/ArrowRightBoxLineArrows.svelte.d.ts",
+      "svelte": "./dist/ArrowRightBoxLineArrows.svelte"
     },
     "./ArrowRightCircleFillArrows.svelte": {
       "types": "./dist/ArrowRightCircleFillArrows.svelte.d.ts",
@@ -686,6 +864,14 @@
       "types": "./dist/ArrowRightDoubleLineArrows.svelte.d.ts",
       "svelte": "./dist/ArrowRightDoubleLineArrows.svelte"
     },
+    "./ArrowRightDownBoxFillArrows.svelte": {
+      "types": "./dist/ArrowRightDownBoxFillArrows.svelte.d.ts",
+      "svelte": "./dist/ArrowRightDownBoxFillArrows.svelte"
+    },
+    "./ArrowRightDownBoxLineArrows.svelte": {
+      "types": "./dist/ArrowRightDownBoxLineArrows.svelte.d.ts",
+      "svelte": "./dist/ArrowRightDownBoxLineArrows.svelte"
+    },
     "./ArrowRightDownFillArrows.svelte": {
       "types": "./dist/ArrowRightDownFillArrows.svelte.d.ts",
       "svelte": "./dist/ArrowRightDownFillArrows.svelte"
@@ -693,6 +879,14 @@
     "./ArrowRightDownLineArrows.svelte": {
       "types": "./dist/ArrowRightDownLineArrows.svelte.d.ts",
       "svelte": "./dist/ArrowRightDownLineArrows.svelte"
+    },
+    "./ArrowRightDownLongFillArrows.svelte": {
+      "types": "./dist/ArrowRightDownLongFillArrows.svelte.d.ts",
+      "svelte": "./dist/ArrowRightDownLongFillArrows.svelte"
+    },
+    "./ArrowRightDownLongLineArrows.svelte": {
+      "types": "./dist/ArrowRightDownLongLineArrows.svelte.d.ts",
+      "svelte": "./dist/ArrowRightDownLongLineArrows.svelte"
     },
     "./ArrowRightFillArrows.svelte": {
       "types": "./dist/ArrowRightFillArrows.svelte.d.ts",
@@ -702,6 +896,14 @@
       "types": "./dist/ArrowRightLineArrows.svelte.d.ts",
       "svelte": "./dist/ArrowRightLineArrows.svelte"
     },
+    "./ArrowRightLongFillArrows.svelte": {
+      "types": "./dist/ArrowRightLongFillArrows.svelte.d.ts",
+      "svelte": "./dist/ArrowRightLongFillArrows.svelte"
+    },
+    "./ArrowRightLongLineArrows.svelte": {
+      "types": "./dist/ArrowRightLongLineArrows.svelte.d.ts",
+      "svelte": "./dist/ArrowRightLongLineArrows.svelte"
+    },
     "./ArrowRightSFillArrows.svelte": {
       "types": "./dist/ArrowRightSFillArrows.svelte.d.ts",
       "svelte": "./dist/ArrowRightSFillArrows.svelte"
@@ -710,6 +912,14 @@
       "types": "./dist/ArrowRightSLineArrows.svelte.d.ts",
       "svelte": "./dist/ArrowRightSLineArrows.svelte"
     },
+    "./ArrowRightUpBoxFillArrows.svelte": {
+      "types": "./dist/ArrowRightUpBoxFillArrows.svelte.d.ts",
+      "svelte": "./dist/ArrowRightUpBoxFillArrows.svelte"
+    },
+    "./ArrowRightUpBoxLineArrows.svelte": {
+      "types": "./dist/ArrowRightUpBoxLineArrows.svelte.d.ts",
+      "svelte": "./dist/ArrowRightUpBoxLineArrows.svelte"
+    },
     "./ArrowRightUpFillArrows.svelte": {
       "types": "./dist/ArrowRightUpFillArrows.svelte.d.ts",
       "svelte": "./dist/ArrowRightUpFillArrows.svelte"
@@ -717,6 +927,14 @@
     "./ArrowRightUpLineArrows.svelte": {
       "types": "./dist/ArrowRightUpLineArrows.svelte.d.ts",
       "svelte": "./dist/ArrowRightUpLineArrows.svelte"
+    },
+    "./ArrowRightUpLongFillArrows.svelte": {
+      "types": "./dist/ArrowRightUpLongFillArrows.svelte.d.ts",
+      "svelte": "./dist/ArrowRightUpLongFillArrows.svelte"
+    },
+    "./ArrowRightUpLongLineArrows.svelte": {
+      "types": "./dist/ArrowRightUpLongLineArrows.svelte.d.ts",
+      "svelte": "./dist/ArrowRightUpLongLineArrows.svelte"
     },
     "./ArrowRightWideFillArrows.svelte": {
       "types": "./dist/ArrowRightWideFillArrows.svelte.d.ts",
@@ -741,6 +959,14 @@
     "./ArrowTurnForwardLineArrows.svelte": {
       "types": "./dist/ArrowTurnForwardLineArrows.svelte.d.ts",
       "svelte": "./dist/ArrowTurnForwardLineArrows.svelte"
+    },
+    "./ArrowUpBoxFillArrows.svelte": {
+      "types": "./dist/ArrowUpBoxFillArrows.svelte.d.ts",
+      "svelte": "./dist/ArrowUpBoxFillArrows.svelte"
+    },
+    "./ArrowUpBoxLineArrows.svelte": {
+      "types": "./dist/ArrowUpBoxLineArrows.svelte.d.ts",
+      "svelte": "./dist/ArrowUpBoxLineArrows.svelte"
     },
     "./ArrowUpCircleFillArrows.svelte": {
       "types": "./dist/ArrowUpCircleFillArrows.svelte.d.ts",
@@ -773,6 +999,14 @@
     "./ArrowUpLineArrows.svelte": {
       "types": "./dist/ArrowUpLineArrows.svelte.d.ts",
       "svelte": "./dist/ArrowUpLineArrows.svelte"
+    },
+    "./ArrowUpLongFillArrows.svelte": {
+      "types": "./dist/ArrowUpLongFillArrows.svelte.d.ts",
+      "svelte": "./dist/ArrowUpLongFillArrows.svelte"
+    },
+    "./ArrowUpLongLineArrows.svelte": {
+      "types": "./dist/ArrowUpLongLineArrows.svelte.d.ts",
+      "svelte": "./dist/ArrowUpLongLineArrows.svelte"
     },
     "./ArrowUpSFillArrows.svelte": {
       "types": "./dist/ArrowUpSFillArrows.svelte.d.ts",
@@ -833,6 +1067,14 @@
     "./AtLineBusiness.svelte": {
       "types": "./dist/AtLineBusiness.svelte.d.ts",
       "svelte": "./dist/AtLineBusiness.svelte"
+    },
+    "./AtomFillHealthMedical.svelte": {
+      "types": "./dist/AtomFillHealthMedical.svelte.d.ts",
+      "svelte": "./dist/AtomFillHealthMedical.svelte"
+    },
+    "./AtomLineHealthMedical.svelte": {
+      "types": "./dist/AtomLineHealthMedical.svelte.d.ts",
+      "svelte": "./dist/AtomLineHealthMedical.svelte"
     },
     "./Attachment2Editor.svelte": {
       "types": "./dist/Attachment2Editor.svelte.d.ts",
@@ -909,6 +1151,14 @@
     "./BarChart2LineBusiness.svelte": {
       "types": "./dist/BarChart2LineBusiness.svelte.d.ts",
       "svelte": "./dist/BarChart2LineBusiness.svelte"
+    },
+    "./BarChartBoxAiFillBusiness.svelte": {
+      "types": "./dist/BarChartBoxAiFillBusiness.svelte.d.ts",
+      "svelte": "./dist/BarChartBoxAiFillBusiness.svelte"
+    },
+    "./BarChartBoxAiLineBusiness.svelte": {
+      "types": "./dist/BarChartBoxAiLineBusiness.svelte.d.ts",
+      "svelte": "./dist/BarChartBoxAiLineBusiness.svelte"
     },
     "./BarChartBoxFillBusiness.svelte": {
       "types": "./dist/BarChartBoxFillBusiness.svelte.d.ts",
@@ -1210,6 +1460,14 @@
       "types": "./dist/Book3LineDocument.svelte.d.ts",
       "svelte": "./dist/Book3LineDocument.svelte"
     },
+    "./BookAiFillDocument.svelte": {
+      "types": "./dist/BookAiFillDocument.svelte.d.ts",
+      "svelte": "./dist/BookAiFillDocument.svelte"
+    },
+    "./BookAiLineDocument.svelte": {
+      "types": "./dist/BookAiLineDocument.svelte.d.ts",
+      "svelte": "./dist/BookAiLineDocument.svelte"
+    },
     "./BookFillDocument.svelte": {
       "types": "./dist/BookFillDocument.svelte.d.ts",
       "svelte": "./dist/BookFillDocument.svelte"
@@ -1354,6 +1612,22 @@
       "types": "./dist/Brain2LineHealthMedical.svelte.d.ts",
       "svelte": "./dist/Brain2LineHealthMedical.svelte"
     },
+    "./Brain3FillHealthMedical.svelte": {
+      "types": "./dist/Brain3FillHealthMedical.svelte.d.ts",
+      "svelte": "./dist/Brain3FillHealthMedical.svelte"
+    },
+    "./Brain3LineHealthMedical.svelte": {
+      "types": "./dist/Brain3LineHealthMedical.svelte.d.ts",
+      "svelte": "./dist/Brain3LineHealthMedical.svelte"
+    },
+    "./BrainAi3FillHealthMedical.svelte": {
+      "types": "./dist/BrainAi3FillHealthMedical.svelte.d.ts",
+      "svelte": "./dist/BrainAi3FillHealthMedical.svelte"
+    },
+    "./BrainAi3LineHealthMedical.svelte": {
+      "types": "./dist/BrainAi3LineHealthMedical.svelte.d.ts",
+      "svelte": "./dist/BrainAi3LineHealthMedical.svelte"
+    },
     "./BrainFillHealthMedical.svelte": {
       "types": "./dist/BrainFillHealthMedical.svelte.d.ts",
       "svelte": "./dist/BrainFillHealthMedical.svelte"
@@ -1449,6 +1723,22 @@
     "./Brush4LineDesign.svelte": {
       "types": "./dist/Brush4LineDesign.svelte.d.ts",
       "svelte": "./dist/Brush4LineDesign.svelte"
+    },
+    "./BrushAi3FillDesign.svelte": {
+      "types": "./dist/BrushAi3FillDesign.svelte.d.ts",
+      "svelte": "./dist/BrushAi3FillDesign.svelte"
+    },
+    "./BrushAi3LineDesign.svelte": {
+      "types": "./dist/BrushAi3LineDesign.svelte.d.ts",
+      "svelte": "./dist/BrushAi3LineDesign.svelte"
+    },
+    "./BrushAiFillDesign.svelte": {
+      "types": "./dist/BrushAiFillDesign.svelte.d.ts",
+      "svelte": "./dist/BrushAiFillDesign.svelte"
+    },
+    "./BrushAiLineDesign.svelte": {
+      "types": "./dist/BrushAiLineDesign.svelte.d.ts",
+      "svelte": "./dist/BrushAiLineDesign.svelte"
     },
     "./BrushFillDesign.svelte": {
       "types": "./dist/BrushFillDesign.svelte.d.ts",
@@ -1662,9 +1952,41 @@
       "types": "./dist/Camera3LineMedia.svelte.d.ts",
       "svelte": "./dist/Camera3LineMedia.svelte"
     },
+    "./Camera4FillMedia.svelte": {
+      "types": "./dist/Camera4FillMedia.svelte.d.ts",
+      "svelte": "./dist/Camera4FillMedia.svelte"
+    },
+    "./Camera4LineMedia.svelte": {
+      "types": "./dist/Camera4LineMedia.svelte.d.ts",
+      "svelte": "./dist/Camera4LineMedia.svelte"
+    },
+    "./CameraAi2FillMedia.svelte": {
+      "types": "./dist/CameraAi2FillMedia.svelte.d.ts",
+      "svelte": "./dist/CameraAi2FillMedia.svelte"
+    },
+    "./CameraAi2LineMedia.svelte": {
+      "types": "./dist/CameraAi2LineMedia.svelte.d.ts",
+      "svelte": "./dist/CameraAi2LineMedia.svelte"
+    },
+    "./CameraAiFillMedia.svelte": {
+      "types": "./dist/CameraAiFillMedia.svelte.d.ts",
+      "svelte": "./dist/CameraAiFillMedia.svelte"
+    },
+    "./CameraAiLineMedia.svelte": {
+      "types": "./dist/CameraAiLineMedia.svelte.d.ts",
+      "svelte": "./dist/CameraAiLineMedia.svelte"
+    },
     "./CameraFillMedia.svelte": {
       "types": "./dist/CameraFillMedia.svelte.d.ts",
       "svelte": "./dist/CameraFillMedia.svelte"
+    },
+    "./CameraLensAiFillMedia.svelte": {
+      "types": "./dist/CameraLensAiFillMedia.svelte.d.ts",
+      "svelte": "./dist/CameraLensAiFillMedia.svelte"
+    },
+    "./CameraLensAiLineMedia.svelte": {
+      "types": "./dist/CameraLensAiLineMedia.svelte.d.ts",
+      "svelte": "./dist/CameraLensAiLineMedia.svelte"
     },
     "./CameraLensFillMedia.svelte": {
       "types": "./dist/CameraLensFillMedia.svelte.d.ts",
@@ -1834,6 +2156,38 @@
       "types": "./dist/Chat4LineCommunication.svelte.d.ts",
       "svelte": "./dist/Chat4LineCommunication.svelte"
     },
+    "./ChatAi2FillCommunication.svelte": {
+      "types": "./dist/ChatAi2FillCommunication.svelte.d.ts",
+      "svelte": "./dist/ChatAi2FillCommunication.svelte"
+    },
+    "./ChatAi2LineCommunication.svelte": {
+      "types": "./dist/ChatAi2LineCommunication.svelte.d.ts",
+      "svelte": "./dist/ChatAi2LineCommunication.svelte"
+    },
+    "./ChatAi3FillCommunication.svelte": {
+      "types": "./dist/ChatAi3FillCommunication.svelte.d.ts",
+      "svelte": "./dist/ChatAi3FillCommunication.svelte"
+    },
+    "./ChatAi3LineCommunication.svelte": {
+      "types": "./dist/ChatAi3LineCommunication.svelte.d.ts",
+      "svelte": "./dist/ChatAi3LineCommunication.svelte"
+    },
+    "./ChatAi4FillCommunication.svelte": {
+      "types": "./dist/ChatAi4FillCommunication.svelte.d.ts",
+      "svelte": "./dist/ChatAi4FillCommunication.svelte"
+    },
+    "./ChatAi4LineCommunication.svelte": {
+      "types": "./dist/ChatAi4LineCommunication.svelte.d.ts",
+      "svelte": "./dist/ChatAi4LineCommunication.svelte"
+    },
+    "./ChatAiFillCommunication.svelte": {
+      "types": "./dist/ChatAiFillCommunication.svelte.d.ts",
+      "svelte": "./dist/ChatAiFillCommunication.svelte"
+    },
+    "./ChatAiLineCommunication.svelte": {
+      "types": "./dist/ChatAiLineCommunication.svelte.d.ts",
+      "svelte": "./dist/ChatAiLineCommunication.svelte"
+    },
     "./ChatCheckFillCommunication.svelte": {
       "types": "./dist/ChatCheckFillCommunication.svelte.d.ts",
       "svelte": "./dist/ChatCheckFillCommunication.svelte"
@@ -1962,6 +2316,22 @@
       "types": "./dist/ChatSmile3LineCommunication.svelte.d.ts",
       "svelte": "./dist/ChatSmile3LineCommunication.svelte"
     },
+    "./ChatSmileAi3FillCommunication.svelte": {
+      "types": "./dist/ChatSmileAi3FillCommunication.svelte.d.ts",
+      "svelte": "./dist/ChatSmileAi3FillCommunication.svelte"
+    },
+    "./ChatSmileAi3LineCommunication.svelte": {
+      "types": "./dist/ChatSmileAi3LineCommunication.svelte.d.ts",
+      "svelte": "./dist/ChatSmileAi3LineCommunication.svelte"
+    },
+    "./ChatSmileAiFillCommunication.svelte": {
+      "types": "./dist/ChatSmileAiFillCommunication.svelte.d.ts",
+      "svelte": "./dist/ChatSmileAiFillCommunication.svelte"
+    },
+    "./ChatSmileAiLineCommunication.svelte": {
+      "types": "./dist/ChatSmileAiLineCommunication.svelte.d.ts",
+      "svelte": "./dist/ChatSmileAiLineCommunication.svelte"
+    },
     "./ChatSmileFillCommunication.svelte": {
       "types": "./dist/ChatSmileFillCommunication.svelte.d.ts",
       "svelte": "./dist/ChatSmileFillCommunication.svelte"
@@ -1993,6 +2363,14 @@
     "./ChatUploadLineCommunication.svelte": {
       "types": "./dist/ChatUploadLineCommunication.svelte.d.ts",
       "svelte": "./dist/ChatUploadLineCommunication.svelte"
+    },
+    "./ChatVoiceAiFillCommunication.svelte": {
+      "types": "./dist/ChatVoiceAiFillCommunication.svelte.d.ts",
+      "svelte": "./dist/ChatVoiceAiFillCommunication.svelte"
+    },
+    "./ChatVoiceAiLineCommunication.svelte": {
+      "types": "./dist/ChatVoiceAiLineCommunication.svelte.d.ts",
+      "svelte": "./dist/ChatVoiceAiLineCommunication.svelte"
     },
     "./ChatVoiceFillCommunication.svelte": {
       "types": "./dist/ChatVoiceFillCommunication.svelte.d.ts",
@@ -2074,6 +2452,14 @@
       "types": "./dist/CheckboxMultipleLineSystem.svelte.d.ts",
       "svelte": "./dist/CheckboxMultipleLineSystem.svelte"
     },
+    "./ChessFillOthers.svelte": {
+      "types": "./dist/ChessFillOthers.svelte.d.ts",
+      "svelte": "./dist/ChessFillOthers.svelte"
+    },
+    "./ChessLineOthers.svelte": {
+      "types": "./dist/ChessLineOthers.svelte.d.ts",
+      "svelte": "./dist/ChessLineOthers.svelte"
+    },
     "./ChinaRailwayFillMap.svelte": {
       "types": "./dist/ChinaRailwayFillMap.svelte.d.ts",
       "svelte": "./dist/ChinaRailwayFillMap.svelte"
@@ -2098,6 +2484,14 @@
       "types": "./dist/CircleLineDesign.svelte.d.ts",
       "svelte": "./dist/CircleLineDesign.svelte"
     },
+    "./ClapperboardAiFillMedia.svelte": {
+      "types": "./dist/ClapperboardAiFillMedia.svelte.d.ts",
+      "svelte": "./dist/ClapperboardAiFillMedia.svelte"
+    },
+    "./ClapperboardAiLineMedia.svelte": {
+      "types": "./dist/ClapperboardAiLineMedia.svelte.d.ts",
+      "svelte": "./dist/ClapperboardAiLineMedia.svelte"
+    },
     "./ClapperboardFillMedia.svelte": {
       "types": "./dist/ClapperboardFillMedia.svelte.d.ts",
       "svelte": "./dist/ClapperboardFillMedia.svelte"
@@ -2105,6 +2499,14 @@
     "./ClapperboardLineMedia.svelte": {
       "types": "./dist/ClapperboardLineMedia.svelte.d.ts",
       "svelte": "./dist/ClapperboardLineMedia.svelte"
+    },
+    "./ClaudeFillLogos.svelte": {
+      "types": "./dist/ClaudeFillLogos.svelte.d.ts",
+      "svelte": "./dist/ClaudeFillLogos.svelte"
+    },
+    "./ClaudeLineLogos.svelte": {
+      "types": "./dist/ClaudeLineLogos.svelte.d.ts",
+      "svelte": "./dist/ClaudeLineLogos.svelte"
     },
     "./ClipboardFillDocument.svelte": {
       "types": "./dist/ClipboardFillDocument.svelte.d.ts",
@@ -2154,6 +2556,14 @@
       "types": "./dist/CloseLineSystem.svelte.d.ts",
       "svelte": "./dist/CloseLineSystem.svelte"
     },
+    "./ClosedCaptioningAiFillMedia.svelte": {
+      "types": "./dist/ClosedCaptioningAiFillMedia.svelte.d.ts",
+      "svelte": "./dist/ClosedCaptioningAiFillMedia.svelte"
+    },
+    "./ClosedCaptioningAiLineMedia.svelte": {
+      "types": "./dist/ClosedCaptioningAiLineMedia.svelte.d.ts",
+      "svelte": "./dist/ClosedCaptioningAiLineMedia.svelte"
+    },
     "./ClosedCaptioningFillMedia.svelte": {
       "types": "./dist/ClosedCaptioningFillMedia.svelte.d.ts",
       "svelte": "./dist/ClosedCaptioningFillMedia.svelte"
@@ -2201,6 +2611,14 @@
     "./CloudyLineWeather.svelte": {
       "types": "./dist/CloudyLineWeather.svelte.d.ts",
       "svelte": "./dist/CloudyLineWeather.svelte"
+    },
+    "./CodeAiFillDevelopment.svelte": {
+      "types": "./dist/CodeAiFillDevelopment.svelte.d.ts",
+      "svelte": "./dist/CodeAiFillDevelopment.svelte"
+    },
+    "./CodeAiLineDevelopment.svelte": {
+      "types": "./dist/CodeAiLineDevelopment.svelte.d.ts",
+      "svelte": "./dist/CodeAiLineDevelopment.svelte"
     },
     "./CodeBlockEditor.svelte": {
       "types": "./dist/CodeBlockEditor.svelte.d.ts",
@@ -2305,6 +2723,14 @@
     "./CollapseVerticalLineArrows.svelte": {
       "types": "./dist/CollapseVerticalLineArrows.svelte.d.ts",
       "svelte": "./dist/CollapseVerticalLineArrows.svelte"
+    },
+    "./ColorFilterAiFillDesign.svelte": {
+      "types": "./dist/ColorFilterAiFillDesign.svelte.d.ts",
+      "svelte": "./dist/ColorFilterAiFillDesign.svelte"
+    },
+    "./ColorFilterAiLineDesign.svelte": {
+      "types": "./dist/ColorFilterAiLineDesign.svelte.d.ts",
+      "svelte": "./dist/ColorFilterAiLineDesign.svelte"
     },
     "./ColorFilterFillDesign.svelte": {
       "types": "./dist/ColorFilterFillDesign.svelte.d.ts",
@@ -2810,6 +3236,10 @@
       "types": "./dist/CursorLineDevelopment.svelte.d.ts",
       "svelte": "./dist/CursorLineDevelopment.svelte"
     },
+    "./CustomSizeEditor.svelte": {
+      "types": "./dist/CustomSizeEditor.svelte.d.ts",
+      "svelte": "./dist/CustomSizeEditor.svelte"
+    },
     "./CustomerService2FillBusiness.svelte": {
       "types": "./dist/CustomerService2FillBusiness.svelte.d.ts",
       "svelte": "./dist/CustomerService2FillBusiness.svelte"
@@ -2873,6 +3303,14 @@
     "./DatabaseLineDevice.svelte": {
       "types": "./dist/DatabaseLineDevice.svelte.d.ts",
       "svelte": "./dist/DatabaseLineDevice.svelte"
+    },
+    "./DeepseekFillLogos.svelte": {
+      "types": "./dist/DeepseekFillLogos.svelte.d.ts",
+      "svelte": "./dist/DeepseekFillLogos.svelte"
+    },
+    "./DeepseekLineLogos.svelte": {
+      "types": "./dist/DeepseekLineLogos.svelte.d.ts",
+      "svelte": "./dist/DeepseekLineLogos.svelte"
     },
     "./DeleteBack2FillSystem.svelte": {
       "types": "./dist/DeleteBack2FillSystem.svelte.d.ts",
@@ -2969,6 +3407,22 @@
     "./DeviceRecoverLineDevice.svelte": {
       "types": "./dist/DeviceRecoverLineDevice.svelte.d.ts",
       "svelte": "./dist/DeviceRecoverLineDevice.svelte"
+    },
+    "./DiamondFillFinance.svelte": {
+      "types": "./dist/DiamondFillFinance.svelte.d.ts",
+      "svelte": "./dist/DiamondFillFinance.svelte"
+    },
+    "./DiamondLineFinance.svelte": {
+      "types": "./dist/DiamondLineFinance.svelte.d.ts",
+      "svelte": "./dist/DiamondLineFinance.svelte"
+    },
+    "./DiamondRingFillFinance.svelte": {
+      "types": "./dist/DiamondRingFillFinance.svelte.d.ts",
+      "svelte": "./dist/DiamondRingFillFinance.svelte"
+    },
+    "./DiamondRingLineFinance.svelte": {
+      "types": "./dist/DiamondRingLineFinance.svelte.d.ts",
+      "svelte": "./dist/DiamondRingLineFinance.svelte"
     },
     "./Dice1FillOthers.svelte": {
       "types": "./dist/Dice1FillOthers.svelte.d.ts",
@@ -3337,6 +3791,14 @@
     "./DvLineMedia.svelte": {
       "types": "./dist/DvLineMedia.svelte.d.ts",
       "svelte": "./dist/DvLineMedia.svelte"
+    },
+    "./DvdAiFillMedia.svelte": {
+      "types": "./dist/DvdAiFillMedia.svelte.d.ts",
+      "svelte": "./dist/DvdAiFillMedia.svelte"
+    },
+    "./DvdAiLineMedia.svelte": {
+      "types": "./dist/DvdAiLineMedia.svelte.d.ts",
+      "svelte": "./dist/DvdAiLineMedia.svelte"
     },
     "./DvdFillMedia.svelte": {
       "types": "./dist/DvdFillMedia.svelte.d.ts",
@@ -3822,6 +4284,14 @@
       "types": "./dist/FahrenheitLineWeather.svelte.d.ts",
       "svelte": "./dist/FahrenheitLineWeather.svelte"
     },
+    "./FediverseFillLogos.svelte": {
+      "types": "./dist/FediverseFillLogos.svelte.d.ts",
+      "svelte": "./dist/FediverseFillLogos.svelte"
+    },
+    "./FediverseLineLogos.svelte": {
+      "types": "./dist/FediverseLineLogos.svelte.d.ts",
+      "svelte": "./dist/FediverseLineLogos.svelte"
+    },
     "./FeedbackFillCommunication.svelte": {
       "types": "./dist/FeedbackFillCommunication.svelte.d.ts",
       "svelte": "./dist/FeedbackFillCommunication.svelte"
@@ -3829,6 +4299,14 @@
     "./FeedbackLineCommunication.svelte": {
       "types": "./dist/FeedbackLineCommunication.svelte.d.ts",
       "svelte": "./dist/FeedbackLineCommunication.svelte"
+    },
+    "./FigmaFillLogos.svelte": {
+      "types": "./dist/FigmaFillLogos.svelte.d.ts",
+      "svelte": "./dist/FigmaFillLogos.svelte"
+    },
+    "./FigmaLineLogos.svelte": {
+      "types": "./dist/FigmaLineLogos.svelte.d.ts",
+      "svelte": "./dist/FigmaLineLogos.svelte"
     },
     "./File2FillDocument.svelte": {
       "types": "./dist/File2FillDocument.svelte.d.ts",
@@ -3861,6 +4339,22 @@
     "./FileAddLineDocument.svelte": {
       "types": "./dist/FileAddLineDocument.svelte.d.ts",
       "svelte": "./dist/FileAddLineDocument.svelte"
+    },
+    "./FileAi2FillDocument.svelte": {
+      "types": "./dist/FileAi2FillDocument.svelte.d.ts",
+      "svelte": "./dist/FileAi2FillDocument.svelte"
+    },
+    "./FileAi2LineDocument.svelte": {
+      "types": "./dist/FileAi2LineDocument.svelte.d.ts",
+      "svelte": "./dist/FileAi2LineDocument.svelte"
+    },
+    "./FileAiFillDocument.svelte": {
+      "types": "./dist/FileAiFillDocument.svelte.d.ts",
+      "svelte": "./dist/FileAiFillDocument.svelte"
+    },
+    "./FileAiLineDocument.svelte": {
+      "types": "./dist/FileAiLineDocument.svelte.d.ts",
+      "svelte": "./dist/FileAiLineDocument.svelte"
     },
     "./FileChart2FillDocument.svelte": {
       "types": "./dist/FileChart2FillDocument.svelte.d.ts",
@@ -4246,6 +4740,14 @@
       "types": "./dist/FileZipLineDocument.svelte.d.ts",
       "svelte": "./dist/FileZipLineDocument.svelte"
     },
+    "./FilmAiFillMedia.svelte": {
+      "types": "./dist/FilmAiFillMedia.svelte.d.ts",
+      "svelte": "./dist/FilmAiFillMedia.svelte"
+    },
+    "./FilmAiLineMedia.svelte": {
+      "types": "./dist/FilmAiLineMedia.svelte.d.ts",
+      "svelte": "./dist/FilmAiLineMedia.svelte"
+    },
     "./FilmFillMedia.svelte": {
       "types": "./dist/FilmFillMedia.svelte.d.ts",
       "svelte": "./dist/FilmFillMedia.svelte"
@@ -4334,6 +4836,14 @@
       "types": "./dist/FirebaseLineLogos.svelte.d.ts",
       "svelte": "./dist/FirebaseLineLogos.svelte"
     },
+    "./FirefoxBrowserFillLogos.svelte": {
+      "types": "./dist/FirefoxBrowserFillLogos.svelte.d.ts",
+      "svelte": "./dist/FirefoxBrowserFillLogos.svelte"
+    },
+    "./FirefoxBrowserLineLogos.svelte": {
+      "types": "./dist/FirefoxBrowserLineLogos.svelte.d.ts",
+      "svelte": "./dist/FirefoxBrowserLineLogos.svelte"
+    },
     "./FirefoxFillLogos.svelte": {
       "types": "./dist/FirefoxFillLogos.svelte.d.ts",
       "svelte": "./dist/FirefoxFillLogos.svelte"
@@ -4365,6 +4875,14 @@
     "./FlagLineBusiness.svelte": {
       "types": "./dist/FlagLineBusiness.svelte.d.ts",
       "svelte": "./dist/FlagLineBusiness.svelte"
+    },
+    "./FlagOffFillBusiness.svelte": {
+      "types": "./dist/FlagOffFillBusiness.svelte.d.ts",
+      "svelte": "./dist/FlagOffFillBusiness.svelte"
+    },
+    "./FlagOffLineBusiness.svelte": {
+      "types": "./dist/FlagOffLineBusiness.svelte.d.ts",
+      "svelte": "./dist/FlagOffLineBusiness.svelte"
     },
     "./FlashlightFillWeather.svelte": {
       "types": "./dist/FlashlightFillWeather.svelte.d.ts",
@@ -4806,6 +5324,10 @@
       "types": "./dist/FontSize2Editor.svelte.d.ts",
       "svelte": "./dist/FontSize2Editor.svelte"
     },
+    "./FontSizeAiEditor.svelte": {
+      "types": "./dist/FontSizeAiEditor.svelte.d.ts",
+      "svelte": "./dist/FontSizeAiEditor.svelte"
+    },
     "./FontSizeEditor.svelte": {
       "types": "./dist/FontSizeEditor.svelte.d.ts",
       "svelte": "./dist/FontSizeEditor.svelte"
@@ -4938,6 +5460,14 @@
       "types": "./dist/FunctionAddLineSystem.svelte.d.ts",
       "svelte": "./dist/FunctionAddLineSystem.svelte"
     },
+    "./FunctionAiFillSystem.svelte": {
+      "types": "./dist/FunctionAiFillSystem.svelte.d.ts",
+      "svelte": "./dist/FunctionAiFillSystem.svelte"
+    },
+    "./FunctionAiLineSystem.svelte": {
+      "types": "./dist/FunctionAiLineSystem.svelte.d.ts",
+      "svelte": "./dist/FunctionAiLineSystem.svelte"
+    },
     "./FunctionFillSystem.svelte": {
       "types": "./dist/FunctionFillSystem.svelte.d.ts",
       "svelte": "./dist/FunctionFillSystem.svelte"
@@ -4989,6 +5519,14 @@
     "./GalleryViewEditor.svelte": {
       "types": "./dist/GalleryViewEditor.svelte.d.ts",
       "svelte": "./dist/GalleryViewEditor.svelte"
+    },
+    "./Game2FillOthers.svelte": {
+      "types": "./dist/Game2FillOthers.svelte.d.ts",
+      "svelte": "./dist/Game2FillOthers.svelte"
+    },
+    "./Game2LineOthers.svelte": {
+      "types": "./dist/Game2LineOthers.svelte.d.ts",
+      "svelte": "./dist/Game2LineOthers.svelte"
     },
     "./GameFillOthers.svelte": {
       "types": "./dist/GameFillOthers.svelte.d.ts",
@@ -5213,6 +5751,14 @@
     "./Goblet2LineFood.svelte": {
       "types": "./dist/Goblet2LineFood.svelte.d.ts",
       "svelte": "./dist/Goblet2LineFood.svelte"
+    },
+    "./GobletBrokenFillFood.svelte": {
+      "types": "./dist/GobletBrokenFillFood.svelte.d.ts",
+      "svelte": "./dist/GobletBrokenFillFood.svelte"
+    },
+    "./GobletBrokenLineFood.svelte": {
+      "types": "./dist/GobletBrokenLineFood.svelte.d.ts",
+      "svelte": "./dist/GobletBrokenLineFood.svelte"
     },
     "./GobletFillFood.svelte": {
       "types": "./dist/GobletFillFood.svelte.d.ts",
@@ -5610,6 +6156,14 @@
       "types": "./dist/Home8LineBuildings.svelte.d.ts",
       "svelte": "./dist/Home8LineBuildings.svelte"
     },
+    "./Home9FillBuildings.svelte": {
+      "types": "./dist/Home9FillBuildings.svelte.d.ts",
+      "svelte": "./dist/Home9FillBuildings.svelte"
+    },
+    "./Home9LineBuildings.svelte": {
+      "types": "./dist/Home9LineBuildings.svelte.d.ts",
+      "svelte": "./dist/Home9LineBuildings.svelte"
+    },
     "./HomeFillBuildings.svelte": {
       "types": "./dist/HomeFillBuildings.svelte.d.ts",
       "svelte": "./dist/HomeFillBuildings.svelte"
@@ -5782,6 +6336,22 @@
       "types": "./dist/ImageAddLineMedia.svelte.d.ts",
       "svelte": "./dist/ImageAddLineMedia.svelte"
     },
+    "./ImageAiFillMedia.svelte": {
+      "types": "./dist/ImageAiFillMedia.svelte.d.ts",
+      "svelte": "./dist/ImageAiFillMedia.svelte"
+    },
+    "./ImageAiLineMedia.svelte": {
+      "types": "./dist/ImageAiLineMedia.svelte.d.ts",
+      "svelte": "./dist/ImageAiLineMedia.svelte"
+    },
+    "./ImageCircleAiFillMedia.svelte": {
+      "types": "./dist/ImageCircleAiFillMedia.svelte.d.ts",
+      "svelte": "./dist/ImageCircleAiFillMedia.svelte"
+    },
+    "./ImageCircleAiLineMedia.svelte": {
+      "types": "./dist/ImageCircleAiLineMedia.svelte.d.ts",
+      "svelte": "./dist/ImageCircleAiLineMedia.svelte"
+    },
     "./ImageCircleFillMedia.svelte": {
       "types": "./dist/ImageCircleFillMedia.svelte.d.ts",
       "svelte": "./dist/ImageCircleFillMedia.svelte"
@@ -5877,6 +6447,14 @@
     "./InfinityLineOthers.svelte": {
       "types": "./dist/InfinityLineOthers.svelte.d.ts",
       "svelte": "./dist/InfinityLineOthers.svelte"
+    },
+    "./InfoCardFillBusiness.svelte": {
+      "types": "./dist/InfoCardFillBusiness.svelte.d.ts",
+      "svelte": "./dist/InfoCardFillBusiness.svelte"
+    },
+    "./InfoCardLineBusiness.svelte": {
+      "types": "./dist/InfoCardLineBusiness.svelte.d.ts",
+      "svelte": "./dist/InfoCardLineBusiness.svelte"
     },
     "./InfoIEditor.svelte": {
       "types": "./dist/InfoIEditor.svelte.d.ts",
@@ -6006,6 +6584,14 @@
       "types": "./dist/JavascriptLineDevelopment.svelte.d.ts",
       "svelte": "./dist/JavascriptLineDevelopment.svelte"
     },
+    "./JewelryFillFinance.svelte": {
+      "types": "./dist/JewelryFillFinance.svelte.d.ts",
+      "svelte": "./dist/JewelryFillFinance.svelte"
+    },
+    "./JewelryLineFinance.svelte": {
+      "types": "./dist/JewelryLineFinance.svelte.d.ts",
+      "svelte": "./dist/JewelryLineFinance.svelte"
+    },
     "./KakaoTalkFillLogos.svelte": {
       "types": "./dist/KakaoTalkFillLogos.svelte.d.ts",
       "svelte": "./dist/KakaoTalkFillLogos.svelte"
@@ -6085,6 +6671,14 @@
     "./KnifeLineFood.svelte": {
       "types": "./dist/KnifeLineFood.svelte.d.ts",
       "svelte": "./dist/KnifeLineFood.svelte"
+    },
+    "./LandscapeAiFillMedia.svelte": {
+      "types": "./dist/LandscapeAiFillMedia.svelte.d.ts",
+      "svelte": "./dist/LandscapeAiFillMedia.svelte"
+    },
+    "./LandscapeAiLineMedia.svelte": {
+      "types": "./dist/LandscapeAiLineMedia.svelte.d.ts",
+      "svelte": "./dist/LandscapeAiLineMedia.svelte"
     },
     "./LandscapeFillMedia.svelte": {
       "types": "./dist/LandscapeFillMedia.svelte.d.ts",
@@ -6270,6 +6864,10 @@
       "types": "./dist/LeafLineOthers.svelte.d.ts",
       "svelte": "./dist/LeafLineOthers.svelte"
     },
+    "./LetterSpacing2Editor.svelte": {
+      "types": "./dist/LetterSpacing2Editor.svelte.d.ts",
+      "svelte": "./dist/LetterSpacing2Editor.svelte"
+    },
     "./LifebuoyFillMap.svelte": {
       "types": "./dist/LifebuoyFillMap.svelte.d.ts",
       "svelte": "./dist/LifebuoyFillMap.svelte"
@@ -6277,6 +6875,14 @@
     "./LifebuoyLineMap.svelte": {
       "types": "./dist/LifebuoyLineMap.svelte.d.ts",
       "svelte": "./dist/LifebuoyLineMap.svelte"
+    },
+    "./LightbulbAiFillOthers.svelte": {
+      "types": "./dist/LightbulbAiFillOthers.svelte.d.ts",
+      "svelte": "./dist/LightbulbAiFillOthers.svelte"
+    },
+    "./LightbulbAiLineOthers.svelte": {
+      "types": "./dist/LightbulbAiLineOthers.svelte.d.ts",
+      "svelte": "./dist/LightbulbAiLineOthers.svelte"
     },
     "./LightbulbFillOthers.svelte": {
       "types": "./dist/LightbulbFillOthers.svelte.d.ts",
@@ -6305,6 +6911,10 @@
     "./LineFillLogos.svelte": {
       "types": "./dist/LineFillLogos.svelte.d.ts",
       "svelte": "./dist/LineFillLogos.svelte"
+    },
+    "./LineHeight2Editor.svelte": {
+      "types": "./dist/LineHeight2Editor.svelte.d.ts",
+      "svelte": "./dist/LineHeight2Editor.svelte"
     },
     "./LineHeightEditor.svelte": {
       "types": "./dist/LineHeightEditor.svelte.d.ts",
@@ -6534,6 +7144,14 @@
       "types": "./dist/LogoutCircleRLineSystem.svelte.d.ts",
       "svelte": "./dist/LogoutCircleRLineSystem.svelte"
     },
+    "./LoopLeftAiFillSystem.svelte": {
+      "types": "./dist/LoopLeftAiFillSystem.svelte.d.ts",
+      "svelte": "./dist/LoopLeftAiFillSystem.svelte"
+    },
+    "./LoopLeftAiLineSystem.svelte": {
+      "types": "./dist/LoopLeftAiLineSystem.svelte.d.ts",
+      "svelte": "./dist/LoopLeftAiLineSystem.svelte"
+    },
     "./LoopLeftFillSystem.svelte": {
       "types": "./dist/LoopLeftFillSystem.svelte.d.ts",
       "svelte": "./dist/LoopLeftFillSystem.svelte"
@@ -6541,6 +7159,14 @@
     "./LoopLeftLineSystem.svelte": {
       "types": "./dist/LoopLeftLineSystem.svelte.d.ts",
       "svelte": "./dist/LoopLeftLineSystem.svelte"
+    },
+    "./LoopRightAiFillSystem.svelte": {
+      "types": "./dist/LoopRightAiFillSystem.svelte.d.ts",
+      "svelte": "./dist/LoopRightAiFillSystem.svelte"
+    },
+    "./LoopRightAiLineSystem.svelte": {
+      "types": "./dist/LoopRightAiLineSystem.svelte.d.ts",
+      "svelte": "./dist/LoopRightAiLineSystem.svelte"
     },
     "./LoopRightFillSystem.svelte": {
       "types": "./dist/LoopRightFillSystem.svelte.d.ts",
@@ -6605,6 +7231,14 @@
     "./MailAddLineBusiness.svelte": {
       "types": "./dist/MailAddLineBusiness.svelte.d.ts",
       "svelte": "./dist/MailAddLineBusiness.svelte"
+    },
+    "./MailAiFillBusiness.svelte": {
+      "types": "./dist/MailAiFillBusiness.svelte.d.ts",
+      "svelte": "./dist/MailAiFillBusiness.svelte"
+    },
+    "./MailAiLineBusiness.svelte": {
+      "types": "./dist/MailAiLineBusiness.svelte.d.ts",
+      "svelte": "./dist/MailAiLineBusiness.svelte"
     },
     "./MailCheckFillBusiness.svelte": {
       "types": "./dist/MailCheckFillBusiness.svelte.d.ts",
@@ -7038,6 +7672,14 @@
       "types": "./dist/Message3LineCommunication.svelte.d.ts",
       "svelte": "./dist/Message3LineCommunication.svelte"
     },
+    "./MessageAi3FillCommunication.svelte": {
+      "types": "./dist/MessageAi3FillCommunication.svelte.d.ts",
+      "svelte": "./dist/MessageAi3FillCommunication.svelte"
+    },
+    "./MessageAi3LineCommunication.svelte": {
+      "types": "./dist/MessageAi3LineCommunication.svelte.d.ts",
+      "svelte": "./dist/MessageAi3LineCommunication.svelte"
+    },
     "./MessageFillCommunication.svelte": {
       "types": "./dist/MessageFillCommunication.svelte.d.ts",
       "svelte": "./dist/MessageFillCommunication.svelte"
@@ -7070,6 +7712,14 @@
       "types": "./dist/MeteorLineWeather.svelte.d.ts",
       "svelte": "./dist/MeteorLineWeather.svelte"
     },
+    "./Mic2AiFillMedia.svelte": {
+      "types": "./dist/Mic2AiFillMedia.svelte.d.ts",
+      "svelte": "./dist/Mic2AiFillMedia.svelte"
+    },
+    "./Mic2AiLineMedia.svelte": {
+      "types": "./dist/Mic2AiLineMedia.svelte.d.ts",
+      "svelte": "./dist/Mic2AiLineMedia.svelte"
+    },
     "./Mic2FillMedia.svelte": {
       "types": "./dist/Mic2FillMedia.svelte.d.ts",
       "svelte": "./dist/Mic2FillMedia.svelte"
@@ -7077,6 +7727,14 @@
     "./Mic2LineMedia.svelte": {
       "types": "./dist/Mic2LineMedia.svelte.d.ts",
       "svelte": "./dist/Mic2LineMedia.svelte"
+    },
+    "./MicAiFillMedia.svelte": {
+      "types": "./dist/MicAiFillMedia.svelte.d.ts",
+      "svelte": "./dist/MicAiFillMedia.svelte"
+    },
+    "./MicAiLineMedia.svelte": {
+      "types": "./dist/MicAiLineMedia.svelte.d.ts",
+      "svelte": "./dist/MicAiLineMedia.svelte"
     },
     "./MicFillMedia.svelte": {
       "types": "./dist/MicFillMedia.svelte.d.ts",
@@ -7145,6 +7803,14 @@
     "./MistLineWeather.svelte": {
       "types": "./dist/MistLineWeather.svelte.d.ts",
       "svelte": "./dist/MistLineWeather.svelte"
+    },
+    "./MixtralFillLogos.svelte": {
+      "types": "./dist/MixtralFillLogos.svelte.d.ts",
+      "svelte": "./dist/MixtralFillLogos.svelte"
+    },
+    "./MixtralLineLogos.svelte": {
+      "types": "./dist/MixtralLineLogos.svelte.d.ts",
+      "svelte": "./dist/MixtralLineLogos.svelte"
     },
     "./MobileDownloadFillDevice.svelte": {
       "types": "./dist/MobileDownloadFillDevice.svelte.d.ts",
@@ -7290,6 +7956,14 @@
       "types": "./dist/MouseLineDevice.svelte.d.ts",
       "svelte": "./dist/MouseLineDevice.svelte"
     },
+    "./Movie2AiFillMedia.svelte": {
+      "types": "./dist/Movie2AiFillMedia.svelte.d.ts",
+      "svelte": "./dist/Movie2AiFillMedia.svelte"
+    },
+    "./Movie2AiLineMedia.svelte": {
+      "types": "./dist/Movie2AiLineMedia.svelte.d.ts",
+      "svelte": "./dist/Movie2AiLineMedia.svelte"
+    },
     "./Movie2FillMedia.svelte": {
       "types": "./dist/Movie2FillMedia.svelte.d.ts",
       "svelte": "./dist/Movie2FillMedia.svelte"
@@ -7297,6 +7971,14 @@
     "./Movie2LineMedia.svelte": {
       "types": "./dist/Movie2LineMedia.svelte.d.ts",
       "svelte": "./dist/Movie2LineMedia.svelte"
+    },
+    "./MovieAiFillMedia.svelte": {
+      "types": "./dist/MovieAiFillMedia.svelte.d.ts",
+      "svelte": "./dist/MovieAiFillMedia.svelte"
+    },
+    "./MovieAiLineMedia.svelte": {
+      "types": "./dist/MovieAiLineMedia.svelte.d.ts",
+      "svelte": "./dist/MovieAiLineMedia.svelte"
     },
     "./MovieFillMedia.svelte": {
       "types": "./dist/MovieFillMedia.svelte.d.ts",
@@ -7306,6 +7988,14 @@
       "types": "./dist/MovieLineMedia.svelte.d.ts",
       "svelte": "./dist/MovieLineMedia.svelte"
     },
+    "./MultiImageFillMedia.svelte": {
+      "types": "./dist/MultiImageFillMedia.svelte.d.ts",
+      "svelte": "./dist/MultiImageFillMedia.svelte"
+    },
+    "./MultiImageLineMedia.svelte": {
+      "types": "./dist/MultiImageLineMedia.svelte.d.ts",
+      "svelte": "./dist/MultiImageLineMedia.svelte"
+    },
     "./Music2FillMedia.svelte": {
       "types": "./dist/Music2FillMedia.svelte.d.ts",
       "svelte": "./dist/Music2FillMedia.svelte"
@@ -7314,6 +8004,14 @@
       "types": "./dist/Music2LineMedia.svelte.d.ts",
       "svelte": "./dist/Music2LineMedia.svelte"
     },
+    "./MusicAiFillMedia.svelte": {
+      "types": "./dist/MusicAiFillMedia.svelte.d.ts",
+      "svelte": "./dist/MusicAiFillMedia.svelte"
+    },
+    "./MusicAiLineMedia.svelte": {
+      "types": "./dist/MusicAiLineMedia.svelte.d.ts",
+      "svelte": "./dist/MusicAiLineMedia.svelte"
+    },
     "./MusicFillMedia.svelte": {
       "types": "./dist/MusicFillMedia.svelte.d.ts",
       "svelte": "./dist/MusicFillMedia.svelte"
@@ -7321,6 +8019,14 @@
     "./MusicLineMedia.svelte": {
       "types": "./dist/MusicLineMedia.svelte.d.ts",
       "svelte": "./dist/MusicLineMedia.svelte"
+    },
+    "./MvAiFillMedia.svelte": {
+      "types": "./dist/MvAiFillMedia.svelte.d.ts",
+      "svelte": "./dist/MvAiFillMedia.svelte"
+    },
+    "./MvAiLineMedia.svelte": {
+      "types": "./dist/MvAiLineMedia.svelte.d.ts",
+      "svelte": "./dist/MvAiLineMedia.svelte"
     },
     "./MvFillMedia.svelte": {
       "types": "./dist/MvFillMedia.svelte.d.ts",
@@ -7386,6 +8092,14 @@
       "types": "./dist/NftLineFinance.svelte.d.ts",
       "svelte": "./dist/NftLineFinance.svelte"
     },
+    "./NoCreditCardFillFinance.svelte": {
+      "types": "./dist/NoCreditCardFillFinance.svelte.d.ts",
+      "svelte": "./dist/NoCreditCardFillFinance.svelte"
+    },
+    "./NoCreditCardLineFinance.svelte": {
+      "types": "./dist/NoCreditCardLineFinance.svelte.d.ts",
+      "svelte": "./dist/NoCreditCardLineFinance.svelte"
+    },
     "./NodeTreeEditor.svelte": {
       "types": "./dist/NodeTreeEditor.svelte.d.ts",
       "svelte": "./dist/NodeTreeEditor.svelte"
@@ -7445,6 +8159,14 @@
     "./NotificationOffLineMedia.svelte": {
       "types": "./dist/NotificationOffLineMedia.svelte.d.ts",
       "svelte": "./dist/NotificationOffLineMedia.svelte"
+    },
+    "./NotificationSnoozeFillMedia.svelte": {
+      "types": "./dist/NotificationSnoozeFillMedia.svelte.d.ts",
+      "svelte": "./dist/NotificationSnoozeFillMedia.svelte"
+    },
+    "./NotificationSnoozeLineMedia.svelte": {
+      "types": "./dist/NotificationSnoozeLineMedia.svelte.d.ts",
+      "svelte": "./dist/NotificationSnoozeLineMedia.svelte"
     },
     "./NotionFillLogos.svelte": {
       "types": "./dist/NotionFillLogos.svelte.d.ts",
@@ -7646,6 +8368,22 @@
       "types": "./dist/PaintLineDesign.svelte.d.ts",
       "svelte": "./dist/PaintLineDesign.svelte"
     },
+    "./PaintingAiFillDesign.svelte": {
+      "types": "./dist/PaintingAiFillDesign.svelte.d.ts",
+      "svelte": "./dist/PaintingAiFillDesign.svelte"
+    },
+    "./PaintingAiLineDesign.svelte": {
+      "types": "./dist/PaintingAiLineDesign.svelte.d.ts",
+      "svelte": "./dist/PaintingAiLineDesign.svelte"
+    },
+    "./PaintingFillDesign.svelte": {
+      "types": "./dist/PaintingFillDesign.svelte.d.ts",
+      "svelte": "./dist/PaintingFillDesign.svelte"
+    },
+    "./PaintingLineDesign.svelte": {
+      "types": "./dist/PaintingLineDesign.svelte.d.ts",
+      "svelte": "./dist/PaintingLineDesign.svelte"
+    },
     "./PaletteFillDesign.svelte": {
       "types": "./dist/PaletteFillDesign.svelte.d.ts",
       "svelte": "./dist/PaletteFillDesign.svelte"
@@ -7786,6 +8524,22 @@
       "types": "./dist/PenNibLineDesign.svelte.d.ts",
       "svelte": "./dist/PenNibLineDesign.svelte"
     },
+    "./PencilAi2FillDesign.svelte": {
+      "types": "./dist/PencilAi2FillDesign.svelte.d.ts",
+      "svelte": "./dist/PencilAi2FillDesign.svelte"
+    },
+    "./PencilAi2LineDesign.svelte": {
+      "types": "./dist/PencilAi2LineDesign.svelte.d.ts",
+      "svelte": "./dist/PencilAi2LineDesign.svelte"
+    },
+    "./PencilAiFillDesign.svelte": {
+      "types": "./dist/PencilAiFillDesign.svelte.d.ts",
+      "svelte": "./dist/PencilAiFillDesign.svelte"
+    },
+    "./PencilAiLineDesign.svelte": {
+      "types": "./dist/PencilAiLineDesign.svelte.d.ts",
+      "svelte": "./dist/PencilAiLineDesign.svelte"
+    },
     "./PencilFillDesign.svelte": {
       "types": "./dist/PencilFillDesign.svelte.d.ts",
       "svelte": "./dist/PencilFillDesign.svelte"
@@ -7826,6 +8580,14 @@
       "types": "./dist/PercentLineFinance.svelte.d.ts",
       "svelte": "./dist/PercentLineFinance.svelte"
     },
+    "./PerplexityFillLogos.svelte": {
+      "types": "./dist/PerplexityFillLogos.svelte.d.ts",
+      "svelte": "./dist/PerplexityFillLogos.svelte"
+    },
+    "./PerplexityLineLogos.svelte": {
+      "types": "./dist/PerplexityLineLogos.svelte.d.ts",
+      "svelte": "./dist/PerplexityLineLogos.svelte"
+    },
     "./PhoneCameraFillMedia.svelte": {
       "types": "./dist/PhoneCameraFillMedia.svelte.d.ts",
       "svelte": "./dist/PhoneCameraFillMedia.svelte"
@@ -7857,6 +8619,14 @@
     "./PhoneLockLineDevice.svelte": {
       "types": "./dist/PhoneLockLineDevice.svelte.d.ts",
       "svelte": "./dist/PhoneLockLineDevice.svelte"
+    },
+    "./PhpFillDevelopment.svelte": {
+      "types": "./dist/PhpFillDevelopment.svelte.d.ts",
+      "svelte": "./dist/PhpFillDevelopment.svelte"
+    },
+    "./PhpLineDevelopment.svelte": {
+      "types": "./dist/PhpLineDevelopment.svelte.d.ts",
+      "svelte": "./dist/PhpLineDevelopment.svelte"
     },
     "./PictureInPicture2FillMedia.svelte": {
       "types": "./dist/PictureInPicture2FillMedia.svelte.d.ts",
@@ -7933,6 +8703,14 @@
     "./PinyinInputEditor.svelte": {
       "types": "./dist/PinyinInputEditor.svelte.d.ts",
       "svelte": "./dist/PinyinInputEditor.svelte"
+    },
+    "./PixFillLogos.svelte": {
+      "types": "./dist/PixFillLogos.svelte.d.ts",
+      "svelte": "./dist/PixFillLogos.svelte"
+    },
+    "./PixLineLogos.svelte": {
+      "types": "./dist/PixLineLogos.svelte.d.ts",
+      "svelte": "./dist/PixLineLogos.svelte"
     },
     "./PixelfedFillLogos.svelte": {
       "types": "./dist/PixelfedFillLogos.svelte.d.ts",
@@ -8069,6 +8847,38 @@
     "./PlugLineOthers.svelte": {
       "types": "./dist/PlugLineOthers.svelte.d.ts",
       "svelte": "./dist/PlugLineOthers.svelte"
+    },
+    "./PokerClubsFillOthers.svelte": {
+      "types": "./dist/PokerClubsFillOthers.svelte.d.ts",
+      "svelte": "./dist/PokerClubsFillOthers.svelte"
+    },
+    "./PokerClubsLineOthers.svelte": {
+      "types": "./dist/PokerClubsLineOthers.svelte.d.ts",
+      "svelte": "./dist/PokerClubsLineOthers.svelte"
+    },
+    "./PokerDiamondsFillOthers.svelte": {
+      "types": "./dist/PokerDiamondsFillOthers.svelte.d.ts",
+      "svelte": "./dist/PokerDiamondsFillOthers.svelte"
+    },
+    "./PokerDiamondsLineOthers.svelte": {
+      "types": "./dist/PokerDiamondsLineOthers.svelte.d.ts",
+      "svelte": "./dist/PokerDiamondsLineOthers.svelte"
+    },
+    "./PokerHeartsFillOthers.svelte": {
+      "types": "./dist/PokerHeartsFillOthers.svelte.d.ts",
+      "svelte": "./dist/PokerHeartsFillOthers.svelte"
+    },
+    "./PokerHeartsLineOthers.svelte": {
+      "types": "./dist/PokerHeartsLineOthers.svelte.d.ts",
+      "svelte": "./dist/PokerHeartsLineOthers.svelte"
+    },
+    "./PokerSpadesFillOthers.svelte": {
+      "types": "./dist/PokerSpadesFillOthers.svelte.d.ts",
+      "svelte": "./dist/PokerSpadesFillOthers.svelte"
+    },
+    "./PokerSpadesLineOthers.svelte": {
+      "types": "./dist/PokerSpadesLineOthers.svelte.d.ts",
+      "svelte": "./dist/PokerSpadesLineOthers.svelte"
     },
     "./Polaroid2FillMedia.svelte": {
       "types": "./dist/Polaroid2FillMedia.svelte.d.ts",
@@ -8270,6 +9080,14 @@
       "types": "./dist/PsychotherapyLineHealthMedical.svelte.d.ts",
       "svelte": "./dist/PsychotherapyLineHealthMedical.svelte"
     },
+    "./PulseAiFillHealthMedical.svelte": {
+      "types": "./dist/PulseAiFillHealthMedical.svelte.d.ts",
+      "svelte": "./dist/PulseAiFillHealthMedical.svelte"
+    },
+    "./PulseAiLineHealthMedical.svelte": {
+      "types": "./dist/PulseAiLineHealthMedical.svelte.d.ts",
+      "svelte": "./dist/PulseAiLineHealthMedical.svelte"
+    },
     "./PulseFillHealthMedical.svelte": {
       "types": "./dist/PulseFillHealthMedical.svelte.d.ts",
       "svelte": "./dist/PulseFillHealthMedical.svelte"
@@ -8369,6 +9187,14 @@
     "./QuestionnaireLineCommunication.svelte": {
       "types": "./dist/QuestionnaireLineCommunication.svelte.d.ts",
       "svelte": "./dist/QuestionnaireLineCommunication.svelte"
+    },
+    "./QuillPenAiFillDesign.svelte": {
+      "types": "./dist/QuillPenAiFillDesign.svelte.d.ts",
+      "svelte": "./dist/QuillPenAiFillDesign.svelte"
+    },
+    "./QuillPenAiLineDesign.svelte": {
+      "types": "./dist/QuillPenAiLineDesign.svelte.d.ts",
+      "svelte": "./dist/QuillPenAiLineDesign.svelte"
     },
     "./QuillPenFillDesign.svelte": {
       "types": "./dist/QuillPenFillDesign.svelte.d.ts",
@@ -8541,6 +9367,14 @@
     "./RegisteredLineBusiness.svelte": {
       "types": "./dist/RegisteredLineBusiness.svelte.d.ts",
       "svelte": "./dist/RegisteredLineBusiness.svelte"
+    },
+    "./RemixFillDesign.svelte": {
+      "types": "./dist/RemixFillDesign.svelte.d.ts",
+      "svelte": "./dist/RemixFillDesign.svelte"
+    },
+    "./RemixLineDesign.svelte": {
+      "types": "./dist/RemixLineDesign.svelte.d.ts",
+      "svelte": "./dist/RemixLineDesign.svelte"
     },
     "./RemixRunFillLogos.svelte": {
       "types": "./dist/RemixRunFillLogos.svelte.d.ts",
@@ -8890,6 +9724,14 @@
       "types": "./dist/Safe2LineFinance.svelte.d.ts",
       "svelte": "./dist/Safe2LineFinance.svelte"
     },
+    "./Safe3FillFinance.svelte": {
+      "types": "./dist/Safe3FillFinance.svelte.d.ts",
+      "svelte": "./dist/Safe3FillFinance.svelte"
+    },
+    "./Safe3LineFinance.svelte": {
+      "types": "./dist/Safe3LineFinance.svelte.d.ts",
+      "svelte": "./dist/Safe3LineFinance.svelte"
+    },
     "./SafeFillFinance.svelte": {
       "types": "./dist/SafeFillFinance.svelte.d.ts",
       "svelte": "./dist/SafeFillFinance.svelte"
@@ -9050,6 +9892,38 @@
       "types": "./dist/Search2LineSystem.svelte.d.ts",
       "svelte": "./dist/Search2LineSystem.svelte"
     },
+    "./SearchAi2FillSystem.svelte": {
+      "types": "./dist/SearchAi2FillSystem.svelte.d.ts",
+      "svelte": "./dist/SearchAi2FillSystem.svelte"
+    },
+    "./SearchAi2LineSystem.svelte": {
+      "types": "./dist/SearchAi2LineSystem.svelte.d.ts",
+      "svelte": "./dist/SearchAi2LineSystem.svelte"
+    },
+    "./SearchAi3FillSystem.svelte": {
+      "types": "./dist/SearchAi3FillSystem.svelte.d.ts",
+      "svelte": "./dist/SearchAi3FillSystem.svelte"
+    },
+    "./SearchAi3LineSystem.svelte": {
+      "types": "./dist/SearchAi3LineSystem.svelte.d.ts",
+      "svelte": "./dist/SearchAi3LineSystem.svelte"
+    },
+    "./SearchAi4FillSystem.svelte": {
+      "types": "./dist/SearchAi4FillSystem.svelte.d.ts",
+      "svelte": "./dist/SearchAi4FillSystem.svelte"
+    },
+    "./SearchAi4LineSystem.svelte": {
+      "types": "./dist/SearchAi4LineSystem.svelte.d.ts",
+      "svelte": "./dist/SearchAi4LineSystem.svelte"
+    },
+    "./SearchAiFillSystem.svelte": {
+      "types": "./dist/SearchAiFillSystem.svelte.d.ts",
+      "svelte": "./dist/SearchAiFillSystem.svelte"
+    },
+    "./SearchAiLineSystem.svelte": {
+      "types": "./dist/SearchAiLineSystem.svelte.d.ts",
+      "svelte": "./dist/SearchAiLineSystem.svelte"
+    },
     "./SearchEyeFillSystem.svelte": {
       "types": "./dist/SearchEyeFillSystem.svelte.d.ts",
       "svelte": "./dist/SearchEyeFillSystem.svelte"
@@ -9133,6 +10007,14 @@
     "./ServerLineDevice.svelte": {
       "types": "./dist/ServerLineDevice.svelte.d.ts",
       "svelte": "./dist/ServerLineDevice.svelte"
+    },
+    "./ServiceBellFillOthers.svelte": {
+      "types": "./dist/ServiceBellFillOthers.svelte.d.ts",
+      "svelte": "./dist/ServiceBellFillOthers.svelte"
+    },
+    "./ServiceBellLineOthers.svelte": {
+      "types": "./dist/ServiceBellLineOthers.svelte.d.ts",
+      "svelte": "./dist/ServiceBellLineOthers.svelte"
     },
     "./ServiceFillBusiness.svelte": {
       "types": "./dist/ServiceFillBusiness.svelte.d.ts",
@@ -9882,6 +10764,14 @@
       "types": "./dist/SparklingLineWeather.svelte.d.ts",
       "svelte": "./dist/SparklingLineWeather.svelte"
     },
+    "./SpeakAiFillCommunication.svelte": {
+      "types": "./dist/SpeakAiFillCommunication.svelte.d.ts",
+      "svelte": "./dist/SpeakAiFillCommunication.svelte"
+    },
+    "./SpeakAiLineCommunication.svelte": {
+      "types": "./dist/SpeakAiLineCommunication.svelte.d.ts",
+      "svelte": "./dist/SpeakAiLineCommunication.svelte"
+    },
     "./SpeakFillCommunication.svelte": {
       "types": "./dist/SpeakFillCommunication.svelte.d.ts",
       "svelte": "./dist/SpeakFillCommunication.svelte"
@@ -9921,6 +10811,14 @@
     "./SpectrumLineLogos.svelte": {
       "types": "./dist/SpectrumLineLogos.svelte.d.ts",
       "svelte": "./dist/SpectrumLineLogos.svelte"
+    },
+    "./SpeechToTextFillCommunication.svelte": {
+      "types": "./dist/SpeechToTextFillCommunication.svelte.d.ts",
+      "svelte": "./dist/SpeechToTextFillCommunication.svelte"
+    },
+    "./SpeechToTextLineCommunication.svelte": {
+      "types": "./dist/SpeechToTextLineCommunication.svelte.d.ts",
+      "svelte": "./dist/SpeechToTextLineCommunication.svelte"
     },
     "./SpeedFillMedia.svelte": {
       "types": "./dist/SpeedFillMedia.svelte.d.ts",
@@ -10041,6 +10939,14 @@
     "./StarLineSystem.svelte": {
       "types": "./dist/StarLineSystem.svelte.d.ts",
       "svelte": "./dist/StarLineSystem.svelte"
+    },
+    "./StarOffFillSystem.svelte": {
+      "types": "./dist/StarOffFillSystem.svelte.d.ts",
+      "svelte": "./dist/StarOffFillSystem.svelte"
+    },
+    "./StarOffLineSystem.svelte": {
+      "types": "./dist/StarOffLineSystem.svelte.d.ts",
+      "svelte": "./dist/StarOffLineSystem.svelte"
     },
     "./StarSFillSystem.svelte": {
       "types": "./dist/StarSFillSystem.svelte.d.ts",
@@ -10470,6 +11376,14 @@
       "types": "./dist/TapeLineMedia.svelte.d.ts",
       "svelte": "./dist/TapeLineMedia.svelte"
     },
+    "./TargetFillOthers.svelte": {
+      "types": "./dist/TargetFillOthers.svelte.d.ts",
+      "svelte": "./dist/TargetFillOthers.svelte"
+    },
+    "./TargetLineOthers.svelte": {
+      "types": "./dist/TargetLineOthers.svelte.d.ts",
+      "svelte": "./dist/TargetLineOthers.svelte"
+    },
     "./TaskFillDocument.svelte": {
       "types": "./dist/TaskFillDocument.svelte.d.ts",
       "svelte": "./dist/TaskFillDocument.svelte"
@@ -10597,6 +11511,14 @@
     "./TextSpacingEditor.svelte": {
       "types": "./dist/TextSpacingEditor.svelte.d.ts",
       "svelte": "./dist/TextSpacingEditor.svelte"
+    },
+    "./TextToSpeechFillCommunication.svelte": {
+      "types": "./dist/TextToSpeechFillCommunication.svelte.d.ts",
+      "svelte": "./dist/TextToSpeechFillCommunication.svelte"
+    },
+    "./TextToSpeechLineCommunication.svelte": {
+      "types": "./dist/TextToSpeechLineCommunication.svelte.d.ts",
+      "svelte": "./dist/TextToSpeechLineCommunication.svelte"
     },
     "./TextWrapEditor.svelte": {
       "types": "./dist/TextWrapEditor.svelte.d.ts",
@@ -10793,6 +11715,14 @@
     "./Translate2Editor.svelte": {
       "types": "./dist/Translate2Editor.svelte.d.ts",
       "svelte": "./dist/Translate2Editor.svelte"
+    },
+    "./TranslateAi2Editor.svelte": {
+      "types": "./dist/TranslateAi2Editor.svelte.d.ts",
+      "svelte": "./dist/TranslateAi2Editor.svelte"
+    },
+    "./TranslateAiEditor.svelte": {
+      "types": "./dist/TranslateAiEditor.svelte.d.ts",
+      "svelte": "./dist/TranslateAiEditor.svelte"
     },
     "./TranslateEditor.svelte": {
       "types": "./dist/TranslateEditor.svelte.d.ts",
@@ -11058,6 +11988,14 @@
       "types": "./dist/UserAddLineUserFaces.svelte.d.ts",
       "svelte": "./dist/UserAddLineUserFaces.svelte"
     },
+    "./UserCommunityFillUserFaces.svelte": {
+      "types": "./dist/UserCommunityFillUserFaces.svelte.d.ts",
+      "svelte": "./dist/UserCommunityFillUserFaces.svelte"
+    },
+    "./UserCommunityLineUserFaces.svelte": {
+      "types": "./dist/UserCommunityLineUserFaces.svelte.d.ts",
+      "svelte": "./dist/UserCommunityLineUserFaces.svelte"
+    },
     "./UserFillUserFaces.svelte": {
       "types": "./dist/UserFillUserFaces.svelte.d.ts",
       "svelte": "./dist/UserFillUserFaces.svelte"
@@ -11186,6 +12124,14 @@
       "types": "./dist/UserVoiceLineUserFaces.svelte.d.ts",
       "svelte": "./dist/UserVoiceLineUserFaces.svelte"
     },
+    "./VercelFillLogos.svelte": {
+      "types": "./dist/VercelFillLogos.svelte.d.ts",
+      "svelte": "./dist/VercelFillLogos.svelte"
+    },
+    "./VercelLineLogos.svelte": {
+      "types": "./dist/VercelLineLogos.svelte.d.ts",
+      "svelte": "./dist/VercelLineLogos.svelte"
+    },
     "./VerifiedBadgeFillBusiness.svelte": {
       "types": "./dist/VerifiedBadgeFillBusiness.svelte.d.ts",
       "svelte": "./dist/VerifiedBadgeFillBusiness.svelte"
@@ -11201,6 +12147,14 @@
     "./VideoAddLineMedia.svelte": {
       "types": "./dist/VideoAddLineMedia.svelte.d.ts",
       "svelte": "./dist/VideoAddLineMedia.svelte"
+    },
+    "./VideoAiFillMedia.svelte": {
+      "types": "./dist/VideoAiFillMedia.svelte.d.ts",
+      "svelte": "./dist/VideoAiFillMedia.svelte"
+    },
+    "./VideoAiLineMedia.svelte": {
+      "types": "./dist/VideoAiLineMedia.svelte.d.ts",
+      "svelte": "./dist/VideoAiLineMedia.svelte"
     },
     "./VideoChatFillCommunication.svelte": {
       "types": "./dist/VideoChatFillCommunication.svelte.d.ts",
@@ -11233,6 +12187,14 @@
     "./VideoOffLineMedia.svelte": {
       "types": "./dist/VideoOffLineMedia.svelte.d.ts",
       "svelte": "./dist/VideoOffLineMedia.svelte"
+    },
+    "./VideoOnAiFillMedia.svelte": {
+      "types": "./dist/VideoOnAiFillMedia.svelte.d.ts",
+      "svelte": "./dist/VideoOnAiFillMedia.svelte"
+    },
+    "./VideoOnAiLineMedia.svelte": {
+      "types": "./dist/VideoOnAiLineMedia.svelte.d.ts",
+      "svelte": "./dist/VideoOnAiLineMedia.svelte"
     },
     "./VideoOnFillMedia.svelte": {
       "types": "./dist/VideoOnFillMedia.svelte.d.ts",
@@ -11329,6 +12291,14 @@
     "./VkLineLogos.svelte": {
       "types": "./dist/VkLineLogos.svelte.d.ts",
       "svelte": "./dist/VkLineLogos.svelte"
+    },
+    "./VoiceAiFillMedia.svelte": {
+      "types": "./dist/VoiceAiFillMedia.svelte.d.ts",
+      "svelte": "./dist/VoiceAiFillMedia.svelte"
+    },
+    "./VoiceAiLineMedia.svelte": {
+      "types": "./dist/VoiceAiLineMedia.svelte.d.ts",
+      "svelte": "./dist/VoiceAiLineMedia.svelte"
     },
     "./VoiceRecognitionFillOthers.svelte": {
       "types": "./dist/VoiceRecognitionFillOthers.svelte.d.ts",
@@ -11593,6 +12563,14 @@
     "./WordpressLineLogos.svelte": {
       "types": "./dist/WordpressLineLogos.svelte.d.ts",
       "svelte": "./dist/WordpressLineLogos.svelte"
+    },
+    "./WrenchFillDesign.svelte": {
+      "types": "./dist/WrenchFillDesign.svelte.d.ts",
+      "svelte": "./dist/WrenchFillDesign.svelte"
+    },
+    "./WrenchLineDesign.svelte": {
+      "types": "./dist/WrenchLineDesign.svelte.d.ts",
+      "svelte": "./dist/WrenchLineDesign.svelte"
     },
     "./WubiInputEditor.svelte": {
       "types": "./dist/WubiInputEditor.svelte.d.ts",

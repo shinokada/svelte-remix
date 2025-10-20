@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
-const title = 'Props - Svelte Remix v2';
-const description = 'How to use Svelte Remix v2 props';
+const title = 'Props - Svelte Remix v3';
+const description = 'How to use Svelte Remix v3 props';
 const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-remix';
 
 test.beforeEach(async ({ page }) => {

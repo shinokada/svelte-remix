@@ -1,0 +1,58 @@
+<script lang="ts">
+  import { getContext } from 'svelte';
+  import type { BaseProps, Props } from './types';
+
+  const ctx: BaseProps = getContext('iconCtx') ?? {};
+
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    color = ctx.color || 'currentColor',
+    title,
+    desc,
+    focusable = 'false',
+    ariaLabel,
+    ...restProps
+  }: Props = $props();
+
+  let ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
+  const hasDescription = $derived(!!(title?.id || desc?.id));
+</script>
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  {...restProps}
+  {role}
+  width={size}
+  height={size}
+  fill={color}
+  {focusable}
+  aria-label={title?.id ? undefined : ariaLabel}
+  aria-labelledby={title?.id || undefined}
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  viewBox="0 0 24 24"
+>
+  {#if title?.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc?.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+  <path
+    d="M12 2C17.5121 2 21.9816 6.45975 21.999 11.9678C21.9992 11.9746 21.9989 11.9814 21.999 11.9883C21.999 11.9922 22 11.9961 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM12 4C10.0751 4 8.30904 4.67985 6.92871 5.8125C7.58426 5.61027 8.27973 5.5 9 5.5C12.866 5.50002 16 8.63402 16 12.5C16 13.0523 15.5523 13.5 15 13.5C14.4477 13.5 14 13.0523 14 12.5C14 9.73859 11.7614 7.50002 9 7.5C6.38853 7.5 4.23108 9.50052 4.00098 12.043C4.02411 16.4415 7.59606 20 12 20C13.9248 20 15.69 19.3191 17.0703 18.1865C16.4149 18.3886 15.72 18.5 15 18.5C11.134 18.5 8 15.366 8 11.5C8 10.9477 8.44772 10.5 9 10.5C9.55228 10.5 10 10.9477 10 11.5C10 14.2614 12.2386 16.5 15 16.5C17.6118 16.5 19.7684 14.4989 19.998 11.9561C19.9744 7.558 16.4036 4 12 4Z"
+  />
+</svg>
+
+<!--
+@component
+[Go to docs](https://svelte-remix.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop desc
+@prop focusable = 'false'
+@prop ariaLabel
+@prop ...restProps
+-->

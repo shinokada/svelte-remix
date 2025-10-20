@@ -1,1 +1,1 @@
-<AttachmentLineBusiness class="position-absolute top-0 px-1" />
+<AlignLeftEditor class="position-absolute top-0 px-1" />

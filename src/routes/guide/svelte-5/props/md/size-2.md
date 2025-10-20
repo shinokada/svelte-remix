@@ -1,1 +1,1 @@
-<AttachmentLineBusiness class="h-24 w-24" />
+<AlignLeftEditor class="h-24 w-24" />

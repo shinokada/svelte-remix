@@ -1,2 +1,2 @@
-<AttachmentLineBusiness color="#ff0000" />
-<AttachmentLineBusiness color="green" />
+<AlignLeftEditor color="#ff0000" />
+<AlignLeftEditor color="green" />

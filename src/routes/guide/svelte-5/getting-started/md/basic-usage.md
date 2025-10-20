@@ -1,5 +1,5 @@
 <script>
-  import { AttachmentLineBusiness } from 'svelte-remix';
+  import { AlignLeftEditor } from 'svelte-remix';
 </script>
 
-<AttachmentLineBusiness />
+<AlignLeftEditor />
