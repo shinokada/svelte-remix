@@ -38,7 +38,7 @@
   };
   const downloads: NpmDownloadPropsType = {
     packageName: 'svelte-remix',
-    link: ['https://www.npmjs.com/package/svelte-remix']
+    link: ['https://www.npmjs.com/package/svelte-remix', 'https://svelte-remix.codewithshin.com/']
   };
 
   const modules = import.meta.glob('./md/*.md', {
