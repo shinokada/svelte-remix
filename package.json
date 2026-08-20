@@ -1,6 +1,6 @@
 {
   "name": "svelte-remix",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "description": "Remix SVG icons for Svelte 4, 5, and Runes",
   "license": "MIT",
   "homepage": "https://svelte-remix.codewithshin.com/",
@@ -26,7 +26,7 @@
     {
       "name": "Remix-Design/RemixIcon",
       "url": "https://github.com/Remix-Design/RemixIcon",
-      "iconVersion": "4.7.0"
+      "iconVersion": "4.9.1"
     }
   ],
   "scripts": {
@@ -40,12 +40,12 @@
     "format": "prettier --write .",
     "lint": "prettier --check . && eslint .",
     "test:unit": "vitest",
-    "test": "npm run test:unit -- --run && npm run test:e2e",
+    "test": "pnpm run test:e2e && pnpm run test:unit --run",
     "test:e2e": "playwright test",
     "gen:exports": "svelte-lib-helpers exports",
     "copy:packagejson": "svelte-lib-helpers package",
     "gen:docs5": "svelte-lib-helpers docs5",
-    "lib-helpers": "pnpm format && pnpm gen:docs5 && pnpm package && pnpm gen:exports && pnpm copy:packagejson",
+    "lib-helpers": "pnpm gen:exports && pnpm package && pnpm copy:packagejson",
     "ch": "npx changeset",
     "cv": "npx changeset version",
     "cp": "npx changeset publish"
@@ -610,6 +610,14 @@
     "./ArchiveStackLineBusiness.svelte": {
       "types": "./dist/ArchiveStackLineBusiness.svelte.d.ts",
       "svelte": "./dist/ArchiveStackLineBusiness.svelte"
+    },
+    "./AreaChartFillBusiness.svelte": {
+      "types": "./dist/AreaChartFillBusiness.svelte.d.ts",
+      "svelte": "./dist/AreaChartFillBusiness.svelte"
+    },
+    "./AreaChartLineBusiness.svelte": {
+      "types": "./dist/AreaChartLineBusiness.svelte.d.ts",
+      "svelte": "./dist/AreaChartLineBusiness.svelte"
     },
     "./ArmchairFillOthers.svelte": {
       "types": "./dist/ArmchairFillOthers.svelte.d.ts",
@@ -1227,13 +1235,21 @@
       "types": "./dist/BaseStationLineDevice.svelte.d.ts",
       "svelte": "./dist/BaseStationLineDevice.svelte"
     },
-    "./BasketballFillOthers.svelte": {
-      "types": "./dist/BasketballFillOthers.svelte.d.ts",
-      "svelte": "./dist/BasketballFillOthers.svelte"
+    "./BaseballFillGameSports.svelte": {
+      "types": "./dist/BaseballFillGameSports.svelte.d.ts",
+      "svelte": "./dist/BaseballFillGameSports.svelte"
     },
-    "./BasketballLineOthers.svelte": {
-      "types": "./dist/BasketballLineOthers.svelte.d.ts",
-      "svelte": "./dist/BasketballLineOthers.svelte"
+    "./BaseballLineGameSports.svelte": {
+      "types": "./dist/BaseballLineGameSports.svelte.d.ts",
+      "svelte": "./dist/BaseballLineGameSports.svelte"
+    },
+    "./BasketballFillGameSports.svelte": {
+      "types": "./dist/BasketballFillGameSports.svelte.d.ts",
+      "svelte": "./dist/BasketballFillGameSports.svelte"
+    },
+    "./BasketballLineGameSports.svelte": {
+      "types": "./dist/BasketballLineGameSports.svelte.d.ts",
+      "svelte": "./dist/BasketballLineGameSports.svelte"
     },
     "./Battery2ChargeFillDevice.svelte": {
       "types": "./dist/Battery2ChargeFillDevice.svelte.d.ts",
@@ -1347,13 +1363,21 @@
       "types": "./dist/BillLineDocument.svelte.d.ts",
       "svelte": "./dist/BillLineDocument.svelte"
     },
-    "./BilliardsFillOthers.svelte": {
-      "types": "./dist/BilliardsFillOthers.svelte.d.ts",
-      "svelte": "./dist/BilliardsFillOthers.svelte"
+    "./BilliardsFillGameSports.svelte": {
+      "types": "./dist/BilliardsFillGameSports.svelte.d.ts",
+      "svelte": "./dist/BilliardsFillGameSports.svelte"
     },
-    "./BilliardsLineOthers.svelte": {
-      "types": "./dist/BilliardsLineOthers.svelte.d.ts",
-      "svelte": "./dist/BilliardsLineOthers.svelte"
+    "./BilliardsLineGameSports.svelte": {
+      "types": "./dist/BilliardsLineGameSports.svelte.d.ts",
+      "svelte": "./dist/BilliardsLineGameSports.svelte"
+    },
+    "./BinocularsFillOthers.svelte": {
+      "types": "./dist/BinocularsFillOthers.svelte.d.ts",
+      "svelte": "./dist/BinocularsFillOthers.svelte"
+    },
+    "./BinocularsLineOthers.svelte": {
+      "types": "./dist/BinocularsLineOthers.svelte.d.ts",
+      "svelte": "./dist/BinocularsLineOthers.svelte"
     },
     "./BitCoinFillFinance.svelte": {
       "types": "./dist/BitCoinFillFinance.svelte.d.ts",
@@ -1575,13 +1599,13 @@
       "types": "./dist/Box3LineOthers.svelte.d.ts",
       "svelte": "./dist/Box3LineOthers.svelte"
     },
-    "./BoxingFillOthers.svelte": {
-      "types": "./dist/BoxingFillOthers.svelte.d.ts",
-      "svelte": "./dist/BoxingFillOthers.svelte"
+    "./BoxingFillGameSports.svelte": {
+      "types": "./dist/BoxingFillGameSports.svelte.d.ts",
+      "svelte": "./dist/BoxingFillGameSports.svelte"
     },
-    "./BoxingLineOthers.svelte": {
-      "types": "./dist/BoxingLineOthers.svelte.d.ts",
-      "svelte": "./dist/BoxingLineOthers.svelte"
+    "./BoxingLineGameSports.svelte": {
+      "types": "./dist/BoxingLineGameSports.svelte.d.ts",
+      "svelte": "./dist/BoxingLineGameSports.svelte"
     },
     "./BracesFillDevelopment.svelte": {
       "types": "./dist/BracesFillDevelopment.svelte.d.ts",
@@ -1614,6 +1638,14 @@
     "./Brain3LineHealthMedical.svelte": {
       "types": "./dist/Brain3LineHealthMedical.svelte.d.ts",
       "svelte": "./dist/Brain3LineHealthMedical.svelte"
+    },
+    "./Brain4FillHealthMedical.svelte": {
+      "types": "./dist/Brain4FillHealthMedical.svelte.d.ts",
+      "svelte": "./dist/Brain4FillHealthMedical.svelte"
+    },
+    "./Brain4LineHealthMedical.svelte": {
+      "types": "./dist/Brain4LineHealthMedical.svelte.d.ts",
+      "svelte": "./dist/Brain4LineHealthMedical.svelte"
     },
     "./BrainAi3FillHealthMedical.svelte": {
       "types": "./dist/BrainAi3FillHealthMedical.svelte.d.ts",
@@ -2095,6 +2127,22 @@
       "types": "./dist/CentosLineLogos.svelte.d.ts",
       "svelte": "./dist/CentosLineLogos.svelte"
     },
+    "./Certificate2FillDocument.svelte": {
+      "types": "./dist/Certificate2FillDocument.svelte.d.ts",
+      "svelte": "./dist/Certificate2FillDocument.svelte"
+    },
+    "./Certificate2LineDocument.svelte": {
+      "types": "./dist/Certificate2LineDocument.svelte.d.ts",
+      "svelte": "./dist/Certificate2LineDocument.svelte"
+    },
+    "./CertificateFillDocument.svelte": {
+      "types": "./dist/CertificateFillDocument.svelte.d.ts",
+      "svelte": "./dist/CertificateFillDocument.svelte"
+    },
+    "./CertificateLineDocument.svelte": {
+      "types": "./dist/CertificateLineDocument.svelte.d.ts",
+      "svelte": "./dist/CertificateLineDocument.svelte"
+    },
     "./CharacterRecognitionFillOthers.svelte": {
       "types": "./dist/CharacterRecognitionFillOthers.svelte.d.ts",
       "svelte": "./dist/CharacterRecognitionFillOthers.svelte"
@@ -2447,13 +2495,13 @@
       "types": "./dist/CheckboxMultipleLineSystem.svelte.d.ts",
       "svelte": "./dist/CheckboxMultipleLineSystem.svelte"
     },
-    "./ChessFillOthers.svelte": {
-      "types": "./dist/ChessFillOthers.svelte.d.ts",
-      "svelte": "./dist/ChessFillOthers.svelte"
+    "./ChessFillGameSports.svelte": {
+      "types": "./dist/ChessFillGameSports.svelte.d.ts",
+      "svelte": "./dist/ChessFillGameSports.svelte"
     },
-    "./ChessLineOthers.svelte": {
-      "types": "./dist/ChessLineOthers.svelte.d.ts",
-      "svelte": "./dist/ChessLineOthers.svelte"
+    "./ChessLineGameSports.svelte": {
+      "types": "./dist/ChessLineGameSports.svelte.d.ts",
+      "svelte": "./dist/ChessLineGameSports.svelte"
     },
     "./ChinaRailwayFillMap.svelte": {
       "types": "./dist/ChinaRailwayFillMap.svelte.d.ts",
@@ -2815,6 +2863,14 @@
       "types": "./dist/ComputerLineDevice.svelte.d.ts",
       "svelte": "./dist/ComputerLineDevice.svelte"
     },
+    "./ConnectorFillDevice.svelte": {
+      "types": "./dist/ConnectorFillDevice.svelte.d.ts",
+      "svelte": "./dist/ConnectorFillDevice.svelte"
+    },
+    "./ConnectorLineDevice.svelte": {
+      "types": "./dist/ConnectorLineDevice.svelte.d.ts",
+      "svelte": "./dist/ConnectorLineDevice.svelte"
+    },
     "./ContactsBook2FillDocument.svelte": {
       "types": "./dist/ContactsBook2FillDocument.svelte.d.ts",
       "svelte": "./dist/ContactsBook2FillDocument.svelte"
@@ -2926,6 +2982,14 @@
     "./ContrastLineDesign.svelte": {
       "types": "./dist/ContrastLineDesign.svelte.d.ts",
       "svelte": "./dist/ContrastLineDesign.svelte"
+    },
+    "./CookieFillFood.svelte": {
+      "types": "./dist/CookieFillFood.svelte.d.ts",
+      "svelte": "./dist/CookieFillFood.svelte"
+    },
+    "./CookieLineFood.svelte": {
+      "types": "./dist/CookieLineFood.svelte.d.ts",
+      "svelte": "./dist/CookieLineFood.svelte"
     },
     "./CopilotFillLogos.svelte": {
       "types": "./dist/CopilotFillLogos.svelte.d.ts",
@@ -3223,9 +3287,21 @@
       "types": "./dist/CurrencyLineFinance.svelte.d.ts",
       "svelte": "./dist/CurrencyLineFinance.svelte"
     },
+    "./CursorAiFillLogos.svelte": {
+      "types": "./dist/CursorAiFillLogos.svelte.d.ts",
+      "svelte": "./dist/CursorAiFillLogos.svelte"
+    },
+    "./CursorAiLineLogos.svelte": {
+      "types": "./dist/CursorAiLineLogos.svelte.d.ts",
+      "svelte": "./dist/CursorAiLineLogos.svelte"
+    },
     "./CursorFillDevelopment.svelte": {
       "types": "./dist/CursorFillDevelopment.svelte.d.ts",
       "svelte": "./dist/CursorFillDevelopment.svelte"
+    },
+    "./CursorHandEditor.svelte": {
+      "types": "./dist/CursorHandEditor.svelte.d.ts",
+      "svelte": "./dist/CursorHandEditor.svelte"
     },
     "./CursorLineDevelopment.svelte": {
       "types": "./dist/CursorLineDevelopment.svelte.d.ts",
@@ -3419,61 +3495,61 @@
       "types": "./dist/DiamondRingLineFinance.svelte.d.ts",
       "svelte": "./dist/DiamondRingLineFinance.svelte"
     },
-    "./Dice1FillOthers.svelte": {
-      "types": "./dist/Dice1FillOthers.svelte.d.ts",
-      "svelte": "./dist/Dice1FillOthers.svelte"
+    "./Dice1FillGameSports.svelte": {
+      "types": "./dist/Dice1FillGameSports.svelte.d.ts",
+      "svelte": "./dist/Dice1FillGameSports.svelte"
     },
-    "./Dice1LineOthers.svelte": {
-      "types": "./dist/Dice1LineOthers.svelte.d.ts",
-      "svelte": "./dist/Dice1LineOthers.svelte"
+    "./Dice1LineGameSports.svelte": {
+      "types": "./dist/Dice1LineGameSports.svelte.d.ts",
+      "svelte": "./dist/Dice1LineGameSports.svelte"
     },
-    "./Dice2FillOthers.svelte": {
-      "types": "./dist/Dice2FillOthers.svelte.d.ts",
-      "svelte": "./dist/Dice2FillOthers.svelte"
+    "./Dice2FillGameSports.svelte": {
+      "types": "./dist/Dice2FillGameSports.svelte.d.ts",
+      "svelte": "./dist/Dice2FillGameSports.svelte"
     },
-    "./Dice2LineOthers.svelte": {
-      "types": "./dist/Dice2LineOthers.svelte.d.ts",
-      "svelte": "./dist/Dice2LineOthers.svelte"
+    "./Dice2LineGameSports.svelte": {
+      "types": "./dist/Dice2LineGameSports.svelte.d.ts",
+      "svelte": "./dist/Dice2LineGameSports.svelte"
     },
-    "./Dice3FillOthers.svelte": {
-      "types": "./dist/Dice3FillOthers.svelte.d.ts",
-      "svelte": "./dist/Dice3FillOthers.svelte"
+    "./Dice3FillGameSports.svelte": {
+      "types": "./dist/Dice3FillGameSports.svelte.d.ts",
+      "svelte": "./dist/Dice3FillGameSports.svelte"
     },
-    "./Dice3LineOthers.svelte": {
-      "types": "./dist/Dice3LineOthers.svelte.d.ts",
-      "svelte": "./dist/Dice3LineOthers.svelte"
+    "./Dice3LineGameSports.svelte": {
+      "types": "./dist/Dice3LineGameSports.svelte.d.ts",
+      "svelte": "./dist/Dice3LineGameSports.svelte"
     },
-    "./Dice4FillOthers.svelte": {
-      "types": "./dist/Dice4FillOthers.svelte.d.ts",
-      "svelte": "./dist/Dice4FillOthers.svelte"
+    "./Dice4FillGameSports.svelte": {
+      "types": "./dist/Dice4FillGameSports.svelte.d.ts",
+      "svelte": "./dist/Dice4FillGameSports.svelte"
     },
-    "./Dice4LineOthers.svelte": {
-      "types": "./dist/Dice4LineOthers.svelte.d.ts",
-      "svelte": "./dist/Dice4LineOthers.svelte"
+    "./Dice4LineGameSports.svelte": {
+      "types": "./dist/Dice4LineGameSports.svelte.d.ts",
+      "svelte": "./dist/Dice4LineGameSports.svelte"
     },
-    "./Dice5FillOthers.svelte": {
-      "types": "./dist/Dice5FillOthers.svelte.d.ts",
-      "svelte": "./dist/Dice5FillOthers.svelte"
+    "./Dice5FillGameSports.svelte": {
+      "types": "./dist/Dice5FillGameSports.svelte.d.ts",
+      "svelte": "./dist/Dice5FillGameSports.svelte"
     },
-    "./Dice5LineOthers.svelte": {
-      "types": "./dist/Dice5LineOthers.svelte.d.ts",
-      "svelte": "./dist/Dice5LineOthers.svelte"
+    "./Dice5LineGameSports.svelte": {
+      "types": "./dist/Dice5LineGameSports.svelte.d.ts",
+      "svelte": "./dist/Dice5LineGameSports.svelte"
     },
-    "./Dice6FillOthers.svelte": {
-      "types": "./dist/Dice6FillOthers.svelte.d.ts",
-      "svelte": "./dist/Dice6FillOthers.svelte"
+    "./Dice6FillGameSports.svelte": {
+      "types": "./dist/Dice6FillGameSports.svelte.d.ts",
+      "svelte": "./dist/Dice6FillGameSports.svelte"
     },
-    "./Dice6LineOthers.svelte": {
-      "types": "./dist/Dice6LineOthers.svelte.d.ts",
-      "svelte": "./dist/Dice6LineOthers.svelte"
+    "./Dice6LineGameSports.svelte": {
+      "types": "./dist/Dice6LineGameSports.svelte.d.ts",
+      "svelte": "./dist/Dice6LineGameSports.svelte"
     },
-    "./DiceFillOthers.svelte": {
-      "types": "./dist/DiceFillOthers.svelte.d.ts",
-      "svelte": "./dist/DiceFillOthers.svelte"
+    "./DiceFillGameSports.svelte": {
+      "types": "./dist/DiceFillGameSports.svelte.d.ts",
+      "svelte": "./dist/DiceFillGameSports.svelte"
     },
-    "./DiceLineOthers.svelte": {
-      "types": "./dist/DiceLineOthers.svelte.d.ts",
-      "svelte": "./dist/DiceLineOthers.svelte"
+    "./DiceLineGameSports.svelte": {
+      "types": "./dist/DiceLineGameSports.svelte.d.ts",
+      "svelte": "./dist/DiceLineGameSports.svelte"
     },
     "./DingdingFillLogos.svelte": {
       "types": "./dist/DingdingFillLogos.svelte.d.ts",
@@ -3695,6 +3771,14 @@
       "types": "./dist/DraggableEditor.svelte.d.ts",
       "svelte": "./dist/DraggableEditor.svelte"
     },
+    "./DrawFillDesign.svelte": {
+      "types": "./dist/DrawFillDesign.svelte.d.ts",
+      "svelte": "./dist/DrawFillDesign.svelte"
+    },
+    "./DrawLineDesign.svelte": {
+      "types": "./dist/DrawLineDesign.svelte.d.ts",
+      "svelte": "./dist/DrawLineDesign.svelte"
+    },
     "./DribbbleFillLogos.svelte": {
       "types": "./dist/DribbbleFillLogos.svelte.d.ts",
       "svelte": "./dist/DribbbleFillLogos.svelte"
@@ -3906,6 +3990,14 @@
     "./Emotion2LineUserFaces.svelte": {
       "types": "./dist/Emotion2LineUserFaces.svelte.d.ts",
       "svelte": "./dist/Emotion2LineUserFaces.svelte"
+    },
+    "./EmotionAddFillUserFaces.svelte": {
+      "types": "./dist/EmotionAddFillUserFaces.svelte.d.ts",
+      "svelte": "./dist/EmotionAddFillUserFaces.svelte"
+    },
+    "./EmotionAddLineUserFaces.svelte": {
+      "types": "./dist/EmotionAddLineUserFaces.svelte.d.ts",
+      "svelte": "./dist/EmotionAddLineUserFaces.svelte"
     },
     "./EmotionFillUserFaces.svelte": {
       "types": "./dist/EmotionFillUserFaces.svelte.d.ts",
@@ -4615,6 +4707,14 @@
       "types": "./dist/FileReduceLineDocument.svelte.d.ts",
       "svelte": "./dist/FileReduceLineDocument.svelte"
     },
+    "./FileScanFillDocument.svelte": {
+      "types": "./dist/FileScanFillDocument.svelte.d.ts",
+      "svelte": "./dist/FileScanFillDocument.svelte"
+    },
+    "./FileScanLineDocument.svelte": {
+      "types": "./dist/FileScanLineDocument.svelte.d.ts",
+      "svelte": "./dist/FileScanLineDocument.svelte"
+    },
     "./FileSearchFillDocument.svelte": {
       "types": "./dist/FileSearchFillDocument.svelte.d.ts",
       "svelte": "./dist/FileSearchFillDocument.svelte"
@@ -4854,6 +4954,14 @@
     "./FirstAidKitLineHealthMedical.svelte": {
       "types": "./dist/FirstAidKitLineHealthMedical.svelte.d.ts",
       "svelte": "./dist/FirstAidKitLineHealthMedical.svelte"
+    },
+    "./FiverrFillLogos.svelte": {
+      "types": "./dist/FiverrFillLogos.svelte.d.ts",
+      "svelte": "./dist/FiverrFillLogos.svelte"
+    },
+    "./FiverrLineLogos.svelte": {
+      "types": "./dist/FiverrLineLogos.svelte.d.ts",
+      "svelte": "./dist/FiverrLineLogos.svelte"
     },
     "./Flag2FillBusiness.svelte": {
       "types": "./dist/Flag2FillBusiness.svelte.d.ts",
@@ -5307,13 +5415,13 @@
       "types": "./dist/FontMonoEditor.svelte.d.ts",
       "svelte": "./dist/FontMonoEditor.svelte"
     },
-    "./FontSansEditor.svelte": {
-      "types": "./dist/FontSansEditor.svelte.d.ts",
-      "svelte": "./dist/FontSansEditor.svelte"
-    },
     "./FontSansSerifEditor.svelte": {
       "types": "./dist/FontSansSerifEditor.svelte.d.ts",
       "svelte": "./dist/FontSansSerifEditor.svelte"
+    },
+    "./FontSerifEditor.svelte": {
+      "types": "./dist/FontSerifEditor.svelte.d.ts",
+      "svelte": "./dist/FontSerifEditor.svelte"
     },
     "./FontSize2Editor.svelte": {
       "types": "./dist/FontSize2Editor.svelte.d.ts",
@@ -5327,13 +5435,13 @@
       "types": "./dist/FontSizeEditor.svelte.d.ts",
       "svelte": "./dist/FontSizeEditor.svelte"
     },
-    "./FootballFillOthers.svelte": {
-      "types": "./dist/FootballFillOthers.svelte.d.ts",
-      "svelte": "./dist/FootballFillOthers.svelte"
+    "./FootballFillGameSports.svelte": {
+      "types": "./dist/FootballFillGameSports.svelte.d.ts",
+      "svelte": "./dist/FootballFillGameSports.svelte"
     },
-    "./FootballLineOthers.svelte": {
-      "types": "./dist/FootballLineOthers.svelte.d.ts",
-      "svelte": "./dist/FootballLineOthers.svelte"
+    "./FootballLineGameSports.svelte": {
+      "types": "./dist/FootballLineGameSports.svelte.d.ts",
+      "svelte": "./dist/FootballLineGameSports.svelte"
     },
     "./FootprintFillMap.svelte": {
       "types": "./dist/FootprintFillMap.svelte.d.ts",
@@ -5515,21 +5623,21 @@
       "types": "./dist/GalleryViewEditor.svelte.d.ts",
       "svelte": "./dist/GalleryViewEditor.svelte"
     },
-    "./Game2FillOthers.svelte": {
-      "types": "./dist/Game2FillOthers.svelte.d.ts",
-      "svelte": "./dist/Game2FillOthers.svelte"
+    "./Game2FillGameSports.svelte": {
+      "types": "./dist/Game2FillGameSports.svelte.d.ts",
+      "svelte": "./dist/Game2FillGameSports.svelte"
     },
-    "./Game2LineOthers.svelte": {
-      "types": "./dist/Game2LineOthers.svelte.d.ts",
-      "svelte": "./dist/Game2LineOthers.svelte"
+    "./Game2LineGameSports.svelte": {
+      "types": "./dist/Game2LineGameSports.svelte.d.ts",
+      "svelte": "./dist/Game2LineGameSports.svelte"
     },
-    "./GameFillOthers.svelte": {
-      "types": "./dist/GameFillOthers.svelte.d.ts",
-      "svelte": "./dist/GameFillOthers.svelte"
+    "./GameFillGameSports.svelte": {
+      "types": "./dist/GameFillGameSports.svelte.d.ts",
+      "svelte": "./dist/GameFillGameSports.svelte"
     },
-    "./GameLineOthers.svelte": {
-      "types": "./dist/GameLineOthers.svelte.d.ts",
-      "svelte": "./dist/GameLineOthers.svelte"
+    "./GameLineGameSports.svelte": {
+      "types": "./dist/GameLineGameSports.svelte.d.ts",
+      "svelte": "./dist/GameLineGameSports.svelte"
     },
     "./GamepadFillDevice.svelte": {
       "types": "./dist/GamepadFillDevice.svelte.d.ts",
@@ -5578,6 +5686,22 @@
     "./Ghost2LineUserFaces.svelte": {
       "types": "./dist/Ghost2LineUserFaces.svelte.d.ts",
       "svelte": "./dist/Ghost2LineUserFaces.svelte"
+    },
+    "./Ghost3FillUserFaces.svelte": {
+      "types": "./dist/Ghost3FillUserFaces.svelte.d.ts",
+      "svelte": "./dist/Ghost3FillUserFaces.svelte"
+    },
+    "./Ghost3LineUserFaces.svelte": {
+      "types": "./dist/Ghost3LineUserFaces.svelte.d.ts",
+      "svelte": "./dist/Ghost3LineUserFaces.svelte"
+    },
+    "./Ghost4FillUserFaces.svelte": {
+      "types": "./dist/Ghost4FillUserFaces.svelte.d.ts",
+      "svelte": "./dist/Ghost4FillUserFaces.svelte"
+    },
+    "./Ghost4LineUserFaces.svelte": {
+      "types": "./dist/Ghost4LineUserFaces.svelte.d.ts",
+      "svelte": "./dist/Ghost4LineUserFaces.svelte"
     },
     "./GhostFillUserFaces.svelte": {
       "types": "./dist/GhostFillUserFaces.svelte.d.ts",
@@ -5691,6 +5815,22 @@
       "types": "./dist/GitRepositoryPrivateLineDevelopment.svelte.d.ts",
       "svelte": "./dist/GitRepositoryPrivateLineDevelopment.svelte"
     },
+    "./GitbookFillLogos.svelte": {
+      "types": "./dist/GitbookFillLogos.svelte.d.ts",
+      "svelte": "./dist/GitbookFillLogos.svelte"
+    },
+    "./GitbookLineLogos.svelte": {
+      "types": "./dist/GitbookLineLogos.svelte.d.ts",
+      "svelte": "./dist/GitbookLineLogos.svelte"
+    },
+    "./GiteeFillLogos.svelte": {
+      "types": "./dist/GiteeFillLogos.svelte.d.ts",
+      "svelte": "./dist/GiteeFillLogos.svelte"
+    },
+    "./GiteeLineLogos.svelte": {
+      "types": "./dist/GiteeLineLogos.svelte.d.ts",
+      "svelte": "./dist/GiteeLineLogos.svelte"
+    },
     "./GithubFillLogos.svelte": {
       "types": "./dist/GithubFillLogos.svelte.d.ts",
       "svelte": "./dist/GithubFillLogos.svelte"
@@ -5730,6 +5870,14 @@
     "./GlobalLineBusiness.svelte": {
       "types": "./dist/GlobalLineBusiness.svelte.d.ts",
       "svelte": "./dist/GlobalLineBusiness.svelte"
+    },
+    "./GlobalOffFillBusiness.svelte": {
+      "types": "./dist/GlobalOffFillBusiness.svelte.d.ts",
+      "svelte": "./dist/GlobalOffFillBusiness.svelte"
+    },
+    "./GlobalOffLineBusiness.svelte": {
+      "types": "./dist/GlobalOffLineBusiness.svelte.d.ts",
+      "svelte": "./dist/GlobalOffLineBusiness.svelte"
     },
     "./GlobeFillMap.svelte": {
       "types": "./dist/GlobeFillMap.svelte.d.ts",
@@ -5771,13 +5919,13 @@
       "types": "./dist/GogglesLineOthers.svelte.d.ts",
       "svelte": "./dist/GogglesLineOthers.svelte"
     },
-    "./GolfBallFillOthers.svelte": {
-      "types": "./dist/GolfBallFillOthers.svelte.d.ts",
-      "svelte": "./dist/GolfBallFillOthers.svelte"
+    "./GolfBallFillGameSports.svelte": {
+      "types": "./dist/GolfBallFillGameSports.svelte.d.ts",
+      "svelte": "./dist/GolfBallFillGameSports.svelte"
     },
-    "./GolfBallLineOthers.svelte": {
-      "types": "./dist/GolfBallLineOthers.svelte.d.ts",
-      "svelte": "./dist/GolfBallLineOthers.svelte"
+    "./GolfBallLineGameSports.svelte": {
+      "types": "./dist/GolfBallLineGameSports.svelte.d.ts",
+      "svelte": "./dist/GolfBallLineGameSports.svelte"
     },
     "./GoogleFillLogos.svelte": {
       "types": "./dist/GoogleFillLogos.svelte.d.ts",
@@ -5834,6 +5982,14 @@
     "./GridLineDesign.svelte": {
       "types": "./dist/GridLineDesign.svelte.d.ts",
       "svelte": "./dist/GridLineDesign.svelte"
+    },
+    "./GrokAiFillLogos.svelte": {
+      "types": "./dist/GrokAiFillLogos.svelte.d.ts",
+      "svelte": "./dist/GrokAiFillLogos.svelte"
+    },
+    "./GrokAiLineLogos.svelte": {
+      "types": "./dist/GrokAiLineLogos.svelte.d.ts",
+      "svelte": "./dist/GrokAiLineLogos.svelte"
     },
     "./Group2FillUserFaces.svelte": {
       "types": "./dist/Group2FillUserFaces.svelte.d.ts",
@@ -5906,6 +6062,10 @@
     "./HammerLineDesign.svelte": {
       "types": "./dist/HammerLineDesign.svelte.d.ts",
       "svelte": "./dist/HammerLineDesign.svelte"
+    },
+    "./Hand2Editor.svelte": {
+      "types": "./dist/Hand2Editor.svelte.d.ts",
+      "svelte": "./dist/Hand2Editor.svelte"
     },
     "./HandCoinFillFinance.svelte": {
       "types": "./dist/HandCoinFillFinance.svelte.d.ts",
@@ -6355,6 +6515,14 @@
       "types": "./dist/ImageCircleLineMedia.svelte.d.ts",
       "svelte": "./dist/ImageCircleLineMedia.svelte"
     },
+    "./ImageDownloadFillMedia.svelte": {
+      "types": "./dist/ImageDownloadFillMedia.svelte.d.ts",
+      "svelte": "./dist/ImageDownloadFillMedia.svelte"
+    },
+    "./ImageDownloadLineMedia.svelte": {
+      "types": "./dist/ImageDownloadLineMedia.svelte.d.ts",
+      "svelte": "./dist/ImageDownloadLineMedia.svelte"
+    },
     "./ImageEditFillMedia.svelte": {
       "types": "./dist/ImageEditFillMedia.svelte.d.ts",
       "svelte": "./dist/ImageEditFillMedia.svelte"
@@ -6370,6 +6538,14 @@
     "./ImageLineMedia.svelte": {
       "types": "./dist/ImageLineMedia.svelte.d.ts",
       "svelte": "./dist/ImageLineMedia.svelte"
+    },
+    "./ImageUploadFillMedia.svelte": {
+      "types": "./dist/ImageUploadFillMedia.svelte.d.ts",
+      "svelte": "./dist/ImageUploadFillMedia.svelte"
+    },
+    "./ImageUploadLineMedia.svelte": {
+      "types": "./dist/ImageUploadLineMedia.svelte.d.ts",
+      "svelte": "./dist/ImageUploadLineMedia.svelte"
     },
     "./ImportFillSystem.svelte": {
       "types": "./dist/ImportFillSystem.svelte.d.ts",
@@ -6558,6 +6734,22 @@
     "./InvisionLineLogos.svelte": {
       "types": "./dist/InvisionLineLogos.svelte.d.ts",
       "svelte": "./dist/InvisionLineLogos.svelte"
+    },
+    "./IssuesFillDevelopment.svelte": {
+      "types": "./dist/IssuesFillDevelopment.svelte.d.ts",
+      "svelte": "./dist/IssuesFillDevelopment.svelte"
+    },
+    "./IssuesLineDevelopment.svelte": {
+      "types": "./dist/IssuesLineDevelopment.svelte.d.ts",
+      "svelte": "./dist/IssuesLineDevelopment.svelte"
+    },
+    "./IssuesReopenFillDevelopment.svelte": {
+      "types": "./dist/IssuesReopenFillDevelopment.svelte.d.ts",
+      "svelte": "./dist/IssuesReopenFillDevelopment.svelte"
+    },
+    "./IssuesReopenLineDevelopment.svelte": {
+      "types": "./dist/IssuesReopenLineDevelopment.svelte.d.ts",
+      "svelte": "./dist/IssuesReopenLineDevelopment.svelte"
     },
     "./ItalicEditor.svelte": {
       "types": "./dist/ItalicEditor.svelte.d.ts",
@@ -7491,6 +7683,14 @@
       "types": "./dist/MediumLineLogos.svelte.d.ts",
       "svelte": "./dist/MediumLineLogos.svelte"
     },
+    "./Megaphone2FillBusiness.svelte": {
+      "types": "./dist/Megaphone2FillBusiness.svelte.d.ts",
+      "svelte": "./dist/Megaphone2FillBusiness.svelte"
+    },
+    "./Megaphone2LineBusiness.svelte": {
+      "types": "./dist/Megaphone2LineBusiness.svelte.d.ts",
+      "svelte": "./dist/Megaphone2LineBusiness.svelte"
+    },
     "./MegaphoneFillBusiness.svelte": {
       "types": "./dist/MegaphoneFillBusiness.svelte.d.ts",
       "svelte": "./dist/MegaphoneFillBusiness.svelte"
@@ -7763,6 +7963,14 @@
       "types": "./dist/MicroscopeLineHealthMedical.svelte.d.ts",
       "svelte": "./dist/MicroscopeLineHealthMedical.svelte"
     },
+    "./MicrosoftCopilotFillLogos.svelte": {
+      "types": "./dist/MicrosoftCopilotFillLogos.svelte.d.ts",
+      "svelte": "./dist/MicrosoftCopilotFillLogos.svelte"
+    },
+    "./MicrosoftCopilotLineLogos.svelte": {
+      "types": "./dist/MicrosoftCopilotLineLogos.svelte.d.ts",
+      "svelte": "./dist/MicrosoftCopilotLineLogos.svelte"
+    },
     "./MicrosoftFillLogos.svelte": {
       "types": "./dist/MicrosoftFillLogos.svelte.d.ts",
       "svelte": "./dist/MicrosoftFillLogos.svelte"
@@ -7935,6 +8143,14 @@
       "types": "./dist/MoreLineSystem.svelte.d.ts",
       "svelte": "./dist/MoreLineSystem.svelte"
     },
+    "./MosaicFillDesign.svelte": {
+      "types": "./dist/MosaicFillDesign.svelte.d.ts",
+      "svelte": "./dist/MosaicFillDesign.svelte"
+    },
+    "./MosaicLineDesign.svelte": {
+      "types": "./dist/MosaicLineDesign.svelte.d.ts",
+      "svelte": "./dist/MosaicLineDesign.svelte"
+    },
     "./MotorbikeFillMap.svelte": {
       "types": "./dist/MotorbikeFillMap.svelte.d.ts",
       "svelte": "./dist/MotorbikeFillMap.svelte"
@@ -8054,6 +8270,30 @@
     "./NetflixLineLogos.svelte": {
       "types": "./dist/NetflixLineLogos.svelte.d.ts",
       "svelte": "./dist/NetflixLineLogos.svelte"
+    },
+    "./NetworkErrorFillDevice.svelte": {
+      "types": "./dist/NetworkErrorFillDevice.svelte.d.ts",
+      "svelte": "./dist/NetworkErrorFillDevice.svelte"
+    },
+    "./NetworkErrorLineDevice.svelte": {
+      "types": "./dist/NetworkErrorLineDevice.svelte.d.ts",
+      "svelte": "./dist/NetworkErrorLineDevice.svelte"
+    },
+    "./NetworkFillDevice.svelte": {
+      "types": "./dist/NetworkFillDevice.svelte.d.ts",
+      "svelte": "./dist/NetworkFillDevice.svelte"
+    },
+    "./NetworkLineDevice.svelte": {
+      "types": "./dist/NetworkLineDevice.svelte.d.ts",
+      "svelte": "./dist/NetworkLineDevice.svelte"
+    },
+    "./NetworkOffFillDevice.svelte": {
+      "types": "./dist/NetworkOffFillDevice.svelte.d.ts",
+      "svelte": "./dist/NetworkOffFillDevice.svelte"
+    },
+    "./NetworkOffLineDevice.svelte": {
+      "types": "./dist/NetworkOffLineDevice.svelte.d.ts",
+      "svelte": "./dist/NetworkOffLineDevice.svelte"
     },
     "./NewsFillDocument.svelte": {
       "types": "./dist/NewsFillDocument.svelte.d.ts",
@@ -8623,6 +8863,22 @@
       "types": "./dist/PhpLineDevelopment.svelte.d.ts",
       "svelte": "./dist/PhpLineDevelopment.svelte"
     },
+    "./PianoFillGameSports.svelte": {
+      "types": "./dist/PianoFillGameSports.svelte.d.ts",
+      "svelte": "./dist/PianoFillGameSports.svelte"
+    },
+    "./PianoGrandFillGameSports.svelte": {
+      "types": "./dist/PianoGrandFillGameSports.svelte.d.ts",
+      "svelte": "./dist/PianoGrandFillGameSports.svelte"
+    },
+    "./PianoGrandLineGameSports.svelte": {
+      "types": "./dist/PianoGrandLineGameSports.svelte.d.ts",
+      "svelte": "./dist/PianoGrandLineGameSports.svelte"
+    },
+    "./PianoLineGameSports.svelte": {
+      "types": "./dist/PianoLineGameSports.svelte.d.ts",
+      "svelte": "./dist/PianoLineGameSports.svelte"
+    },
     "./PictureInPicture2FillMedia.svelte": {
       "types": "./dist/PictureInPicture2FillMedia.svelte.d.ts",
       "svelte": "./dist/PictureInPicture2FillMedia.svelte"
@@ -8679,13 +8935,13 @@
       "types": "./dist/PinDistanceLineMap.svelte.d.ts",
       "svelte": "./dist/PinDistanceLineMap.svelte"
     },
-    "./PingPongFillOthers.svelte": {
-      "types": "./dist/PingPongFillOthers.svelte.d.ts",
-      "svelte": "./dist/PingPongFillOthers.svelte"
+    "./PingPongFillGameSports.svelte": {
+      "types": "./dist/PingPongFillGameSports.svelte.d.ts",
+      "svelte": "./dist/PingPongFillGameSports.svelte"
     },
-    "./PingPongLineOthers.svelte": {
-      "types": "./dist/PingPongLineOthers.svelte.d.ts",
-      "svelte": "./dist/PingPongLineOthers.svelte"
+    "./PingPongLineGameSports.svelte": {
+      "types": "./dist/PingPongLineGameSports.svelte.d.ts",
+      "svelte": "./dist/PingPongLineGameSports.svelte"
     },
     "./PinterestFillLogos.svelte": {
       "types": "./dist/PinterestFillLogos.svelte.d.ts",
@@ -8835,6 +9091,14 @@
       "types": "./dist/Plug2LineOthers.svelte.d.ts",
       "svelte": "./dist/Plug2LineOthers.svelte"
     },
+    "./Plug3FillOthers.svelte": {
+      "types": "./dist/Plug3FillOthers.svelte.d.ts",
+      "svelte": "./dist/Plug3FillOthers.svelte"
+    },
+    "./Plug3LineOthers.svelte": {
+      "types": "./dist/Plug3LineOthers.svelte.d.ts",
+      "svelte": "./dist/Plug3LineOthers.svelte"
+    },
     "./PlugFillOthers.svelte": {
       "types": "./dist/PlugFillOthers.svelte.d.ts",
       "svelte": "./dist/PlugFillOthers.svelte"
@@ -8843,37 +9107,37 @@
       "types": "./dist/PlugLineOthers.svelte.d.ts",
       "svelte": "./dist/PlugLineOthers.svelte"
     },
-    "./PokerClubsFillOthers.svelte": {
-      "types": "./dist/PokerClubsFillOthers.svelte.d.ts",
-      "svelte": "./dist/PokerClubsFillOthers.svelte"
+    "./PokerClubsFillGameSports.svelte": {
+      "types": "./dist/PokerClubsFillGameSports.svelte.d.ts",
+      "svelte": "./dist/PokerClubsFillGameSports.svelte"
     },
-    "./PokerClubsLineOthers.svelte": {
-      "types": "./dist/PokerClubsLineOthers.svelte.d.ts",
-      "svelte": "./dist/PokerClubsLineOthers.svelte"
+    "./PokerClubsLineGameSports.svelte": {
+      "types": "./dist/PokerClubsLineGameSports.svelte.d.ts",
+      "svelte": "./dist/PokerClubsLineGameSports.svelte"
     },
-    "./PokerDiamondsFillOthers.svelte": {
-      "types": "./dist/PokerDiamondsFillOthers.svelte.d.ts",
-      "svelte": "./dist/PokerDiamondsFillOthers.svelte"
+    "./PokerDiamondsFillGameSports.svelte": {
+      "types": "./dist/PokerDiamondsFillGameSports.svelte.d.ts",
+      "svelte": "./dist/PokerDiamondsFillGameSports.svelte"
     },
-    "./PokerDiamondsLineOthers.svelte": {
-      "types": "./dist/PokerDiamondsLineOthers.svelte.d.ts",
-      "svelte": "./dist/PokerDiamondsLineOthers.svelte"
+    "./PokerDiamondsLineGameSports.svelte": {
+      "types": "./dist/PokerDiamondsLineGameSports.svelte.d.ts",
+      "svelte": "./dist/PokerDiamondsLineGameSports.svelte"
     },
-    "./PokerHeartsFillOthers.svelte": {
-      "types": "./dist/PokerHeartsFillOthers.svelte.d.ts",
-      "svelte": "./dist/PokerHeartsFillOthers.svelte"
+    "./PokerHeartsFillGameSports.svelte": {
+      "types": "./dist/PokerHeartsFillGameSports.svelte.d.ts",
+      "svelte": "./dist/PokerHeartsFillGameSports.svelte"
     },
-    "./PokerHeartsLineOthers.svelte": {
-      "types": "./dist/PokerHeartsLineOthers.svelte.d.ts",
-      "svelte": "./dist/PokerHeartsLineOthers.svelte"
+    "./PokerHeartsLineGameSports.svelte": {
+      "types": "./dist/PokerHeartsLineGameSports.svelte.d.ts",
+      "svelte": "./dist/PokerHeartsLineGameSports.svelte"
     },
-    "./PokerSpadesFillOthers.svelte": {
-      "types": "./dist/PokerSpadesFillOthers.svelte.d.ts",
-      "svelte": "./dist/PokerSpadesFillOthers.svelte"
+    "./PokerSpadesFillGameSports.svelte": {
+      "types": "./dist/PokerSpadesFillGameSports.svelte.d.ts",
+      "svelte": "./dist/PokerSpadesFillGameSports.svelte"
     },
-    "./PokerSpadesLineOthers.svelte": {
-      "types": "./dist/PokerSpadesLineOthers.svelte.d.ts",
-      "svelte": "./dist/PokerSpadesLineOthers.svelte"
+    "./PokerSpadesLineGameSports.svelte": {
+      "types": "./dist/PokerSpadesLineGameSports.svelte.d.ts",
+      "svelte": "./dist/PokerSpadesLineGameSports.svelte"
     },
     "./Polaroid2FillMedia.svelte": {
       "types": "./dist/Polaroid2FillMedia.svelte.d.ts",
@@ -9147,6 +9411,14 @@
       "types": "./dist/QrScan2LineDevice.svelte.d.ts",
       "svelte": "./dist/QrScan2LineDevice.svelte"
     },
+    "./QrScanAiFillDevice.svelte": {
+      "types": "./dist/QrScanAiFillDevice.svelte.d.ts",
+      "svelte": "./dist/QrScanAiFillDevice.svelte"
+    },
+    "./QrScanAiLineDevice.svelte": {
+      "types": "./dist/QrScanAiLineDevice.svelte.d.ts",
+      "svelte": "./dist/QrScanAiLineDevice.svelte"
+    },
     "./QrScanFillDevice.svelte": {
       "types": "./dist/QrScanFillDevice.svelte.d.ts",
       "svelte": "./dist/QrScanFillDevice.svelte"
@@ -9202,6 +9474,14 @@
     "./QuoteTextEditor.svelte": {
       "types": "./dist/QuoteTextEditor.svelte.d.ts",
       "svelte": "./dist/QuoteTextEditor.svelte"
+    },
+    "./QwenAiFillLogos.svelte": {
+      "types": "./dist/QwenAiFillLogos.svelte.d.ts",
+      "svelte": "./dist/QwenAiFillLogos.svelte"
+    },
+    "./QwenAiLineLogos.svelte": {
+      "types": "./dist/QwenAiLineLogos.svelte.d.ts",
+      "svelte": "./dist/QwenAiLineLogos.svelte"
     },
     "./RadarFillDevice.svelte": {
       "types": "./dist/RadarFillDevice.svelte.d.ts",
@@ -9322,6 +9602,14 @@
     "./RedPacketLineFinance.svelte": {
       "types": "./dist/RedPacketLineFinance.svelte.d.ts",
       "svelte": "./dist/RedPacketLineFinance.svelte"
+    },
+    "./Reddit2FillLogos.svelte": {
+      "types": "./dist/Reddit2FillLogos.svelte.d.ts",
+      "svelte": "./dist/Reddit2FillLogos.svelte"
+    },
+    "./Reddit2LineLogos.svelte": {
+      "types": "./dist/Reddit2LineLogos.svelte.d.ts",
+      "svelte": "./dist/Reddit2LineLogos.svelte"
     },
     "./RedditFillLogos.svelte": {
       "types": "./dist/RedditFillLogos.svelte.d.ts",
@@ -9955,6 +10243,14 @@
       "types": "./dist/SendBackwardEditor.svelte.d.ts",
       "svelte": "./dist/SendBackwardEditor.svelte"
     },
+    "./SendInsFillBusiness.svelte": {
+      "types": "./dist/SendInsFillBusiness.svelte.d.ts",
+      "svelte": "./dist/SendInsFillBusiness.svelte"
+    },
+    "./SendInsLineBusiness.svelte": {
+      "types": "./dist/SendInsLineBusiness.svelte.d.ts",
+      "svelte": "./dist/SendInsLineBusiness.svelte"
+    },
     "./SendPlane2FillBusiness.svelte": {
       "types": "./dist/SendPlane2FillBusiness.svelte.d.ts",
       "svelte": "./dist/SendPlane2FillBusiness.svelte"
@@ -10371,6 +10667,38 @@
       "types": "./dist/SidebarUnfoldLineSystem.svelte.d.ts",
       "svelte": "./dist/SidebarUnfoldLineSystem.svelte"
     },
+    "./SignalCellular1FillDevice.svelte": {
+      "types": "./dist/SignalCellular1FillDevice.svelte.d.ts",
+      "svelte": "./dist/SignalCellular1FillDevice.svelte"
+    },
+    "./SignalCellular1LineDevice.svelte": {
+      "types": "./dist/SignalCellular1LineDevice.svelte.d.ts",
+      "svelte": "./dist/SignalCellular1LineDevice.svelte"
+    },
+    "./SignalCellular2FillDevice.svelte": {
+      "types": "./dist/SignalCellular2FillDevice.svelte.d.ts",
+      "svelte": "./dist/SignalCellular2FillDevice.svelte"
+    },
+    "./SignalCellular2LineDevice.svelte": {
+      "types": "./dist/SignalCellular2LineDevice.svelte.d.ts",
+      "svelte": "./dist/SignalCellular2LineDevice.svelte"
+    },
+    "./SignalCellular3FillDevice.svelte": {
+      "types": "./dist/SignalCellular3FillDevice.svelte.d.ts",
+      "svelte": "./dist/SignalCellular3FillDevice.svelte"
+    },
+    "./SignalCellular3LineDevice.svelte": {
+      "types": "./dist/SignalCellular3LineDevice.svelte.d.ts",
+      "svelte": "./dist/SignalCellular3LineDevice.svelte"
+    },
+    "./SignalCellularOffFillDevice.svelte": {
+      "types": "./dist/SignalCellularOffFillDevice.svelte.d.ts",
+      "svelte": "./dist/SignalCellularOffFillDevice.svelte"
+    },
+    "./SignalCellularOffLineDevice.svelte": {
+      "types": "./dist/SignalCellularOffLineDevice.svelte.d.ts",
+      "svelte": "./dist/SignalCellularOffLineDevice.svelte"
+    },
     "./SignalTowerFillMap.svelte": {
       "types": "./dist/SignalTowerFillMap.svelte.d.ts",
       "svelte": "./dist/SignalTowerFillMap.svelte"
@@ -10450,6 +10778,14 @@
     "./SimCardLineDevice.svelte": {
       "types": "./dist/SimCardLineDevice.svelte.d.ts",
       "svelte": "./dist/SimCardLineDevice.svelte"
+    },
+    "./SimCardWarningFillDevice.svelte": {
+      "types": "./dist/SimCardWarningFillDevice.svelte.d.ts",
+      "svelte": "./dist/SimCardWarningFillDevice.svelte"
+    },
+    "./SimCardWarningLineDevice.svelte": {
+      "types": "./dist/SimCardWarningLineDevice.svelte.d.ts",
+      "svelte": "./dist/SimCardWarningLineDevice.svelte"
     },
     "./SingleQuotesLEditor.svelte": {
       "types": "./dist/SingleQuotesLEditor.svelte.d.ts",
@@ -10711,6 +11047,14 @@
       "types": "./dist/SpaceEditor.svelte.d.ts",
       "svelte": "./dist/SpaceEditor.svelte"
     },
+    "./SpaceShip2FillMap.svelte": {
+      "types": "./dist/SpaceShip2FillMap.svelte.d.ts",
+      "svelte": "./dist/SpaceShip2FillMap.svelte"
+    },
+    "./SpaceShip2LineMap.svelte": {
+      "types": "./dist/SpaceShip2LineMap.svelte.d.ts",
+      "svelte": "./dist/SpaceShip2LineMap.svelte"
+    },
     "./SpaceShipFillMap.svelte": {
       "types": "./dist/SpaceShipFillMap.svelte.d.ts",
       "svelte": "./dist/SpaceShipFillMap.svelte"
@@ -10890,6 +11234,14 @@
     "./StackOverflowLineLogos.svelte": {
       "types": "./dist/StackOverflowLineLogos.svelte.d.ts",
       "svelte": "./dist/StackOverflowLineLogos.svelte"
+    },
+    "./StackedChartFillBusiness.svelte": {
+      "types": "./dist/StackedChartFillBusiness.svelte.d.ts",
+      "svelte": "./dist/StackedChartFillBusiness.svelte"
+    },
+    "./StackedChartLineBusiness.svelte": {
+      "types": "./dist/StackedChartLineBusiness.svelte.d.ts",
+      "svelte": "./dist/StackedChartLineBusiness.svelte"
     },
     "./StackedViewEditor.svelte": {
       "types": "./dist/StackedViewEditor.svelte.d.ts",
@@ -11087,6 +11439,14 @@
       "types": "./dist/StrikethroughEditor.svelte.d.ts",
       "svelte": "./dist/StrikethroughEditor.svelte"
     },
+    "./SubredditFillLogos.svelte": {
+      "types": "./dist/SubredditFillLogos.svelte.d.ts",
+      "svelte": "./dist/SubredditFillLogos.svelte"
+    },
+    "./SubredditLineLogos.svelte": {
+      "types": "./dist/SubredditLineLogos.svelte.d.ts",
+      "svelte": "./dist/SubredditLineLogos.svelte"
+    },
     "./Subscript2Editor.svelte": {
       "types": "./dist/Subscript2Editor.svelte.d.ts",
       "svelte": "./dist/Subscript2Editor.svelte"
@@ -11255,13 +11615,13 @@
       "types": "./dist/SwitchLineLogos.svelte.d.ts",
       "svelte": "./dist/SwitchLineLogos.svelte"
     },
-    "./SwordFillOthers.svelte": {
-      "types": "./dist/SwordFillOthers.svelte.d.ts",
-      "svelte": "./dist/SwordFillOthers.svelte"
+    "./SwordFillGameSports.svelte": {
+      "types": "./dist/SwordFillGameSports.svelte.d.ts",
+      "svelte": "./dist/SwordFillGameSports.svelte"
     },
-    "./SwordLineOthers.svelte": {
-      "types": "./dist/SwordLineOthers.svelte.d.ts",
-      "svelte": "./dist/SwordLineOthers.svelte"
+    "./SwordLineGameSports.svelte": {
+      "types": "./dist/SwordLineGameSports.svelte.d.ts",
+      "svelte": "./dist/SwordLineGameSports.svelte"
     },
     "./SyringeFillHealthMedical.svelte": {
       "types": "./dist/SyringeFillHealthMedical.svelte.d.ts",
@@ -11371,13 +11731,13 @@
       "types": "./dist/TapeLineMedia.svelte.d.ts",
       "svelte": "./dist/TapeLineMedia.svelte"
     },
-    "./TargetFillOthers.svelte": {
-      "types": "./dist/TargetFillOthers.svelte.d.ts",
-      "svelte": "./dist/TargetFillOthers.svelte"
+    "./TargetFillGameSports.svelte": {
+      "types": "./dist/TargetFillGameSports.svelte.d.ts",
+      "svelte": "./dist/TargetFillGameSports.svelte"
     },
-    "./TargetLineOthers.svelte": {
-      "types": "./dist/TargetLineOthers.svelte.d.ts",
-      "svelte": "./dist/TargetLineOthers.svelte"
+    "./TargetLineGameSports.svelte": {
+      "types": "./dist/TargetLineGameSports.svelte.d.ts",
+      "svelte": "./dist/TargetLineGameSports.svelte"
     },
     "./TaskFillDocument.svelte": {
       "types": "./dist/TaskFillDocument.svelte.d.ts",
@@ -11926,6 +12286,14 @@
     "./UploadLineSystem.svelte": {
       "types": "./dist/UploadLineSystem.svelte.d.ts",
       "svelte": "./dist/UploadLineSystem.svelte"
+    },
+    "./UpworkFillLogos.svelte": {
+      "types": "./dist/UpworkFillLogos.svelte.d.ts",
+      "svelte": "./dist/UpworkFillLogos.svelte"
+    },
+    "./UpworkLineLogos.svelte": {
+      "types": "./dist/UpworkLineLogos.svelte.d.ts",
+      "svelte": "./dist/UpworkLineLogos.svelte"
     },
     "./UsbFillDevice.svelte": {
       "types": "./dist/UsbFillDevice.svelte.d.ts",
@@ -12634,6 +13002,14 @@
     "./ZhihuLineLogos.svelte": {
       "types": "./dist/ZhihuLineLogos.svelte.d.ts",
       "svelte": "./dist/ZhihuLineLogos.svelte"
+    },
+    "./ZhipuAiFillLogos.svelte": {
+      "types": "./dist/ZhipuAiFillLogos.svelte.d.ts",
+      "svelte": "./dist/ZhipuAiFillLogos.svelte"
+    },
+    "./ZhipuAiLineLogos.svelte": {
+      "types": "./dist/ZhipuAiLineLogos.svelte.d.ts",
+      "svelte": "./dist/ZhipuAiLineLogos.svelte"
     },
     "./ZoomInFillSystem.svelte": {
       "types": "./dist/ZoomInFillSystem.svelte.d.ts",

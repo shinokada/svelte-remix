@@ -1,5 +1,11 @@
 # svelte-remix
 
+## 3.1.0
+
+### Minor Changes
+
+- feat: remix@4.9.1
+
 ## 3.0.1
 
 ### Patch Changes
